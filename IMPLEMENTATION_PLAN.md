@@ -144,7 +144,7 @@
 
 - [x] Create `src/components/journal/MoodDepthPicker.tsx` — reusable 1-5 scale picker (emoji or slider); used for mood-before, mood-after, depth rating. See specs/journal.md.
 - [x] Create `src/components/journal/JournalEditor.tsx` — plain-text textarea; `MoodDepthPicker` for before/after mood and depth; tags input; optional technique notes; saves `JournalEntry` to IndexedDB. See specs/journal.md.
-- [ ] Add post-session journal prompt to `SessionSummary.tsx` — "Would you like to journal?" with pre-filled `sessionId`; optional, skippable. See specs/journal.md.
+- [x] Add post-session journal prompt to `SessionSummary.tsx` — "Would you like to journal?" with pre-filled `sessionId`; optional, skippable. See specs/journal.md.
 - [ ] Implement `app/journal/page.tsx` — chronological list of `JournalEntry` records (newest first); entry cards with date, mood, depth, first line, tags; tag filter; tap to view. See specs/journal.md.
 - [ ] Implement `app/journal/[entryId]/page.tsx` — full entry display; edit mode toggle; delete with confirmation. See specs/journal.md.
 - [ ] Create `app/journal/new/page.tsx` — standalone journal entry creation (not session-linked). See specs/journal.md.
