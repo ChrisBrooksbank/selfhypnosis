@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     title: 'Self-Hypnosis',
     description:
         'Guided self-hypnosis sessions, technique library, and personal suggestion builder',
-    manifest: '/manifest.json',
+    manifest: '/manifest.webmanifest',
     appleWebApp: {
         capable: true,
         statusBarStyle: 'default',
