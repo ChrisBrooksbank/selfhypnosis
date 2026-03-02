@@ -1,8 +1,22 @@
+import type { GuidedSession } from '@/types';
+import { PageHeader } from '@components/layout/PageHeader';
+import { SessionLauncher } from '@components/session/SessionLauncher';
+
+import beginnerRelaxation from '@/content/sessions/beginner-relaxation.json';
+import stressRelief from '@/content/sessions/stress-relief.json';
+import sleepPreparation from '@/content/sessions/sleep-preparation.json';
+
+const sessions: GuidedSession[] = [
+    beginnerRelaxation,
+    stressRelief,
+    sleepPreparation,
+] as GuidedSession[];
+
 export default function SessionPage() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center p-6">
-            <h1 className="mb-4 text-2xl font-bold text-indigo-900">Start a Session</h1>
-            <p className="text-center text-gray-600">Session launcher coming soon.</p>
+        <main className="flex flex-col gap-6 p-4">
+            <PageHeader title="Start a Session" />
+            <SessionLauncher sessions={sessions} />
         </main>
     );
 }

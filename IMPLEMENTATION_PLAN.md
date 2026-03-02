@@ -115,7 +115,7 @@
 
 ### Pages
 
-- [ ] Implement `app/session/page.tsx` — renders `SessionLauncher` with all available sessions. See specs/guided-sessions.md.
+- [x] Implement `app/session/page.tsx` — renders `SessionLauncher` with all available sessions. See specs/guided-sessions.md.
 
 ---
 
