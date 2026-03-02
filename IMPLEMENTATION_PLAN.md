@@ -76,7 +76,7 @@
 
 - [x] Create `src/components/library/TechniqueCard.tsx` — card with name, tagline, difficulty badge, goal-area tags. See specs/technique-library.md.
 - [x] Create `src/components/library/SciencePanel.tsx` — science blurb + citations list. See specs/technique-library.md.
-- [ ] Create `src/components/library/TechniqueDetail.tsx` — 3-tab layout: How it Works, The Science, Try It (step-by-step with Next button). See specs/technique-library.md.
+- [x] Create `src/components/library/TechniqueDetail.tsx` — 3-tab layout: How it Works, The Science, Try It (step-by-step with Next button). See specs/technique-library.md.
 
 ### Pages
 
