@@ -40,7 +40,7 @@ Practices resembling self-hypnosis have existed for millennia. Ancient Egyptian 
 ### 18th-19th Century Development
 
 - **Franz Mesmer (1734-1815)** proposed "animal magnetism" as a healing force. Although his theories were discredited, his techniques demonstrated the power of suggestion and expectation.
-- **James Braid (1795-1860)** coined the term "hypnosis" (from the Greek *hypnos*, meaning sleep) in the 1840s. He recognised it as a psychological phenomenon based on focused attention rather than a magnetic force.
+- **James Braid (1795-1860)** coined the term "hypnosis" (from the Greek _hypnos_, meaning sleep) in the 1840s. He recognised it as a psychological phenomenon based on focused attention rather than a magnetic force.
 - **Emile Coue (1857-1926)** developed a method of conscious auto-suggestion, popularising the affirmation "Every day, in every way, I am getting better and better." His work laid the groundwork for modern self-hypnosis.
 
 ### 20th Century to Present
@@ -98,6 +98,7 @@ Research indicates that approximately 10-15% of adults are highly hypnotisable, 
 The oldest and most traditional induction method. The practitioner fixates their gaze on a single point -- a spot on the ceiling, a candle flame, a pendulum, or even a thumb held at arm's length. As the eyes tire, the eyelids grow heavy, and the suggestion to close the eyes serves as the first step into trance.
 
 **How to practise:**
+
 - Choose a fixed point slightly above eye level
 - Gaze steadily without straining
 - Notice the eyes becoming tired and heavy
@@ -109,6 +110,7 @@ The oldest and most traditional induction method. The practitioner fixates their
 Developed by Edmund Jacobson in the 1930s, PMR involves systematically tensing and then releasing muscle groups throughout the body. The contrast between tension and release deepens awareness of physical relaxation.
 
 **How to practise:**
+
 - Begin with the feet and work upward (or start with the hands/face and work downward)
 - Tense each muscle group for 5-7 seconds
 - Release and notice the sensation of relaxation for 15-20 seconds
@@ -120,6 +122,7 @@ Developed by Edmund Jacobson in the 1930s, PMR involves systematically tensing a
 The practitioner creates a vivid mental image of a peaceful, safe place -- a beach, forest, garden, or any personally meaningful setting. Engaging all senses in this internal experience deepens the trance and provides a framework for therapeutic suggestions.
 
 **How to practise:**
+
 - Choose a setting that feels calm and safe
 - Build the scene with all five senses: what you see, hear, feel, smell, and taste
 - Allow yourself to "step into" the scene fully
@@ -131,6 +134,7 @@ The practitioner creates a vivid mental image of a peaceful, safe place -- a bea
 A deepening technique that uses a numerical countdown to progressively deepen relaxation. Each number is associated with going deeper into trance.
 
 **How to practise:**
+
 - Begin counting slowly from 10 (or 20) down to 1
 - With each number, suggest going deeper: "Ten... going deeper... Nine... more relaxed..."
 - Pair numbers with exhaling or with steps descending a staircase
@@ -142,6 +146,7 @@ A deepening technique that uses a numerical countdown to progressively deepen re
 Deliberate, slow breathing activates the parasympathetic nervous system, reducing heart rate and promoting relaxation. It serves as both an induction and deepening tool.
 
 **How to practise:**
+
 - Inhale slowly through the nose for 4 counts
 - Hold for 4 counts (optional -- omit if uncomfortable)
 - Exhale slowly through the mouth for 6-8 counts (longer exhale activates the vagus nerve)
@@ -153,6 +158,7 @@ Deliberate, slow breathing activates the parasympathetic nervous system, reducin
 Named after Milton Erickson's wife, this technique uses a structured narrowing of external sensory awareness to shift attention inward.
 
 **How to practise:**
+
 - **Round of 3:** Notice three things you can see, three things you can hear, and three things you can feel (physical sensations)
 - **Round of 2:** Notice two things you can see, two you can hear, two you can feel
 - **Round of 1:** Notice one thing you can see, one you can hear, one you can feel
@@ -164,6 +170,7 @@ Named after Milton Erickson's wife, this technique uses a structured narrowing o
 Developed by Johannes Schultz, autogenic training uses a series of specific verbal formulas repeated silently to induce physical sensations associated with relaxation.
 
 **The six standard formulas:**
+
 1. **Heaviness:** "My right arm is heavy" (repeat for each limb)
 2. **Warmth:** "My right arm is warm" (repeat for each limb)
 3. **Heart:** "My heartbeat is calm and regular"
@@ -204,15 +211,16 @@ Choose one or combine several of the core techniques above:
 This is the therapeutic core of the session.
 
 1. **Deliver your prepared suggestions.** Repeat your intention in positive, present-tense language:
-   - "I am calm and confident"
-   - "My body is healing and strong"
-   - "I sleep deeply and wake refreshed"
-2. **Use vivid imagery.** Don't just state suggestions -- *see, feel, and experience* the desired outcome as if it's happening now.
+    - "I am calm and confident"
+    - "My body is healing and strong"
+    - "I sleep deeply and wake refreshed"
+2. **Use vivid imagery.** Don't just state suggestions -- _see, feel, and experience_ the desired outcome as if it's happening now.
 3. **Repeat each suggestion 3-5 times.** Repetition strengthens the neural pathways.
 4. **Engage emotion.** Feel the positive emotions associated with achieving your goal. Emotional engagement dramatically increases suggestion effectiveness.
 5. **Use metaphor and symbol.** If helpful, use imagery such as a healing light spreading through the body, stress being carried away by a river, or confidence growing like a flame.
 
 **Guidelines for effective suggestions:**
+
 - **Positive:** State what you want, not what you want to avoid ("I am calm" rather than "I am not anxious")
 - **Present tense:** Phrase as if already true ("I am" rather than "I will be")
 - **Specific:** Be concrete and detailed about the desired outcome
@@ -232,9 +240,10 @@ This is the therapeutic core of the session.
 
 ### 1. Stress and Anxiety Reduction
 
-Self-hypnosis is one of the most well-supported applications in the literature. A 2024 meta-analysis in *Psychological Bulletin* found hypnosis-based interventions produced moderate-to-large effect sizes for anxiety reduction (Cohen's d = 0.58-0.82). The mechanism involves downregulation of the hypothalamic-pituitary-adrenal (HPA) axis and reduced cortisol output.
+Self-hypnosis is one of the most well-supported applications in the literature. A 2024 meta-analysis in _Psychological Bulletin_ found hypnosis-based interventions produced moderate-to-large effect sizes for anxiety reduction (Cohen's d = 0.58-0.82). The mechanism involves downregulation of the hypothalamic-pituitary-adrenal (HPA) axis and reduced cortisol output.
 
 **Evidence highlights:**
+
 - Significant reductions in self-reported stress and physiological stress markers
 - Benefits comparable to cognitive-behavioural therapy (CBT) for generalised anxiety
 - Effects enhanced when self-hypnosis is practised regularly (daily or multiple times per week)
@@ -244,6 +253,7 @@ Self-hypnosis is one of the most well-supported applications in the literature. 
 Hypnotic analgesia is one of the oldest and most robust findings in hypnosis research. Self-hypnosis has been shown to reduce both the sensory intensity and emotional unpleasantness of pain.
 
 **Evidence highlights:**
+
 - A 2023 Cochrane review confirmed hypnosis as effective for procedural pain, chronic pain, and cancer-related pain
 - Effective for labour pain, burns treatment, dental procedures, and post-surgical recovery
 - Neuroimaging shows hypnotic analgesia modulates activity in the anterior cingulate cortex and somatosensory cortex
@@ -254,7 +264,8 @@ Hypnotic analgesia is one of the oldest and most robust findings in hypnosis res
 Self-hypnosis before bedtime can improve sleep onset, duration, and subjective quality. The relaxation response and reduced cognitive arousal facilitate the transition to sleep.
 
 **Evidence highlights:**
-- A 2023 randomised controlled trial in *Sleep* journal found hypnosis increased slow-wave sleep (the most restorative phase) by up to 80% in highly suggestible individuals
+
+- A 2023 randomised controlled trial in _Sleep_ journal found hypnosis increased slow-wave sleep (the most restorative phase) by up to 80% in highly suggestible individuals
 - Significant improvements in sleep onset latency and self-reported sleep quality
 - Effective as an adjunct to sleep hygiene education
 - Particularly helpful for individuals whose insomnia is driven by hyperarousal or racing thoughts
@@ -264,6 +275,7 @@ Self-hypnosis before bedtime can improve sleep onset, duration, and subjective q
 Self-hypnosis supports behaviour change by strengthening motivation, altering automatic associations, and reinforcing new patterns.
 
 **Evidence highlights:**
+
 - **Smoking cessation:** A 2024 randomised trial found that hypnosis combined with nicotine replacement therapy produced higher quit rates (35%) than NRT alone (22%) at 6-month follow-up
 - **Weight management:** Meta-analyses show modest but consistent benefits when hypnosis is added to behavioural weight-loss programmes
 - **Nail biting, hair pulling:** Case series and small trials support self-hypnosis for habit reversal
@@ -273,6 +285,7 @@ Self-hypnosis supports behaviour change by strengthening motivation, altering au
 Athletes, musicians, and public speakers use self-hypnosis for mental rehearsal, anxiety management, and confidence building.
 
 **Evidence highlights:**
+
 - Controlled studies show improvements in sports performance (accuracy, endurance, reaction time) with hypnotic mental rehearsal
 - Test anxiety reduction documented in university student populations
 - Enhanced self-efficacy and reduced performance anxiety in musicians
@@ -282,6 +295,7 @@ Athletes, musicians, and public speakers use self-hypnosis for mental rehearsal,
 Gut-directed hypnotherapy is one of the best-evidenced applications and is recommended in clinical guidelines (NICE, AGA).
 
 **Evidence highlights:**
+
 - The Manchester protocol (developed by Peter Whorwell) produces significant symptom relief in 70-80% of patients
 - Benefits persist at long-term follow-up (1-5 years)
 - A 2023 randomised controlled trial confirmed that self-administered gut-directed hypnotherapy via audio recordings was effective, increasing accessibility
@@ -292,6 +306,7 @@ Gut-directed hypnotherapy is one of the best-evidenced applications and is recom
 Self-hypnosis techniques applied to labour and delivery reduce pain perception, anxiety, and in some studies, the need for pharmacological pain relief.
 
 **Evidence highlights:**
+
 - A 2023 Cochrane review found hypnosis during labour reduced the need for pharmacological analgesia
 - Reduced fear and anxiety surrounding childbirth
 - Some evidence of shorter labour duration
@@ -316,14 +331,14 @@ Self-hypnosis is widely regarded as safe for most people when practised responsi
 
 Self-hypnosis is **not recommended** or should be used with caution in the following situations:
 
-| Condition | Concern |
-|-----------|---------|
-| **Active psychosis or schizophrenia** | Trance states may worsen dissociative symptoms or blur reality testing |
-| **Severe dissociative disorders** | Hypnosis may trigger uncontrolled dissociation |
-| **Epilepsy (uncontrolled)** | Deep relaxation and focused attention may lower seizure threshold in some individuals (evidence is limited; consult a neurologist) |
-| **Severe PTSD (without professional guidance)** | Self-directed trance may trigger flashbacks or emotional flooding; work with a trained hypnotherapist instead |
-| **Recent traumatic experience** | Allow stabilisation before using trance-based techniques |
-| **Personality disorders with poor reality testing** | Professional supervision recommended |
+| Condition                                           | Concern                                                                                                                            |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Active psychosis or schizophrenia**               | Trance states may worsen dissociative symptoms or blur reality testing                                                             |
+| **Severe dissociative disorders**                   | Hypnosis may trigger uncontrolled dissociation                                                                                     |
+| **Epilepsy (uncontrolled)**                         | Deep relaxation and focused attention may lower seizure threshold in some individuals (evidence is limited; consult a neurologist) |
+| **Severe PTSD (without professional guidance)**     | Self-directed trance may trigger flashbacks or emotional flooding; work with a trained hypnotherapist instead                      |
+| **Recent traumatic experience**                     | Allow stabilisation before using trance-based techniques                                                                           |
+| **Personality disorders with poor reality testing** | Professional supervision recommended                                                                                               |
 
 ### When to Seek Professional Guidance
 
@@ -338,24 +353,24 @@ Self-hypnosis is **not recommended** or should be used with caution in the follo
 
 ### Major Studies (2023-2025)
 
-1. **Thompson, Terhune & Bhatt (2023).** "The effectiveness of hypnosis for pain relief: A comprehensive meta-analysis." *Neuroscience & Biobehavioral Reviews.* Confirmed medium-to-large effect sizes for hypnotic analgesia across pain conditions (acute, chronic, procedural). 85 studies analysed.
+1. **Thompson, Terhune & Bhatt (2023).** "The effectiveness of hypnosis for pain relief: A comprehensive meta-analysis." _Neuroscience & Biobehavioral Reviews._ Confirmed medium-to-large effect sizes for hypnotic analgesia across pain conditions (acute, chronic, procedural). 85 studies analysed.
 
-2. **Cordi, Schlarb & Rasch (2023).** "Hypnosis and slow-wave sleep: Effects and neural mechanisms." *Sleep.* Demonstrated that hypnotic suggestion before sleep increased slow-wave sleep duration by 67-80% in high-susceptibility individuals, measured by polysomnography.
+2. **Cordi, Schlarb & Rasch (2023).** "Hypnosis and slow-wave sleep: Effects and neural mechanisms." _Sleep._ Demonstrated that hypnotic suggestion before sleep increased slow-wave sleep duration by 67-80% in high-susceptibility individuals, measured by polysomnography.
 
-3. **Hasan et al. (2023).** "Self-administered gut-directed hypnotherapy for irritable bowel syndrome: A randomised controlled trial." *The Lancet Gastroenterology & Hepatology.* Found that audio-based self-hypnosis was effective for IBS symptom relief, supporting scalable delivery.
+3. **Hasan et al. (2023).** "Self-administered gut-directed hypnotherapy for irritable bowel syndrome: A randomised controlled trial." _The Lancet Gastroenterology & Hepatology._ Found that audio-based self-hypnosis was effective for IBS symptom relief, supporting scalable delivery.
 
-4. **Landolt et al. (2024).** "Hypnosis as an adjunct to smoking cessation: A multicentre randomised controlled trial." *Addiction.* Reported significantly higher quit rates at 6-month follow-up when hypnosis was combined with nicotine replacement therapy (35% vs 22%).
+4. **Landolt et al. (2024).** "Hypnosis as an adjunct to smoking cessation: A multicentre randomised controlled trial." _Addiction._ Reported significantly higher quit rates at 6-month follow-up when hypnosis was combined with nicotine replacement therapy (35% vs 22%).
 
-5. **Milling et al. (2024).** "A comprehensive meta-analysis of hypnosis for anxiety: Clinical effectiveness and moderators." *Psychological Bulletin.* Analysed 50+ trials and reported moderate-to-large effect sizes for hypnosis in treating anxiety across clinical and non-clinical populations.
+5. **Milling et al. (2024).** "A comprehensive meta-analysis of hypnosis for anxiety: Clinical effectiveness and moderators." _Psychological Bulletin._ Analysed 50+ trials and reported moderate-to-large effect sizes for hypnosis in treating anxiety across clinical and non-clinical populations.
 
-6. **Jensen et al. (2024).** "Neuroimaging of hypnosis: A systematic review of functional brain changes." *Clinical Psychology Review.* Synthesised neuroimaging evidence confirming distinct patterns of brain activity during hypnosis, including altered DMN connectivity and ACC modulation.
+6. **Jensen et al. (2024).** "Neuroimaging of hypnosis: A systematic review of functional brain changes." _Clinical Psychology Review._ Synthesised neuroimaging evidence confirming distinct patterns of brain activity during hypnosis, including altered DMN connectivity and ACC modulation.
 
-7. **Madden et al. (2023).** "Hypnosis for pain management during labour and childbirth (updated Cochrane review)." *Cochrane Database of Systematic Reviews.* Found evidence supporting reduced pharmacological analgesia use and improved maternal satisfaction with hypnosis during childbirth.
+7. **Madden et al. (2023).** "Hypnosis for pain management during labour and childbirth (updated Cochrane review)." _Cochrane Database of Systematic Reviews._ Found evidence supporting reduced pharmacological analgesia use and improved maternal satisfaction with hypnosis during childbirth.
 
 ### Foundational Studies
 
-- **Spiegel et al. (2016).** "Neural correlates of hypnosis in highly hypnotisable subjects." *Cerebral Cortex.* Landmark Stanford study identifying three hallmarks of the hypnotic state: decreased activity in the dorsal ACC, increased functional connectivity between the DLPFC and insula, and reduced connectivity between the DLPFC and DMN.
-- **Elkins, Barabasz, Council & Spiegel (2015).** "Advancing research and practice: The revised APA Division 30 definition of hypnosis." *International Journal of Clinical and Experimental Hypnosis.* Established the current consensus definition of hypnosis used in research.
+- **Spiegel et al. (2016).** "Neural correlates of hypnosis in highly hypnotisable subjects." _Cerebral Cortex._ Landmark Stanford study identifying three hallmarks of the hypnotic state: decreased activity in the dorsal ACC, increased functional connectivity between the DLPFC and insula, and reduced connectivity between the DLPFC and DMN.
+- **Elkins, Barabasz, Council & Spiegel (2015).** "Advancing research and practice: The revised APA Division 30 definition of hypnosis." _International Journal of Clinical and Experimental Hypnosis._ Established the current consensus definition of hypnosis used in research.
 
 ---
 
@@ -387,17 +402,17 @@ Self-hypnosis is **not recommended** or should be used with caution in the follo
 
 ### Books
 
-- Hadley, J. & Staudacher, C. (2003). *Hypnosis for Change.* New Harbinger Publications.
-- Hammond, D.C. (Ed.) (1990). *Handbook of Hypnotic Suggestions and Metaphors.* W.W. Norton.
-- Heap, M. & Aravind, K.K. (2002). *Hartland's Medical and Dental Hypnosis.* Churchill Livingstone.
-- Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). *Handbook of Clinical Hypnosis.* American Psychological Association.
-- Spiegel, H. & Spiegel, D. (2004). *Trance and Treatment: Clinical Uses of Hypnosis.* American Psychiatric Publishing.
+- Hadley, J. & Staudacher, C. (2003). _Hypnosis for Change._ New Harbinger Publications.
+- Hammond, D.C. (Ed.) (1990). _Handbook of Hypnotic Suggestions and Metaphors._ W.W. Norton.
+- Heap, M. & Aravind, K.K. (2002). _Hartland's Medical and Dental Hypnosis._ Churchill Livingstone.
+- Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). _Handbook of Clinical Hypnosis._ American Psychological Association.
+- Spiegel, H. & Spiegel, D. (2004). _Trance and Treatment: Clinical Uses of Hypnosis._ American Psychiatric Publishing.
 
 ### Key Journals
 
-- *International Journal of Clinical and Experimental Hypnosis*
-- *American Journal of Clinical Hypnosis*
-- *Contemporary Hypnosis and Integrative Therapy*
+- _International Journal of Clinical and Experimental Hypnosis_
+- _American Journal of Clinical Hypnosis_
+- _Contemporary Hypnosis and Integrative Therapy_
 
 ### Professional Organisations
 
@@ -407,9 +422,9 @@ Self-hypnosis is **not recommended** or should be used with caution in the follo
 
 ### Clinical Guidelines
 
-- National Institute for Health and Care Excellence (NICE). (2008, updated 2017). *Irritable bowel syndrome in adults: diagnosis and management.* CG61.
-- American Gastroenterological Association (AGA). (2022). *Clinical practice guideline on the pharmacological management of irritable bowel syndrome.*
+- National Institute for Health and Care Excellence (NICE). (2008, updated 2017). _Irritable bowel syndrome in adults: diagnosis and management._ CG61.
+- American Gastroenterological Association (AGA). (2022). _Clinical practice guideline on the pharmacological management of irritable bowel syndrome._
 
 ---
 
-*Report compiled March 2026. This document is for educational and research purposes. It does not constitute medical advice. Individuals with health concerns should consult qualified healthcare professionals.*
+_Report compiled March 2026. This document is for educational and research purposes. It does not constitute medical advice. Individuals with health concerns should consult qualified healthcare professionals._

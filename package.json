@@ -1,0 +1,65 @@
+{
+    "name": "self-hypnosis",
+    "version": "1.0.0",
+    "description": "Guided self-hypnosis PWA — technique library, session engine, and personal suggestion builder",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "npx serve out",
+        "test": "vitest",
+        "test:run": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "typecheck": "tsc --noEmit",
+        "knip": "knip",
+        "check": "npm run typecheck && npm run lint && npm run format:check && npm run knip",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "dexie": "^4.0.0",
+        "dexie-react-hooks": "^1.1.0",
+        "next": "^15.0.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "zod": "^3.0.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.0.0",
+        "@tailwindcss/postcss": "^4.0.0",
+        "@testing-library/jest-dom": "^6.0.0",
+        "@testing-library/react": "^16.0.0",
+        "@types/node": "^22.0.0",
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.0.0",
+        "@vitest/coverage-v8": "^2.0.0",
+        "eslint": "^9.0.0",
+        "eslint-config-next": "^15.0.0",
+        "eslint-config-prettier": "^10.0.0",
+        "husky": "^9.0.0",
+        "jsdom": "^25.0.0",
+        "knip": "^5.0.0",
+        "lint-staged": "^15.0.0",
+        "prettier": "^3.0.0",
+        "prettier-plugin-tailwindcss": "^0.6.0",
+        "tailwindcss": "^4.0.0",
+        "typescript": "^5.0.0",
+        "vitest": "^2.0.0"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,mjs}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,md,yml,yaml,css}": [
+            "prettier --write"
+        ]
+    },
+    "engines": {
+        "node": ">=20.0.0"
+    }
+}

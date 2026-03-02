@@ -1,0 +1,28 @@
+{
+    "entry": ["app/**/*.{ts,tsx}", "src/**/*.{ts,tsx}"],
+    "project": ["app/**/*.{ts,tsx}", "src/**/*.{ts,tsx}"],
+    "paths": {
+        "@/*": ["src/*"],
+        "@api/*": ["src/api/*"],
+        "@core/*": ["src/core/*"],
+        "@utils/*": ["src/utils/*"],
+        "@config/*": ["src/config/*"],
+        "@types/*": ["src/types/*"],
+        "@components/*": ["src/components/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@lib/*": ["src/lib/*"]
+    },
+    "next": {
+        "entry": ["next.config.{js,ts,mjs}", "app/**/*.{ts,tsx}"]
+    },
+    "ignoreDependencies": [
+        "dexie",
+        "dexie-react-hooks",
+        "@testing-library/jest-dom",
+        "@testing-library/react",
+        "eslint-config-next",
+        "tailwindcss",
+        "postcss"
+    ],
+    "ignoreBinaries": ["serve"]
+}
