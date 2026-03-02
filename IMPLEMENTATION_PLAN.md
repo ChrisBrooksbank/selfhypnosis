@@ -136,7 +136,7 @@
 - [x] Create `src/components/session/AudioPlayer.tsx` — play/pause button; progress bar with seek; current/total time; integrated into session page. See specs/audio-playback.md.
 - [x] Integrate `audioManager` with session engine: when audio available, segment advance triggered by `onSegmentEnd`; fallback to `durationSeconds` when unavailable. See specs/audio-playback.md.
 - [x] Add `workbox-range-requests` plugin to Serwist service worker config for Safari audio seek compatibility. See specs/audio-playback.md.
-- [ ] Add cache-first strategy for `src/content/audio/**` in service worker. See specs/audio-playback.md.
+- [x] Add cache-first strategy for `src/content/audio/**` in service worker. See specs/audio-playback.md.
 
 ---
 
