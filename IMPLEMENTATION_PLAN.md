@@ -63,7 +63,7 @@
 
 ### Content
 
-- [ ] Add `Technique` type to `src/types/index.ts` matching the JSON schema (id, name, tagline, difficultyLevel, goalAreas, overview, steps, scienceBlurb, citations, relatedTechniques). See specs/technique-library.md.
+- [x] Add `Technique` type to `src/types/index.ts` matching the JSON schema (id, name, tagline, difficultyLevel, goalAreas, overview, steps, scienceBlurb, citations, relatedTechniques). See specs/technique-library.md.
 - [ ] Create `src/content/techniques/eye-fixation.json` — content from research.md. See specs/technique-library.md.
 - [ ] Create `src/content/techniques/pmr.json` — progressive muscle relaxation content. See specs/technique-library.md.
 - [ ] Create `src/content/techniques/visualisation.json`. See specs/technique-library.md.

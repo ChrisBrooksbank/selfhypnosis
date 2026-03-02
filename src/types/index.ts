@@ -26,3 +26,22 @@ export type GoalArea =
     | 'general-relaxation';
 
 export type PhaseId = 'preparation' | 'induction' | 'deepening' | 'suggestion' | 'emergence';
+
+export interface TechniqueStep {
+    number: number;
+    instruction: string;
+    duration?: string;
+}
+
+export interface Technique {
+    id: TechniqueId;
+    name: string;
+    tagline: string;
+    difficultyLevel: 'beginner' | 'intermediate' | 'advanced';
+    goalAreas: GoalArea[];
+    overview: string;
+    steps: TechniqueStep[];
+    scienceBlurb: string;
+    citations: string[];
+    relatedTechniques: TechniqueId[];
+}
