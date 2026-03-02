@@ -1,6 +1,6 @@
 'use client';
 
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useLiveQuery } from '@hooks/useDexieQuery';
 import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 

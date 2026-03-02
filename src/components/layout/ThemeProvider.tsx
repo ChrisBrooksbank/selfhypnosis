@@ -1,8 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
-
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useEffect, useState } from 'react';
 
 import { db } from '@lib/db';
 
@@ -22,15 +20,29 @@ function applyTheme(theme: Theme): void {
 }
 
 export function ThemeProvider() {
-    const settings = useLiveQuery(() => db.settings.get('user'));
+    const [theme, setTheme] = useState<Theme>('system');
 
     useEffect(() => {
-        const theme = settings?.theme ?? 'system';
+        let cancelled = false;
+        async function load() {
+            try {
+                const settings = await db.settings.get('user');
+                if (!cancelled) setTheme(settings?.theme ?? 'system');
+            } catch {
+                // ignore
+            }
+        }
+        load();
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    useEffect(() => {
         applyTheme(theme);
-    }, [settings?.theme]);
+    }, [theme]);
 
     useEffect(() => {
-        const theme = settings?.theme ?? 'system';
         if (theme !== 'system') return;
 
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -40,7 +52,7 @@ export function ThemeProvider() {
         };
         mediaQuery.addEventListener('change', handler);
         return () => mediaQuery.removeEventListener('change', handler);
-    }, [settings?.theme]);
+    }, [theme]);
 
     return null;
 }

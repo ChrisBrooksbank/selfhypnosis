@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useLiveQuery } from '@hooks/useDexieQuery';
 
 import { db } from '@lib/db';
 

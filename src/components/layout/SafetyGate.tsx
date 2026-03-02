@@ -1,10 +1,9 @@
 'use client';
 
-import { useLiveQuery } from 'dexie-react-hooks';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-import { db } from '@lib/db';
+import { db, type UserSettings } from '@lib/db';
 import { Logger } from '@utils/logger';
 
 interface SafetyGateProps {
@@ -13,17 +12,42 @@ interface SafetyGateProps {
 
 export function SafetyGate({ children }: SafetyGateProps) {
     const router = useRouter();
+    const pathname = usePathname();
 
-    const settings = useLiveQuery(() => db.settings.get('user'));
+    const [settings, setSettings] = useState<UserSettings | null | undefined>(undefined);
     const isLoading = settings === undefined;
+    const isOnboarding = pathname.startsWith('/onboarding');
 
     useEffect(() => {
-        if (isLoading) return;
+        let cancelled = false;
+
+        async function load() {
+            try {
+                const result = await db.settings.get('user');
+                if (!cancelled) setSettings(result ?? null);
+            } catch (err) {
+                Logger.error('SafetyGate: failed to load settings', err);
+                if (!cancelled) setSettings(null);
+            }
+        }
+
+        load();
+        return () => {
+            cancelled = true;
+        };
+    }, [pathname]);
+
+    useEffect(() => {
+        if (isLoading || isOnboarding) return;
         if (!settings?.onboardingComplete) {
             Logger.info('SafetyGate: onboarding incomplete, redirecting');
             router.replace('/onboarding');
         }
-    }, [isLoading, settings?.onboardingComplete, router]);
+    }, [isLoading, isOnboarding, settings?.onboardingComplete, router]);
+
+    if (isOnboarding) {
+        return <>{children}</>;
+    }
 
     if (isLoading) {
         return null;

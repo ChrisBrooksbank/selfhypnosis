@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useLiveQuery } from '@hooks/useDexieQuery';
 
 import { db } from '@lib/db';
 import { Logger } from '@utils/logger';

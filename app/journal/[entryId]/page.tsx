@@ -1,8 +1,7 @@
 import { JournalEntryView } from '@components/journal/JournalEntryView';
 
 export function generateStaticParams() {
-    // Entry IDs are runtime UUIDs stored in IndexedDB.
-    // A placeholder is exported so the static build succeeds; real navigation is client-side.
+    // A placeholder so the static build succeeds; real navigation is client-side.
     return [{ entryId: 'placeholder' }];
 }
 

@@ -424,7 +424,7 @@ export class SessionEngine {
         );
 
         db.sessions
-            .add({
+            .put({
                 id: cfg.sessionId,
                 startedAt: new Date().toISOString(),
                 type: cfg.type ?? 'custom',

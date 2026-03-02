@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { useLiveQuery } from 'dexie-react-hooks';
+import { useLiveQuery } from '@hooks/useDexieQuery';
 
 import { PageHeader } from '@components/layout/PageHeader';
 import { Statistics } from '@components/settings/Statistics';
