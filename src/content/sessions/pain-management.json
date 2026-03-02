@@ -1,0 +1,188 @@
+{
+    "id": "pain-management",
+    "name": "Pain Management",
+    "description": "A guided session using visualisation, breathing, and autogenic techniques to reduce discomfort and change your relationship with pain. Includes the glove anaesthesia technique and pain dial metaphor.",
+    "goalArea": "pain",
+    "difficulty": "intermediate",
+    "estimatedMinutes": 25,
+    "techniquesUsed": ["visualisation", "breathing", "autogenic"],
+    "phases": {
+        "preparation": {
+            "durationMinutes": 3,
+            "segments": [
+                {
+                    "text": "Find a comfortable position — sitting or lying down — where you won't be disturbed. Let your hands rest gently in your lap or at your sides. Close your eyes when you feel ready.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Take a moment to acknowledge any discomfort you are currently experiencing. You don't need to fight it or push it away — simply notice it, as if from a little distance. You are the observer.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Set your intention for this session: to allow your mind to work with your body, to create comfort, ease, and a sense of control. Your mind has remarkable abilities that you are about to explore.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Begin to notice your breathing. Allow each inhale to bring in calm and ease. Allow each exhale to carry away a little tension. There is nothing you need to do right now except breathe and listen.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "Let's begin with a simple breathing pattern. Inhale slowly through your nose for a count of four: one… two… three… four.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Hold gently for four counts: one… two… three… four. A comfortable pause — no effort, no strain.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Now exhale slowly through your mouth for a count of six: one… two… three… four… five… six. With every exhale, feel your body soften a little more.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Continue this pattern. Breathe in for four… hold for four… breathe out for six. Each breath cycle takes you deeper into a state of calm and ease.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "Now we'll add autogenic warmth. Turn your attention to your dominant hand. Begin to imagine — just imagine — a gentle warmth spreading through your palm and fingers.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "As you continue to breathe slowly, allow that warmth to grow. Silently repeat to yourself: my hand is warm and heavy. My hand is warm and heavy.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Allow the warmth and heaviness to spread up your arm. My arm is warm and heavy. My whole body is beginning to feel pleasantly warm and deeply relaxed.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Continue breathing gently as this warm, heavy relaxation spreads through your chest, your back, your legs. Your whole body is settling into a safe, supported stillness.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 4,
+            "segments": [
+                {
+                    "text": "In a moment I will count from ten down to one. With each number, you will drift twice as deep — into a state of profound calm and receptiveness.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Imagine yourself standing before a beautiful garden gate. Beyond it lies a garden of perfect peace — soft grass, gentle light, the sound of water somewhere nearby. The gate opens effortlessly.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Ten — stepping through the gate, feeling wonderfully relaxed. Nine — walking slowly along a soft path, all tension releasing. Eight — surrounded by beauty, sinking deeper.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Seven — deeper and deeper. Six — so comfortable, so at ease. Five — halfway there, completely safe and calm.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Four — drifting beautifully. Three — almost at the centre of this peaceful garden. Two — nearly there, profoundly relaxed.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "One — you arrive at a beautiful resting place at the heart of the garden. You are deeply, perfectly relaxed. Your mind is open, receptive, and calm.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "From this deep, peaceful state, your mind is ready to do its remarkable work. Every suggestion you hear will take root easily and naturally.",
+                    "durationSeconds": 25
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 9,
+            "segments": [
+                {
+                    "text": "Bring your attention to your dominant hand once more. Notice the warmth that is already there. Now imagine that warmth intensifying — as if you have placed your hand near a gentle, healing heat source.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "As the warmth deepens, imagine your hand beginning to feel different — a pleasant numbness, like the feeling after a dentist's anaesthetic, spreading through your palm and fingers.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "This is the glove anaesthesia. Imagine sliding on an invisible glove of comfort and numbness. Your hand feels less sensitive, more muffled — comfortable, protected, at ease.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now, gently place this anaesthetic hand over the area of your body where you feel discomfort. As your hand rests there, imagine that comfortable numbness flowing from your palm into that area.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "The healing warmth and numbness spread beneath your hand like a gentle wave. The area softens, relaxes, and becomes more comfortable with every slow breath you take.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now visualise a dial — like a volume dial on a radio. This is your pain dial. Notice what number it is currently showing. Simply observe, without judgment.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "You have the ability to turn this dial. Imagine reaching out and slowly, carefully turning it down by one notch. Feel the shift as the intensity eases slightly.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Turn it down another notch. With each exhale, the dial turns a little further. You are in control. Your mind and body are working together to create more comfort.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now imagine a soft, golden healing light entering your body with each inhale. This light is warm and soothing. It flows towards any area of tension or discomfort.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "The healing light surrounds the discomfort gently, like a warm embrace. It does not fight or struggle — it simply softens, soothes, and transforms the sensation.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "I am calm and in control of my experience. My mind has the power to change how I experience sensation. With each practice, this becomes easier and more natural.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "I am more than my pain. I move through discomfort with grace and ease. My body is healing and restoring itself with every breath I take.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Spend a few moments resting in this healing space. The pain dial rests at a comfortable setting. The healing light continues its gentle, restorative work. You are safe and well.",
+                    "durationSeconds": 60
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 3,
+            "segments": [
+                {
+                    "text": "In a moment I will count from one to five. With each number you will become more aware and alert, bringing this sense of comfort and control back with you into full waking awareness.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "One — beginning to return, carrying the healing warmth and calm with you. The pain dial remains at its comfortable setting.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Two — becoming more aware of your surroundings, feeling rested and centred. You remember how to reach this state whenever you need it.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Three — halfway back now, feeling refreshed and capable. Your mind knows it can return to this peaceful, comfortable place at any time.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Four — almost fully awake, feeling alert and comfortable, with a pleasant sense of ease throughout your body.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Five — eyes open, fully awake and alert, feeling well. Take a moment to stretch gently if you wish. You have given yourself something truly valuable today.",
+                    "durationSeconds": 30
+                }
+            ]
+        }
+    }
+}
