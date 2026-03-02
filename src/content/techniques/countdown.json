@@ -1,0 +1,48 @@
+{
+    "id": "countdown",
+    "name": "Countdown Deepening",
+    "tagline": "Count your way deeper — each number carries you further into trance",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "performance"],
+    "overview": "Countdown deepening is one of the most versatile and widely used deepening techniques in self-hypnosis. Rather than inducing the initial trance state, it is typically used after an induction to progressively deepen the level of relaxation and focus.\n\nEach number in the countdown acts as a verbal anchor, carrying a suggestion of going deeper with it. Paired with slow breathing or a visualised descent — a staircase, an elevator, a path into a forest — the countdown creates a reliable, repeatable route into deeper trance. With practice, the counting itself becomes a conditioned cue that the mind associates with relaxation, making subsequent sessions easier and faster.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Begin after your induction. Sit or lie comfortably with your eyes closed. Take three slow, deep breaths. With each exhale, let your body soften a little more.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 2,
+            "instruction": "Choose a visualisation to accompany your count — a staircase descending into a peaceful place, an elevator moving gently downward, or simply the sense of sinking comfortably deeper into your chair or bed.",
+            "duration": "30 seconds"
+        },
+        {
+            "number": 3,
+            "instruction": "Begin counting slowly from 10 down to 1. With each number, say silently: \"Ten... going deeper... Nine... more relaxed...\" Pause between each number to allow the suggestion to settle.",
+            "duration": "2–3 minutes"
+        },
+        {
+            "number": 4,
+            "instruction": "Pair each number with your exhale. As you breathe out, release a little more tension. Feel as though each breath carries you one step further into your chosen visualisation.",
+            "duration": "2–3 minutes"
+        },
+        {
+            "number": 5,
+            "instruction": "When you reach \"One,\" suggest to yourself: \"Deeply relaxed, peaceful, and focused. Any sounds around me simply help me go deeper.\" Rest here for your suggestion phase.",
+            "duration": "30 seconds"
+        },
+        {
+            "number": 6,
+            "instruction": "To emerge, reverse the process. Count slowly upward from 1 to 5: \"One... beginning to return... Three... feeling refreshed... Five... eyes open, wide awake.\" Take your time and reorient gently."
+        }
+    ],
+    "scienceBlurb": "The countdown technique works through a combination of conditioned expectation and the psychophysiology of focused attention. Repetitive, rhythmic counting occupies the verbal-analytical mind — quieting the inner monologue — while the paired suggestion of deepening recruits the ideomotor response, where focused expectation shapes physical and mental experience.\n\nNeuroimaging studies show that hypnotic depth correlates with reduced activity in the default mode network and increased synchrony in frontal theta rhythms (4–8 Hz). The structured, graduated nature of counting may facilitate this shift incrementally: each number steps the nervous system one stage further from alert, outward-focused beta-wave activity toward the relaxed, inwardly absorbed theta state associated with effective hypnosis.\n\nThe technique's effectiveness is enhanced through repetition. With regular practice, the counting sequence becomes a conditioned stimulus — the brain learns to associate the numbers with trance — allowing experienced practitioners to enter deep states in seconds rather than minutes.",
+    "citations": [
+        "Yapko, M.D. (2012). Trancework: An Introduction to the Practice of Clinical Hypnosis (4th ed.). Routledge.",
+        "Jensen, M.P. et al. (2024). Neuroimaging of hypnosis: A systematic review of functional brain changes. Clinical Psychology Review.",
+        "Elkins, G., Barabasz, A., Council, J. & Spiegel, D. (2015). Advancing research and practice: The revised APA Division 30 definition of hypnosis. International Journal of Clinical and Experimental Hypnosis, 63(1), 1–9.",
+        "Hammond, D.C. (Ed.) (1990). Handbook of Hypnotic Suggestions and Metaphors. W.W. Norton.",
+        "Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). Handbook of Clinical Hypnosis. American Psychological Association."
+    ],
+    "relatedTechniques": ["eye-fixation", "breathing", "visualisation"]
+}
