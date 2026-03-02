@@ -45,3 +45,25 @@ export interface Technique {
     citations: string[];
     relatedTechniques: TechniqueId[];
 }
+
+export interface SessionSegment {
+    text: string;
+    durationSeconds: number;
+    audioTrackId?: string;
+}
+
+export interface SessionPhase {
+    durationMinutes: number;
+    segments: SessionSegment[];
+}
+
+export interface GuidedSession {
+    id: string;
+    name: string;
+    description: string;
+    goalArea: GoalArea;
+    difficulty: 'beginner' | 'intermediate' | 'advanced';
+    estimatedMinutes: number;
+    techniquesUsed: TechniqueId[];
+    phases: Record<PhaseId, SessionPhase>;
+}
