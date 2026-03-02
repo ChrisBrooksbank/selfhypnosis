@@ -110,7 +110,7 @@
 
 ### UI Components
 
-- [ ] Create `src/components/session/SessionLauncher.tsx` — card grid of available sessions; shows name, goal, difficulty, duration, techniques; launch button creates `SessionRecord` and navigates to `/session/[sessionId]`; disabled for `riskLevel === 'red'`. See specs/guided-sessions.md.
+- [x] Create `src/components/session/SessionLauncher.tsx` — card grid of available sessions; shows name, goal, difficulty, duration, techniques; launch button creates `SessionRecord` and navigates to `/session/[sessionId]`; disabled for `riskLevel === 'red'`. See specs/guided-sessions.md.
 - [ ] Create `src/components/session/SessionSummary.tsx` — post-session screen with depth rating (1-5), mood before/after (1-5), optional notes; saves to `SessionRecord` in IndexedDB; prompt to continue to journal. See specs/guided-sessions.md.
 
 ### Pages
