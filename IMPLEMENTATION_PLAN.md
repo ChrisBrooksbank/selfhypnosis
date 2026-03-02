@@ -50,7 +50,7 @@
 
 ## Phase 1 — Safety & Onboarding (See specs/safety-onboarding.md)
 
-- [ ] Create `src/hooks/useOnboardingStatus.ts` — reads `settings` table; returns `{ isComplete, hasContraindication, riskLevel }` using `useLiveQuery`. See specs/safety-onboarding.md.
+- [x] Create `src/hooks/useOnboardingStatus.ts` — reads `settings` table; returns `{ isComplete, hasContraindication, riskLevel }` using `useLiveQuery`. See specs/safety-onboarding.md.
 - [ ] Create `src/components/onboarding/WelcomeSlide.tsx` — intro screen with myth-busting bullets and "Get Started" button. See specs/safety-onboarding.md.
 - [ ] Create `src/components/onboarding/ContraindicationForm.tsx` — 6 yes/no questions with explanations; submit enabled only when all answered. See specs/safety-onboarding.md.
 - [ ] Create `src/components/onboarding/SafetyAcknowledgement.tsx` — single checkbox acknowledgement; "Complete Setup" enabled only when checked. See specs/safety-onboarding.md.
