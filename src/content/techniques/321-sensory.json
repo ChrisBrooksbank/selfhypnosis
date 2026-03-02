@@ -1,0 +1,59 @@
+{
+    "id": "321-sensory",
+    "name": "3-2-1 Sensory Awareness",
+    "tagline": "Narrow your focus from the world outside to the world within — three senses at a time",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "focus-performance", "sleep"],
+    "overview": "The 3-2-1 Sensory Awareness technique — also known as the Betty Erickson method — uses a structured narrowing of external sensory attention to gently guide awareness inward. Named after the wife of influential hypnotherapist Milton Erickson, it works by systematically reducing the number of things you consciously notice in your environment: three sights, three sounds, three physical sensations, then two of each, then one.\n\nThis progressive narrowing occupies the analytical mind with a simple, absorbing task while simultaneously loosening its grip on external reality. By the time you reach the final round, attention has naturally shifted from the outer world to inner experience — a classic trance gateway. The technique requires no props, no special environment, and no prior experience, making it one of the most accessible induction methods available.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Sit or lie comfortably. Keep your eyes open for now. Take a slow breath in, and as you exhale, allow your body to soften slightly.",
+            "duration": "30 seconds"
+        },
+        {
+            "number": 2,
+            "instruction": "Round of 3 — SIGHT: Look around and notice three things you can see. Don't analyse them; simply acknowledge each one with a silent word or phrase (\"the lamp\", \"the ceiling\", \"my hands\"). Take your time between each.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 3,
+            "instruction": "Round of 3 — SOUND: Now notice three things you can hear. They may be near or far, loud or subtle — a passing car, your own breathing, distant voices. Simply acknowledge each one without judgement.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 4,
+            "instruction": "Round of 3 — FEELING: Notice three physical sensations in your body — the weight of your body against the surface, the temperature of the air, the feeling of your clothes against your skin. Acknowledge each one gently.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 5,
+            "instruction": "Round of 2: Repeat the process with two things for each sense — two things you see, two things you hear, two physical sensations you feel. Move at a slower, more relaxed pace this time.",
+            "duration": "2 minutes"
+        },
+        {
+            "number": 6,
+            "instruction": "Round of 1: Notice just one thing you can see, one thing you can hear, one thing you feel. Let your awareness rest on each one fully before moving on.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 7,
+            "instruction": "Now close your eyes. Repeat the 3-2-1 rounds using imagined or internal sensory experiences — things you can visualise, sounds in your mind's ear, inner bodily sensations. Allow yourself to drift deeper with each round.",
+            "duration": "3–5 minutes"
+        },
+        {
+            "number": 8,
+            "instruction": "Rest in this inward-focused state. Your conscious mind has stepped back; you are in a receptive, relaxed state of awareness. Remain here as long as you wish, or introduce a suggestion now. To emerge, count slowly from 1 to 5, feeling more alert with each number.",
+            "duration": "2–5 minutes"
+        }
+    ],
+    "scienceBlurb": "The 3-2-1 method works through the principle of attentional absorption — directing focused, non-judgemental awareness to specific sensory channels until the default-mode network (the brain's \"background chatter\" system) quietens. This is closely related to the mindfulness concept of \"grounding\", which has a strong evidence base for reducing anxiety and emotional reactivity.\n\nFrom a neurological perspective, the structured narrowing of attention from three items down to one mirrors classic hypnotic induction patterns: engaging the prefrontal cortex with a simple task while progressively reducing sensory input until the brain transitions toward theta-wave activity (4–8 Hz) — the frequency associated with hypnotic trance, deep relaxation, and enhanced suggestibility.\n\nThe internal phase of the technique (repeating the rounds with imagined senses) leverages the well-documented overlap between perception and imagination in the brain. Neuroimaging studies show that imagining a sensory stimulus activates many of the same neural circuits as actually perceiving it, effectively deepening the inward focus and dissociation from external reality that characterises trance.",
+    "citations": [
+        "Barabasz, A. & Watkins, J.G. (2005). Hypnotherapeutic Techniques (2nd ed.). Brunner-Routledge.",
+        "Elkins, G., Barabasz, A., Council, J. & Spiegel, D. (2015). Advancing research and practice: The revised APA Division 30 definition of hypnosis. International Journal of Clinical and Experimental Hypnosis, 63(1), 1–9.",
+        "Zeidan, F. et al. (2011). Brain mechanisms supporting the modulation of pain by mindfulness meditation. Journal of Neuroscience, 31(14), 5540–5548.",
+        "Yapko, M.D. (2012). Trancework: An Introduction to the Practice of Clinical Hypnosis (4th ed.). Routledge.",
+        "Spiegel, D. et al. (2000). Hypnotic alteration of somatosensory perception. American Journal of Psychiatry, 157(8), 1279–1284."
+    ],
+    "relatedTechniques": ["breathing", "eye-fixation", "countdown"]
+}
