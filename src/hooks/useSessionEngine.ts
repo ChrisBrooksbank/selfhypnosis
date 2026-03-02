@@ -2,12 +2,15 @@
  * useSessionEngine — React wrapper around the SessionEngine state machine.
  *
  * Returns reactive state synced from engine events, plus bound action methods.
+ * Also detects interrupted sessions (started but not completed) on mount.
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { SessionEngine, type EngineSnapshot, type SessionConfig } from '@lib/session/engine';
+import { db, type SessionRecord } from '@lib/db';
 import type { PhaseId } from '@/types';
+import { Logger } from '@utils/logger';
 
 export interface SessionEngineState {
     phase: PhaseId | null;
@@ -16,6 +19,7 @@ export interface SessionEngineState {
     totalElapsed: number;
     isRunning: boolean;
     isPaused: boolean;
+    interruptedSession: SessionRecord | null;
 }
 
 export interface UseSessionEngineReturn extends SessionEngineState {
@@ -24,9 +28,13 @@ export interface UseSessionEngineReturn extends SessionEngineState {
     pause: () => void;
     resume: () => void;
     stop: () => void;
+    discardInterrupted: () => Promise<void>;
 }
 
-function snapshotToState(snapshot: EngineSnapshot): SessionEngineState {
+function snapshotToState(
+    snapshot: EngineSnapshot,
+    interruptedSession: SessionRecord | null
+): SessionEngineState {
     return {
         phase: snapshot.phase,
         timeRemaining: snapshot.timeRemaining,
@@ -34,6 +42,7 @@ function snapshotToState(snapshot: EngineSnapshot): SessionEngineState {
         totalElapsed: snapshot.totalElapsed,
         isRunning: snapshot.isRunning,
         isPaused: snapshot.isPaused,
+        interruptedSession,
     };
 }
 
@@ -44,6 +53,7 @@ const INITIAL_STATE: SessionEngineState = {
     totalElapsed: 0,
     isRunning: false,
     isPaused: false,
+    interruptedSession: null,
 };
 
 export function useSessionEngine(): UseSessionEngineReturn {
@@ -54,13 +64,44 @@ export function useSessionEngine(): UseSessionEngineReturn {
     }
 
     const [state, setState] = useState<SessionEngineState>(INITIAL_STATE);
+    const interruptedSessionRef = useRef<SessionRecord | null>(null);
+
+    // Detect interrupted sessions on mount
+    useEffect(() => {
+        let cancelled = false;
+
+        db.sessions
+            .filter(s => !s.completedAt && !s.interruptedAt)
+            .first()
+            .then(record => {
+                if (cancelled) return;
+                const interrupted = record ?? null;
+                interruptedSessionRef.current = interrupted;
+                if (interrupted) {
+                    Logger.info(
+                        `Interrupted session detected: ${interrupted.id} (started ${interrupted.startedAt})`
+                    );
+                }
+                setState(prev => ({ ...prev, interruptedSession: interrupted }));
+            })
+            .catch(err => {
+                if (cancelled) return;
+                Logger.error('Failed to check for interrupted sessions', err);
+            });
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
     useEffect(() => {
         const engine = engineRef.current;
         if (engine === null) return;
 
         const unsubscribe = engine.on(event => {
-            setState(snapshotToState(event));
+            setState(prev =>
+                snapshotToState(event, interruptedSessionRef.current ?? prev.interruptedSession)
+            );
         });
 
         return unsubscribe;
@@ -86,5 +127,21 @@ export function useSessionEngine(): UseSessionEngineReturn {
         engineRef.current?.stop();
     }, []);
 
-    return { ...state, start, skip, pause, resume, stop };
+    const discardInterrupted = useCallback(async () => {
+        const interrupted = interruptedSessionRef.current;
+        if (!interrupted) return;
+
+        try {
+            await db.sessions.update(interrupted.id, {
+                interruptedAt: new Date().toISOString(),
+            });
+            interruptedSessionRef.current = null;
+            setState(prev => ({ ...prev, interruptedSession: null }));
+            Logger.info(`Interrupted session discarded: ${interrupted.id}`);
+        } catch (err) {
+            Logger.error('Failed to discard interrupted session', err);
+        }
+    }, []);
+
+    return { ...state, start, skip, pause, resume, stop, discardInterrupted };
 }
