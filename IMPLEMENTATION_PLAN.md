@@ -155,7 +155,7 @@
 
 - [x] Add `CustomSuggestion` type to `src/types/index.ts` (id, goalArea, text, score, tags, isFavourite, usageCount, createdAt). See specs/suggestion-builder.md.
 - [x] Create `src/lib/suggestions/validator.ts` — heuristic checks: positive framing (negation regex), present tense (future-tense regex), specificity (word count < 4); returns per-criteria pass/fail + numeric score 0-5. See specs/suggestion-builder.md.
-- [ ] Create `src/components/suggestions/GoalAreaPicker.tsx` — 8 goal areas as large tap targets with icons; one required. See specs/suggestion-builder.md.
+- [x] Create `src/components/suggestions/GoalAreaPicker.tsx` — 8 goal areas as large tap targets with icons; one required. See specs/suggestion-builder.md.
 - [ ] Create `src/components/suggestions/SuggestionEditor.tsx` — textarea; example chips per goal area (chips insert text); optional `SpeechRecognition` voice input (hidden if unsupported). See specs/suggestion-builder.md.
 - [ ] Create `src/components/suggestions/GuidelineChecklist.tsx` — 5 criteria with pass/fail indicators; user toggles for "believable" and "emotionally engaging"; star score display; save disabled below score 3. See specs/suggestion-builder.md.
 - [ ] Create `src/components/suggestions/SuggestionPreview.tsx` — session-styled text preview; tags input; favourite toggle; save button → writes `CustomSuggestion` to IndexedDB. See specs/suggestion-builder.md.
