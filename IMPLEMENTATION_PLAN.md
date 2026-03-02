@@ -41,7 +41,7 @@
 - [x] Create `app/session/page.tsx` — placeholder layout (session launcher). See specs/pwa-shell.md.
 - [x] Create `app/session/[sessionId]/page.tsx` — placeholder full-screen layout. See specs/pwa-shell.md.
 - [x] Create `app/suggestions/page.tsx` — placeholder layout. See specs/pwa-shell.md.
-- [ ] Create `app/suggestions/builder/page.tsx` — placeholder layout. See specs/pwa-shell.md.
+- [x] Create `app/suggestions/builder/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [ ] Create `app/journal/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [ ] Create `app/journal/[entryId]/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [ ] Create `app/settings/page.tsx` — placeholder layout. See specs/pwa-shell.md.
