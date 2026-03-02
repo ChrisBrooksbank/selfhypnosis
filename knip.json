@@ -16,7 +16,6 @@
         "entry": ["next.config.{js,ts,mjs}", "app/**/*.{ts,tsx}"]
     },
     "ignoreDependencies": [
-        "dexie",
         "dexie-react-hooks",
         "@testing-library/jest-dom",
         "@testing-library/react",

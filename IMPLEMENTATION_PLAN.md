@@ -17,7 +17,7 @@
 
 ### Dexie Database
 
-- [ ] Create `src/lib/db.ts` — Dexie v4 database with tables: `settings`, `sessions`, `suggestions`, `journal`; add TypeScript entity types (`UserSettings`, `SessionRecord`, `CustomSuggestion`, `JournalEntry`) and schema v1. See specs/pwa-shell.md, specs/settings-notifications.md.
+- [x] Create `src/lib/db.ts` — Dexie v4 database with tables: `settings`, `sessions`, `suggestions`, `journal`; add TypeScript entity types (`UserSettings`, `SessionRecord`, `CustomSuggestion`, `JournalEntry`) and schema v1. See specs/pwa-shell.md, specs/settings-notifications.md.
 
 ### PWA Manifest & Service Worker
 
