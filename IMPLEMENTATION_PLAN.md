@@ -94,7 +94,7 @@
 - [x] Add interrupted session detection: on app mount check IndexedDB for records with non-null `startedAt` and null `completedAt`; expose via `useSessionEngine`. See specs/session-engine.md.
 - [x] Create `src/components/session/ScriptDisplay.tsx` — typewriter reveal (character-by-character); fades to low opacity after 8 seconds; auto-advances segments. See specs/session-engine.md.
 - [x] Create `src/components/session/PhaseTimer.tsx` — circular/linear progress indicator; phase name + MM:SS countdown; animated phase transition. See specs/session-engine.md.
-- [ ] Create `src/components/session/PhaseDisplay.tsx` — 5-phase stepper bar; current phase highlighted; completed phases marked. See specs/session-engine.md.
+- [x] Create `src/components/session/PhaseDisplay.tsx` — 5-phase stepper bar; current phase highlighted; completed phases marked. See specs/session-engine.md.
 - [ ] Implement `app/session/[sessionId]/page.tsx` — full-screen layout (hides bottom nav); renders `PhaseDisplay`, `PhaseTimer`, `ScriptDisplay`; skip button (hidden during emergence); pause/resume button; emergency exit button (jumps to emergence). See specs/session-engine.md.
 
 ---
