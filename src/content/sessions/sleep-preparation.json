@@ -1,0 +1,160 @@
+{
+    "id": "sleep-preparation",
+    "name": "Sleep Preparation",
+    "description": "A gentle session designed to help you drift into deep, restful sleep using autogenic training, progressive relaxation, and soothing cloud imagery.",
+    "goalArea": "sleep",
+    "difficulty": "beginner",
+    "estimatedMinutes": 20,
+    "techniquesUsed": ["autogenic", "pmr", "countdown"],
+    "phases": {
+        "preparation": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Lie down in your bed and allow yourself to settle into a comfortable position. You don't need to do anything or go anywhere. The only thing left on your agenda tonight is sleep.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Gently close your eyes. Take a slow breath in through your nose, and let it out softly through your mouth. With that exhale, let go of the day — every thought, every task, every worry. They will still be there tomorrow. Right now, sleep is the only thing that matters.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Notice the weight of your body against the mattress. Feel the pillow supporting your head. The sheets feel just right. Everything around you is quiet and calm.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "This moment is yours. There is no hurry. You are safe, comfortable, and free to drift into deep, healing sleep.",
+                    "durationSeconds": 30
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 7,
+            "segments": [
+                {
+                    "text": "We will begin with autogenic training — a gentle practice of giving your body simple, soothing instructions. Allow each phrase to sink in at your own pace, without effort.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "My right arm is heavy. My right arm is heavy and warm. Feel the pleasant weight spreading through your arm, from shoulder to fingertips.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My left arm is heavy. My left arm is heavy and warm. Both arms feel pleasantly heavy, sinking deeper into the mattress.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My right leg is heavy. My right leg is heavy and warm. My left leg is heavy. My left leg is heavy and warm. Your legs feel wonderfully weighted and relaxed.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "My arms and legs are heavy and warm. My whole body is beginning to feel delightfully heavy — not uncomfortable, but like a warm, gentle weight settling you deeper and deeper into the bed.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "My heartbeat is calm and regular. My heartbeat is calm and regular. Simply notice the steady, reliable rhythm of your heart — beating gently, keeping you safe, inviting you toward sleep.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "My breathing is slow and easy. My breathing is slow and easy. Each breath comes and goes effortlessly, like gentle waves lapping at a quiet shore.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My solar plexus is warm. Deep in your abdomen, there is a warm, glowing feeling — like a gentle warmth spreading outward through your entire body.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My forehead is cool and clear. Your mind grows calm and still. Thoughts slow down, becoming soft and distant, like sounds heard from far away.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 5,
+            "segments": [
+                {
+                    "text": "Now let a wave of deep relaxation begin at the very top of your head. Feel your scalp soften. Your forehead smooths. Your eyelids feel wonderfully heavy, as though weighted with sleep.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "The relaxation flows into your face — your cheeks, your jaw. Let your jaw hang slightly loose. Your mouth may open just a little. That's perfectly fine.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Down through your neck and shoulders — feel any last traces of tension simply dissolve. Your shoulders sink back and down. Your neck feels long and comfortable.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "The wave continues through your chest and upper back. Feel your chest rise and fall with each slow breath. Your back is fully supported, completely at ease.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Down through your abdomen, lower back, and hips. Feel yourself sinking ever deeper into the mattress — every muscle releasing, every cell resting.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Down through your thighs, knees, calves. Your legs feel wonderfully heavy and warm. Ankles, feet, toes — all releasing, all at rest.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Your whole body is now deeply, completely relaxed. You are drifting into a place just between waking and sleep — that beautiful, soft boundary where rest begins.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "I will count down from ten to one. With each number, you drift a little deeper, a little closer to the edge of sleep. Ten… nine… drifting… eight… seven… so comfortable… six… five… almost there… four… three… so sleepy… two… one. Deep, beautiful rest.",
+                    "durationSeconds": 60
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 4,
+            "segments": [
+                {
+                    "text": "Imagine you are lying in a soft, warm cloud. This cloud holds you perfectly — like the gentlest hammock in the world. The cloud is exactly the right temperature. Everything is perfectly still.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Your cloud drifts slowly through a dark, peaceful sky. Below, the world carries on — but it is very far away and very quiet. Up here, there is only peace and darkness and rest.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Allow these words to settle softly into your mind, like snowflakes settling on still water: I drift into deep, restful sleep. Sleep comes easily and naturally to me.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My mind quiets naturally when I lie down. I release the day with ease. I trust my body to rest and restore itself through the night.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "I sleep deeply and peacefully through the night. I wake feeling fully rested, refreshed, and renewed. Sleep is a safe and natural state for me.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Your cloud drifts on. The sky is dark and quiet. Your breathing slows even further. Your thoughts grow softer, vaguer, like half-remembered dreams.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "There is nothing to do, nothing to think about, nothing to solve. Simply rest. Simply let go. Simply drift. Sleep is coming to meet you now.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "This session is now complete. There is no need to rouse yourself fully — you are free to drift directly into sleep from this comfortable, relaxed state.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Simply let your awareness fade gently, like a candle flame slowly dimming. Your body knows what to do next. Sleep is natural. Sleep is safe. Sleep is here.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Rest well. Good night.",
+                    "durationSeconds": 15
+                }
+            ]
+        }
+    }
+}
