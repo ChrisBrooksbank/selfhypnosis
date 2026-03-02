@@ -105,7 +105,7 @@
 
 - [x] Add `GuidedSession` type to `src/types/index.ts` matching the session JSON schema (id, name, description, goalArea, difficulty, estimatedMinutes, techniquesUsed, phases). See specs/guided-sessions.md.
 - [x] Create `src/content/sessions/beginner-relaxation.json` — full 5-phase script for beginner relaxation (~20 min); techniques: breathing, pmr, visualisation. See specs/guided-sessions.md.
-- [ ] Create `src/content/sessions/stress-relief.json` — full 5-phase script for stress relief (~25 min); techniques: breathing, 321-sensory, visualisation. See specs/guided-sessions.md.
+- [x] Create `src/content/sessions/stress-relief.json` — full 5-phase script for stress relief (~25 min); techniques: breathing, 321-sensory, visualisation. See specs/guided-sessions.md.
 - [ ] Create `src/content/sessions/sleep-preparation.json` — full 5-phase script for sleep (~20 min); techniques: autogenic, pmr, countdown; shortened emergence (2 min). See specs/guided-sessions.md.
 
 ### UI Components

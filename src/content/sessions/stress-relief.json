@@ -1,0 +1,172 @@
+{
+    "id": "stress-relief",
+    "name": "Stress Relief",
+    "description": "Release stress and restore calm using the 3-2-1 sensory awareness technique, rhythmic breathing, and soothing visualisation. Ideal when you feel overwhelmed or anxious.",
+    "goalArea": "stress-anxiety",
+    "difficulty": "beginner",
+    "estimatedMinutes": 25,
+    "techniquesUsed": ["breathing", "321-sensory", "visualisation"],
+    "phases": {
+        "preparation": {
+            "durationMinutes": 3,
+            "segments": [
+                {
+                    "text": "Find a comfortable position — sitting or lying down — in a quiet place where you won't be disturbed. Let your hands rest softly in your lap or at your sides. Allow your eyes to gently close.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Take a moment to acknowledge where you are right now. Perhaps you're carrying some tension, some worry, or a sense of being overwhelmed. That's okay. You don't need to push it away — simply notice it, without judgement.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now set a clear intention for this session: I am choosing to release what I do not need. I am giving myself permission to let go of stress and return to my natural state of calm.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Know that stress is simply energy — and energy can be transformed. Over the next few minutes, you will guide that energy gently out of your body and mind, leaving behind a deep and comfortable ease.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Begin to settle into your breath. Notice it moving in and out — no need to control it yet, simply feel the gentle rhythm that is already there, already carrying you toward relaxation.",
+                    "durationSeconds": 30
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 8,
+            "segments": [
+                {
+                    "text": "We'll begin with a simple awareness exercise that gently shifts your attention from the busy mind to the present moment. This is the 3-2-1 sensory technique — one of the most effective ways to ease into a relaxed, receptive state.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Keep your eyes closed and simply notice three things you can hear right now. Perhaps sounds inside the room — your own breath, a distant hum — or sounds from outside. Name them silently to yourself. Just listen.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now notice three things you can feel physically — the weight of your body against the chair or floor, the temperature of the air on your skin, the gentle pressure of your hands resting somewhere. Simply feel.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Good. Now notice two things you can hear. Let your listening become softer, more effortless — as if the sounds are washing over you like warm water.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Notice two things you can feel — perhaps a subtle warmth in your hands or face, the steady, reassuring weight of your own body at rest. Two sensations. Just feel.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "And now, one sound. Perhaps the quietest sound in your environment — or perhaps the soft, rhythmic sound of your own breathing. Let your attention rest there, gently.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "One physical sensation — the steady, comfortable contact of your body being held and supported right now. Feel it completely. You are safe. You are held. There is nothing you need to do.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Your mind has naturally slowed. You have stepped away from the noise of stress and into the quiet of the present moment. From here, we continue to deepen.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Begin a slow, easy breath — in through the nose for a count of four: one… two… three… four. Hold gently for two: one… two. Then release slowly through the mouth for six: one… two… three… four… five… six.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "With each exhale, imagine the stress leaving your body — dissolving into the air around you, lighter and lighter with every breath. In for four… hold for two… out for six. Let it go.",
+                    "durationSeconds": 40
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 5,
+            "segments": [
+                {
+                    "text": "Now imagine you are standing at the edge of a calm, gently flowing river. The water moves slowly, catching the light. The air is fresh and cool. You feel completely at ease here.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "With each breath you take — slow and rhythmic — imagine the movement of the river. In… and the water flows smoothly forward. Out… and it carries everything away downstream.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Breathe in — the river flows in gently. Breathe out — the river carries away any remaining tension. Each wave of breath moves through you like water, effortless and cleansing.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "In… and you feel a soft wave of calm washing through your body from head to toe. Out… and another wave carries away anything you no longer need. Deeper and deeper with each breath.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "You are as still as the surface of a deep, quiet pool. Beneath any remaining ripples of thought, there is profound stillness — calm, clear, and undisturbed.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "In this stillness, your mind is clear, your body is at ease, and you are completely open to the healing suggestions that follow. You are deeply relaxed and beautifully calm.",
+                    "durationSeconds": 30
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 7,
+            "segments": [
+                {
+                    "text": "From this deep, peaceful place, allow these words to settle into every cell of your body, into the quiet depths of your mind, where they take root and grow stronger each day.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "I release tension with each breath I take. My body knows how to let go, and I trust that process completely. Stress flows out of me as naturally as water flows downstream.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My mind is calm and clear. Beneath the surface, I am always at peace — and I can return to that peace whenever I choose, with just a few slow, conscious breaths.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Imagine now that the river before you carries everything that has been weighing on you. Watch as your worries, your tensions, your stresses gently lift from your shoulders and float downstream — growing smaller, lighter, and further away.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "The river accepts it all without resistance. It carries everything away peacefully, making space for calm, for clarity, for ease. You watch it go and you feel lighter with each passing moment.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "I respond to challenges with clarity and composure. I am capable, resourceful, and resilient. Stress does not define me — my inner calm is my foundation.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Each time I practise this, it becomes easier. My nervous system learns to return to balance more quickly. My body remembers this feeling of ease and seeks it out naturally.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "You deserve this peace. You deserve to feel this good. Take a few quiet moments now to simply rest in the stillness — breathing slowly, feeling completely free of stress, completely at ease.",
+                    "durationSeconds": 60
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "In a moment I will count from one to five. With each number you will become gently more awake and aware, carrying with you the lightness and calm you have cultivated here.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "One — beginning to return, feeling lighter than when you arrived. Two — becoming more aware of your surroundings, rested and refreshed.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Three — halfway back, carrying a beautiful sense of peace and clarity. The stress has dissolved and in its place is a quiet, steady calm.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Four — almost fully awake, feeling clear-headed and at ease. Your body is relaxed, your mind is sharp and open.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Five — eyes open, fully awake, feeling wonderfully refreshed and lighter. Welcome back. Take a gentle breath and carry this calm with you into the rest of your day.",
+                    "durationSeconds": 30
+                }
+            ]
+        }
+    }
+}
