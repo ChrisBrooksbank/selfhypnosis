@@ -1,0 +1,54 @@
+{
+    "id": "visualisation",
+    "name": "Visualisation",
+    "tagline": "Build a vivid inner sanctuary and use it as a container for change",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "performance", "pain"],
+    "overview": "Visualisation — also called guided imagery — involves creating a detailed mental image of a peaceful, safe place. By engaging all five senses inside this inner landscape, the mind enters a state of deep absorption that both deepens trance and provides a framework for therapeutic suggestions.\n\nThe technique is highly versatile: the same mental sanctuary can be used to dissolve stress, rehearse peak performance, manage pain, or simply rest. With repeated visits, the place becomes an anchor — returning to it triggers relaxation faster each time.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Choose a setting that feels calm, safe, and personally meaningful — a beach, forest, garden, mountain meadow, or any place (real or imagined) where you feel at ease. Close your eyes and let it begin to form.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 2,
+            "instruction": "Build the visual layer first. Notice the colours, light, and shapes around you. Is it morning or afternoon? Are you indoors or outdoors? Let the scene become clear and stable.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 3,
+            "instruction": "Add sound. What do you hear? Perhaps waves, birdsong, a breeze through leaves, or distant music. Allow the sounds to feel real and three-dimensional.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 4,
+            "instruction": "Bring in physical sensation. Feel the ground or surface beneath you, the temperature of the air on your skin, a gentle breeze or warmth from sunlight. Let your body settle into the scene.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 5,
+            "instruction": "If appropriate, include scent — salt air, pine, flowers, fresh rain — and perhaps a subtle taste. The richer the sensory detail, the deeper the absorption.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 6,
+            "instruction": "Allow yourself to fully \"step into\" the place. Move through it slowly if you wish. Let any remaining tension dissolve as you explore. This is your space — safe, quiet, and entirely yours.",
+            "duration": "2–3 minutes"
+        },
+        {
+            "number": 7,
+            "instruction": "While in your sanctuary, introduce your therapeutic suggestion. For example: imagine stress washing away with each wave, visualise yourself performing with calm confidence, or feel pain dissolving like ice in warm water.",
+            "duration": "3–5 minutes"
+        }
+    ],
+    "scienceBlurb": "Visualisation works because the brain processes vividly imagined experience in ways that overlap substantially with real perception. Neuroimaging studies show that imagining a scene activates many of the same visual, auditory, and somatosensory cortical regions as actually perceiving it. This \"functional equivalence\" means a richly imagined peaceful environment genuinely reduces physiological arousal — lowering heart rate, blood pressure, cortisol, and subjective pain ratings.\n\nMental rehearsal — a specific application of visualisation — has been shown to produce measurable motor learning, improve athletic performance, and reduce pre-performance anxiety. The technique is among the most broadly applicable in the self-hypnosis repertoire: the same core skill supports stress reduction, pain management, sleep onset, and confidence building. Consistent use of a single mental place deepens the conditioned association between that imagery and the relaxation response, making induction faster over time.",
+    "citations": [
+        "Milling, L.S. et al. (2024). A comprehensive meta-analysis of hypnosis for anxiety: Clinical effectiveness and moderators. Psychological Bulletin.",
+        "Thompson, T., Terhune, D.B. & Bhatt, M. (2023). The effectiveness of hypnosis for pain relief: A comprehensive meta-analysis. Neuroscience & Biobehavioral Reviews.",
+        "Jensen, M.P. et al. (2024). Neuroimaging of hypnosis: A systematic review of functional brain changes. Clinical Psychology Review.",
+        "Kosslyn, S.M., Ganis, G. & Thompson, W.L. (2001). Neural foundations of imagery. Nature Reviews Neuroscience, 2(9), 635–642.",
+        "Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). Handbook of Clinical Hypnosis. American Psychological Association."
+    ],
+    "relatedTechniques": ["countdown", "breathing", "pmr"]
+}
