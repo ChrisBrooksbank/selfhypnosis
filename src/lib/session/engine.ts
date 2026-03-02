@@ -7,7 +7,8 @@
 
 import { IntervalManager } from '@utils/helpers';
 import { Logger } from '@utils/logger';
-import type { PhaseId } from '@/types';
+import type { GoalArea, PhaseId, TechniqueId } from '@/types';
+import { db } from '@lib/db';
 import { PHASE_CONFIG, PHASE_ORDER } from './phaseConfig';
 
 // ─── Public Types ─────────────────────────────────────────────────────────────
@@ -32,6 +33,14 @@ export interface SessionConfig {
     sessionId: string;
     /** Per-phase script overrides.  Omitted phases use phaseConfig defaults. */
     phases?: Partial<Record<PhaseId, PhaseScript>>;
+    // ── Persistence metadata ───────────────────────────────────────────────
+    type?: 'guided' | 'timer' | 'custom';
+    templateId?: string;
+    goalArea?: GoalArea;
+    techniquesUsed?: TechniqueId[];
+    /** Total planned duration in minutes. Defaults to sum of phase defaults (25 min). */
+    plannedDurationMinutes?: number;
+    suggestionIds?: string[];
 }
 
 export type EngineEventType =
@@ -172,6 +181,7 @@ export class SessionEngine {
 
         this._enterPhase(firstPhase);
         this._startInterval();
+        this._persistCreate();
     }
 
     /**
@@ -226,6 +236,7 @@ export class SessionEngine {
      */
     stop(): void {
         Logger.info('Session stopped by user');
+        this._persistInterrupted();
         this._stopInterval();
         this._isRunning = false;
         this._isPaused = false;
@@ -313,6 +324,7 @@ export class SessionEngine {
         const completed = this._currentPhase;
         this._phasesCompleted = [...this._phasesCompleted, completed];
         Logger.info(`Phase completed: ${completed}`);
+        this._persistPhaseProgress();
 
         const idx = PHASE_ORDER.indexOf(completed);
         const next = PHASE_ORDER[idx + 1];
@@ -330,6 +342,87 @@ export class SessionEngine {
         this._currentPhase = null;
         this._state = 'complete';
         Logger.info('Session complete');
+        this._persistComplete();
         this.emit('complete');
+    }
+
+    // ── Persistence helpers (fire-and-forget) ─────────────────────────────────
+
+    private _persistCreate(): void {
+        if (!this._config) return;
+        const cfg = this._config;
+
+        const defaultPlanned = PHASE_ORDER.reduce(
+            (sum, p) => sum + PHASE_CONFIG[p].defaultMinutes,
+            0
+        );
+
+        db.sessions
+            .add({
+                id: cfg.sessionId,
+                startedAt: new Date().toISOString(),
+                type: cfg.type ?? 'custom',
+                templateId: cfg.templateId,
+                goalArea: cfg.goalArea,
+                techniquesUsed: cfg.techniquesUsed ?? [],
+                plannedDurationMinutes: cfg.plannedDurationMinutes ?? defaultPlanned,
+                phasesCompleted: [],
+                suggestionIds: cfg.suggestionIds ?? [],
+            })
+            .then(() => {
+                Logger.info(`SessionRecord created: ${cfg.sessionId}`);
+            })
+            .catch((err: unknown) => {
+                Logger.error('Failed to create SessionRecord:', String(err));
+            });
+    }
+
+    private _persistPhaseProgress(): void {
+        if (!this._config) return;
+        const id = this._config.sessionId;
+        const completed = [...this._phasesCompleted];
+
+        db.sessions
+            .update(id, { phasesCompleted: completed })
+            .then(() => {
+                Logger.debug(`SessionRecord updated phasesCompleted: ${completed.join(', ')}`);
+            })
+            .catch((err: unknown) => {
+                Logger.error('Failed to update SessionRecord phases:', String(err));
+            });
+    }
+
+    private _persistComplete(): void {
+        if (!this._config) return;
+        const id = this._config.sessionId;
+        const elapsed = this._totalElapsed;
+        const completed = [...this._phasesCompleted];
+
+        db.sessions
+            .update(id, {
+                completedAt: new Date().toISOString(),
+                actualDurationSeconds: elapsed,
+                phasesCompleted: completed,
+            })
+            .then(() => {
+                Logger.info(`SessionRecord completed: ${id}`);
+            })
+            .catch((err: unknown) => {
+                Logger.error('Failed to complete SessionRecord:', String(err));
+            });
+    }
+
+    private _persistInterrupted(): void {
+        if (!this._config) return;
+        const id = this._config.sessionId;
+
+        db.sessions
+            .update(id, { interruptedAt: new Date().toISOString() })
+            .then(() => {
+                Logger.info(`SessionRecord marked interrupted: ${id}`);
+            })
+            .catch((err: unknown) => {
+                Logger.error('Failed to mark SessionRecord interrupted:', String(err));
+            });
     }
 }
