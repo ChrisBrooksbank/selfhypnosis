@@ -1,0 +1,48 @@
+{
+    "id": "pmr",
+    "name": "Progressive Muscle Relaxation",
+    "tagline": "Tense to release — systematically melt tension from head to toe",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "pain-management"],
+    "overview": "Progressive Muscle Relaxation (PMR) was developed by Edmund Jacobson in the 1930s and remains one of the most well-researched relaxation techniques available. By deliberately tensing and then releasing muscle groups throughout the body, you create a powerful contrast that deepens your awareness of physical relaxation.\n\nThe technique works by teaching your nervous system to recognise the difference between tension and release. Over time — and with practice — you can skip the tension phase entirely, simply scanning each area and willing it to relax. This makes PMR an excellent bridge between conscious effort and the effortless release of deep self-hypnosis.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Sit or lie in a comfortable position. Close your eyes and take three slow, deep breaths. Let your body settle into the surface beneath you.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 2,
+            "instruction": "Bring your attention to your feet. Curl your toes tightly and tense the muscles in both feet. Hold the tension firmly without straining.",
+            "duration": "5–7 seconds"
+        },
+        {
+            "number": 3,
+            "instruction": "Suddenly release the tension in your feet. Notice the flood of warmth and relaxation that flows in. Rest and observe the contrast for a full breath cycle.",
+            "duration": "15–20 seconds"
+        },
+        {
+            "number": 4,
+            "instruction": "Move upward through calves, thighs, abdomen, chest, hands, arms, shoulders, neck, and face — tensing each group for 5–7 seconds, then releasing for 15–20 seconds. Work at a comfortable pace.",
+            "duration": "10–15 minutes"
+        },
+        {
+            "number": 5,
+            "instruction": "Once you have passed through every muscle group, scan your body from head to toe. If any area holds residual tension, revisit it with another tense-and-release cycle.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 6,
+            "instruction": "Rest in the deep relaxation you have created. Suggest to yourself: \"My body is completely relaxed. I am calm, at ease, and ready to receive positive change.\" Allow this state to deepen with each exhale."
+        }
+    ],
+    "scienceBlurb": "PMR reduces physiological arousal by activating the parasympathetic nervous system. Research consistently shows significant reductions in cortisol, heart rate, and muscle-tension electromyography (EMG) readings following a single PMR session. The tense-and-release cycle exploits reciprocal inhibition — a spinal reflex that causes a muscle to relax more deeply after being contracted — making the relaxation response both faster and more complete than passive rest alone.\n\nIn the context of self-hypnosis, PMR serves as a highly effective induction because its physical sensations — warmth, heaviness, tingling — closely match the classic phenomenology of entering trance, reinforcing the expectation that something is happening. Clinical trials have demonstrated efficacy for generalised anxiety disorder, insomnia, chronic pain, and hypertension, and the technique is endorsed by the American Psychological Association as a first-line self-management strategy.",
+    "citations": [
+        "Jacobson, E. (1938). Progressive Relaxation. University of Chicago Press.",
+        "Conrad, A. & Roth, W.T. (2007). Muscle relaxation therapy for anxiety disorders: It works but how? Journal of Anxiety Disorders, 21(3), 243–264.",
+        "Manzoni, G.M. et al. (2008). Relaxation training for anxiety: A ten-years systematic review with meta-analysis. BMC Psychiatry, 8, 41.",
+        "Lolak, S. et al. (2008). Effects of progressive muscle relaxation training on anxiety and depression in patients enrolled in an outpatient pulmonary rehabilitation program. Psychotherapy and Psychosomatics, 77(2), 119–125.",
+        "Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). Handbook of Clinical Hypnosis. American Psychological Association."
+    ],
+    "relatedTechniques": ["breathing", "autogenic", "visualisation"]
+}
