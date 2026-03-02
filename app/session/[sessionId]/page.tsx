@@ -4,6 +4,7 @@ import { use, useCallback, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useSessionEngine } from '@hooks/useSessionEngine';
+import { AudioPlayer } from '@components/session/AudioPlayer';
 import { PhaseDisplay } from '@components/session/PhaseDisplay';
 import { PhaseTimer } from '@components/session/PhaseTimer';
 import { ScriptDisplay } from '@components/session/ScriptDisplay';
@@ -106,6 +107,11 @@ export default function SessionPlayerPage({ params }: Props) {
                 <div className="w-full max-w-sm">
                     <ScriptDisplay text={currentText} segmentIndex={segment} />
                 </div>
+            </div>
+
+            {/* Audio player — hidden automatically when no audio is available */}
+            <div className="px-6">
+                <AudioPlayer />
             </div>
 
             {/* Controls */}

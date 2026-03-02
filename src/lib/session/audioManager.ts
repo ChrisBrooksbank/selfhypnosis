@@ -158,6 +158,17 @@ export class AudioManager {
         Logger.debug('AudioManager: stopped');
     }
 
+    /** Current playback position in seconds (0 when no audio is loaded). */
+    get currentTime(): number {
+        return this._audio?.currentTime ?? 0;
+    }
+
+    /** Total duration of the current segment in seconds (0 when unknown). */
+    get duration(): number {
+        const d = this._audio?.duration;
+        return d && isFinite(d) ? d : 0;
+    }
+
     /** Returns a snapshot of the current manager state. */
     snapshot(): AudioManagerSnapshot {
         return {
