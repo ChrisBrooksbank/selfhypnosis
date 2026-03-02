@@ -36,3 +36,15 @@ next-env.d.ts
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# PWA / Serwist
+sw.js
+sw.js.map
+workbox-*.js
+workbox-*.js.map
+swe-worker-*.js
