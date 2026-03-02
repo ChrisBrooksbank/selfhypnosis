@@ -81,7 +81,7 @@
 ### Pages
 
 - [x] Implement `app/library/page.tsx` — loads all 7 technique JSON files; search input filtering by name/tagline; goal-area filter chips (multi-select intersection); responsive 2-column card grid. See specs/technique-library.md.
-- [ ] Implement `app/library/[techniqueId]/page.tsx` — full `generateStaticParams` for all 7 IDs; renders `TechniqueDetail`. See specs/technique-library.md.
+- [x] Implement `app/library/[techniqueId]/page.tsx` — full `generateStaticParams` for all 7 IDs; renders `TechniqueDetail`. See specs/technique-library.md.
 
 ---
 
