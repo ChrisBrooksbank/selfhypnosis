@@ -28,7 +28,7 @@ const eslintConfig = [
         },
     },
     {
-        ignores: ['out/', '.next/', 'coverage/', 'node_modules/', 'next-env.d.ts'],
+        ignores: ['out/', '.next/', 'coverage/', 'node_modules/', 'next-env.d.ts', 'scripts/'],
     },
 ];
 
