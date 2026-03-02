@@ -1,0 +1,49 @@
+{
+    "id": "breathing",
+    "name": "Controlled Breathing",
+    "tagline": "Breathe your way into trance — each exhale carries you deeper into calm",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "performance"],
+    "overview": "Controlled breathing is one of the most accessible and powerful self-hypnosis techniques available. It works directly with the body's autonomic nervous system: a slow, extended exhale activates the vagus nerve and the parasympathetic \"rest and digest\" response, lowering heart rate, reducing cortisol, and signalling the brain that it is safe to relax.\n\nUnlike techniques that require visualisation or physical movement, controlled breathing needs nothing beyond your own body. This makes it ideal as a standalone induction, a preparation step before other techniques, or a quick reset during stressful moments. The simple rhythm of the breath also gives the analytical mind something gentle to focus on, allowing background mental chatter to quieten naturally.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Find a comfortable position — seated with your back supported, or lying down. Close your eyes. Allow your hands to rest loosely in your lap or at your sides.",
+            "duration": "30 seconds"
+        },
+        {
+            "number": 2,
+            "instruction": "Take a slow, natural breath in through your nose. Don't force it — simply invite the breath in. Notice the air entering, the chest and belly rising gently.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 3,
+            "instruction": "Exhale slowly through your mouth, making the out-breath longer than the in-breath. Aim for an inhale of 4 counts and an exhale of 6–8 counts. Feel any tension leaving with the breath.",
+            "duration": "2–3 minutes"
+        },
+        {
+            "number": 4,
+            "instruction": "If comfortable, try a brief hold of 2–4 counts at the top of your inhale before releasing. If this feels uncomfortable, simply breathe in, then out — the hold is optional.",
+            "duration": "2–3 minutes"
+        },
+        {
+            "number": 5,
+            "instruction": "With each exhale, silently repeat a suggestion: \"With each breath out, I release tension and go deeper.\" Let the words drift through your mind without effort.",
+            "duration": "3–5 minutes"
+        },
+        {
+            "number": 6,
+            "instruction": "Remain in this rhythm for as long as you need. To emerge, allow your breathing to return to its natural pace, gently move your fingers and toes, and open your eyes when you feel ready.",
+            "duration": "1–2 minutes"
+        }
+    ],
+    "scienceBlurb": "The physiological basis of controlled breathing is well established. An extended exhale increases activation of the vagus nerve — the primary nerve of the parasympathetic nervous system — triggering a cascade of calming responses: reduced heart rate (heart rate variability increases), lower blood pressure, decreased activity in the amygdala (the brain's threat-detection centre), and reduced cortisol output.\n\nFrom a self-hypnosis perspective, the breath also functions as an attentional anchor. Directing focused awareness to the rhythm of breathing closely mirrors the concentration required for trance induction: attention narrows, external stimuli recede, and internal experience becomes vivid. EEG studies show that slow, rhythmic breathing increases frontal theta wave activity (4–8 Hz), the same neural signature associated with hypnotic trance and deep meditation.\n\nResearch on slow-paced breathing (approximately 5–6 breaths per minute, known as resonance frequency breathing) demonstrates significant effects on anxiety, pain tolerance, cardiovascular health, and mood. These benefits accumulate with regular practice, as the nervous system learns to access the relaxation response more readily.",
+    "citations": [
+        "Gerritsen, R.J.S. & Band, G.P.H. (2018). Breath of life: The respiratory vagal stimulation model of contemplative activity. Frontiers in Human Neuroscience, 12, 397.",
+        "Zaccaro, A. et al. (2018). How breath-control can change your life: A systematic review on psycho-physiological correlates of slow breathing. Frontiers in Human Neuroscience, 12, 353.",
+        "Milling, L.S. et al. (2024). A comprehensive meta-analysis of hypnosis for anxiety: Clinical effectiveness and moderators. Psychological Bulletin.",
+        "Elkins, G., Barabasz, A., Council, J. & Spiegel, D. (2015). Advancing research and practice: The revised APA Division 30 definition of hypnosis. International Journal of Clinical and Experimental Hypnosis, 63(1), 1–9.",
+        "Yapko, M.D. (2012). Trancework: An Introduction to the Practice of Clinical Hypnosis (4th ed.). Routledge."
+    ],
+    "relatedTechniques": ["countdown", "pmr", "321-sensory"]
+}

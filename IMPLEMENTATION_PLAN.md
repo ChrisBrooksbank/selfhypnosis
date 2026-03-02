@@ -68,7 +68,7 @@
 - [x] Create `src/content/techniques/pmr.json` — progressive muscle relaxation content. See specs/technique-library.md.
 - [x] Create `src/content/techniques/visualisation.json`. See specs/technique-library.md.
 - [x] Create `src/content/techniques/countdown.json`. See specs/technique-library.md.
-- [ ] Create `src/content/techniques/breathing.json`. See specs/technique-library.md.
+- [x] Create `src/content/techniques/breathing.json`. See specs/technique-library.md.
 - [ ] Create `src/content/techniques/321-sensory.json` — Betty Erickson method. See specs/technique-library.md.
 - [ ] Create `src/content/techniques/autogenic.json`. See specs/technique-library.md.
 
