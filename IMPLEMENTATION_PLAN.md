@@ -170,7 +170,7 @@
 - [x] Create `src/components/settings/Statistics.tsx` — aggregates `SessionRecord` data: total sessions, total time, average duration, most-used techniques, average depth, sessions/week. See specs/settings-notifications.md.
 - [x] Implement `app/settings/page.tsx` — default duration slider (10-45 min); preferred techniques multi-select; theme toggle (light/dark/system); notifications section; data export; clear data; `Statistics` component. See specs/settings-notifications.md.
 - [x] Implement data export: serialize all IndexedDB tables to JSON and trigger browser download via `Blob` + `URL.createObjectURL`. See specs/settings-notifications.md.
-- [ ] Implement clear data with double-confirmation dialog ("Are you sure?" → "This cannot be undone"). See specs/settings-notifications.md.
+- [x] Implement clear data with double-confirmation dialog ("Are you sure?" → "This cannot be undone"). See specs/settings-notifications.md.
 - [ ] Implement Tailwind dark mode toggle: persist `theme` to `UserSettings`; apply `dark` class to `<html>` via `useEffect`. See specs/settings-notifications.md.
 
 ---
