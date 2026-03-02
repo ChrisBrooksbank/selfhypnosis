@@ -1,0 +1,59 @@
+{
+    "id": "autogenic",
+    "name": "Autogenic Training",
+    "tagline": "Six verbal formulas that teach your body to relax on command",
+    "difficultyLevel": "intermediate",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "pain"],
+    "overview": "Autogenic Training was developed by German psychiatrist Johannes Schultz in the 1930s and refined by Wolfgang Luthe. The name means 'self-generated' — unlike passive relaxation, you actively instruct your nervous system using specific verbal formulas, training it to reproduce the physical sensations of deep relaxation on demand.\n\nThe technique consists of six standard formulas, each targeting a different physiological system: heaviness (muscular relaxation), warmth (peripheral blood flow), cardiac regulation, breathing, solar plexus warmth (abdominal relaxation), and cool forehead (cerebral relaxation). You repeat each phrase silently with 'passive concentration' — a relaxed, observational attention that notices sensations without forcing them.\n\nWith regular practice over several weeks, the body learns to respond automatically to the formulas, making Autogenic Training one of the most powerful self-regulation techniques available. It bridges the gap between conscious intention and involuntary physiological control.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Sit in a comfortable chair with your arms resting on the armrests or thighs, or lie down in a quiet space. Close your eyes. Take three slow, deep breaths and let your body settle.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 2,
+            "instruction": "Formula 1 — Heaviness. Silently repeat: \"My right arm is heavy\" six times, then \"I am at peace\" once. Move to the left arm, right leg, left leg. Feel the weight and release in each limb. Do not force the sensation — simply observe with gentle curiosity.",
+            "duration": "3–4 minutes"
+        },
+        {
+            "number": 3,
+            "instruction": "Formula 2 — Warmth. Repeat: \"My right arm is warm\" six times, then \"I am at peace\" once. Continue through the left arm, right leg, and left leg. Notice any spreading warmth or tingling as peripheral blood vessels dilate.",
+            "duration": "3–4 minutes"
+        },
+        {
+            "number": 4,
+            "instruction": "Formula 3 — Heart. Repeat: \"My heartbeat is calm and regular\" six times, then \"I am at peace\" once. Simply observe your heartbeat without trying to control it. Trust the rhythm of your body.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 5,
+            "instruction": "Formula 4 — Breathing. Repeat: \"My breathing is calm and regular — it breathes me\" six times, then \"I am at peace\" once. Allow your breathing to settle into its own natural rhythm without conscious effort.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 6,
+            "instruction": "Formula 5 — Solar Plexus. Repeat: \"My solar plexus is warm\" six times, then \"I am at peace\" once. Focus attention on the area between your navel and chest, noticing any warmth or gentle expansion.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 7,
+            "instruction": "Formula 6 — Cool Forehead. Repeat: \"My forehead is pleasantly cool\" six times, then \"I am at peace\" once. Imagine a gentle breeze or cool cloth across your brow, bringing mental clarity and calm.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 8,
+            "instruction": "Rest in the state you have achieved for as long as you wish, then use the cancellation procedure: make a fist, flex both arms firmly, take a deep breath, and open your eyes. This ensures a complete, refreshed return to full alertness.",
+            "duration": "1–2 minutes"
+        }
+    ],
+    "scienceBlurb": "Autogenic Training exerts its effects through the autonomic nervous system. The heaviness and warmth formulas produce measurable changes in peripheral blood flow (plethysmography) and muscle tension (EMG), confirming that the verbal formulas trigger genuine physiological responses rather than placebo effects. The solar plexus formula has been shown to reduce gastrointestinal motility, accounting for its effectiveness in stress-related gut disorders.\n\nLuthe's comprehensive review of over 2,000 studies found autogenic training effective for a wide range of psychosomatic conditions including anxiety, hypertension, migraine, asthma, and insomnia. A 2002 meta-analysis by Stetter and Kupper analysed 60 controlled trials and found medium-to-large effect sizes for anxiety, tension headache, mild-to-moderate hypertension, and psychosomatic disorders.\n\nThe technique is approved as a first-line treatment in several European clinical guidelines and is widely used in sports psychology for performance optimisation. The 'passive concentration' approach distinguishes it from active suggestion techniques, training the practitioner to modulate autonomic responses through observational awareness rather than effortful control.",
+    "citations": [
+        "Schultz, J.H. & Luthe, W. (1969). Autogenic Therapy (Vol. 1–6). Grune & Stratton.",
+        "Stetter, F. & Kupper, S. (2002). Autogenic training: A meta-analysis of clinical outcome studies. Applied Psychophysiology and Biofeedback, 27(1), 45–98.",
+        "Linden, W. (1994). Autogenic training: A narrative and quantitative review of clinical outcome. Biofeedback and Self-Regulation, 19(3), 227–264.",
+        "Kanji, N. & Ernst, E. (2000). Autogenic training for stress and anxiety: A systematic review. Complementary Therapies in Medicine, 8(2), 106–110.",
+        "Milling, L.S. et al. (2024). A comprehensive meta-analysis of hypnosis for anxiety: Clinical effectiveness and moderators. Psychological Bulletin."
+    ],
+    "relatedTechniques": ["pmr", "breathing", "visualisation"]
+}
