@@ -1,0 +1,164 @@
+{
+    "id": "confidence-building",
+    "name": "Confidence Building",
+    "description": "A guided session using eye-fixation induction, vivid visualisation, and an anchoring technique to build genuine confidence and mentally rehearse successful performance.",
+    "goalArea": "performance",
+    "difficulty": "intermediate",
+    "estimatedMinutes": 20,
+    "techniquesUsed": ["eye-fixation", "visualisation", "countdown"],
+    "phases": {
+        "preparation": {
+            "durationMinutes": 3,
+            "segments": [
+                {
+                    "text": "Find a comfortable seated position where your back is supported and your feet are flat on the floor. Rest your hands loosely in your lap. Allow your shoulders to settle and your jaw to soften.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Choose a specific situation in which you want to feel more confident — a presentation, a performance, a conversation, or a challenge. Hold that situation lightly in your mind for a moment.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Set your intention now: to discover and strengthen the confident version of yourself that already exists within you. This session will help you access that resource and anchor it firmly in place.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Take three slow, settling breaths. With each exhale, release any self-doubt or tension you are carrying into this session. You are ready to begin.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 5,
+            "segments": [
+                {
+                    "text": "Choose a spot to fix your gaze — a point slightly above eye level on the wall in front of you, or a small object. Focus your eyes on that point and hold your gaze steady there.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "As you hold that steady gaze, allow your breathing to slow and deepen. Keep looking at your chosen point. Notice how your eyes may already feel a little tired or heavy.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Continue to stare at that point. Your eyelids are beginning to feel heavier with each slow breath. The longer you look, the more your eyes want to close and rest.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "When your eyes feel ready to close, simply allow them to close — gently and naturally. Feel that closing as a signal of deep relaxation beginning to spread through your whole body.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "With your eyes now closed, let go of all effort. Your eyelids are so pleasantly heavy that you have no desire to open them. This heaviness is spreading downward — through your face, your neck, your shoulders.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Your arms feel heavy and relaxed. Your legs feel heavy and relaxed. Your whole body is sinking pleasantly into a state of deep, restful calm. You are safe, comfortable, and drifting deeper.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 4,
+            "segments": [
+                {
+                    "text": "I will count down from ten to one. With each number, you will drift ten times deeper into this wonderful relaxed state — calm, open, and receptive.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Ten — a wave of relaxation washes over you. Nine — sinking deeper, all tension releasing. Eight — your mind becoming quieter and more still.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Seven — deeper and deeper still. Six — so peacefully relaxed. Five — halfway, feeling wonderfully calm and at ease.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Four — drifting beautifully inward. Three — your mind clear and open. Two — almost fully deep now, profoundly relaxed.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "One — deeply, completely relaxed. Your conscious mind is quiet. Your creative, resourceful inner mind is fully awake and listening. Every word you hear will resonate easily and naturally.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "From this deeply relaxed state, you have access to your truest capabilities — your wisdom, your resilience, your natural confidence. These are real parts of you, always present, waiting to be expressed.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "Now bring to mind the situation you identified at the start. See it clearly in your imagination — the setting, the people, the context. Allow the scene to form vividly.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now step into that scene as the most confident version of yourself. Notice how this confident you stands or sits — upright, open, grounded. Notice the expression on your face — calm, focused, assured.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "Watch this confident version of you in action. See how they speak clearly and with ease. How they listen with genuine interest. How they move through the situation with natural authority.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "Now step fully into this confident self — merge with them completely. Feel what they feel: the steadiness in your chest, the clarity in your mind, the calm strength in your body.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "You perform with ease and excellence. Your mind is clear. Your words come naturally. You are fully present and completely capable. This is you — the real you — expressing yourself without limitation.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "I am calm, capable, and confident. I trust myself completely. My abilities are real and ready. Each time I enter this situation, I access this confidence naturally and easily.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Now we will create an anchor — a way to bring this confidence back instantly whenever you need it. Press your thumb and middle finger together gently on your dominant hand. Hold that pressure.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "As you hold that anchor, flood your mind with this feeling of confident performance. See the scene again at its peak. Feel the strength, the clarity, the ease. Let the feeling build as you hold that anchor.",
+                    "durationSeconds": 45
+                },
+                {
+                    "text": "The anchor is set. From now on, whenever you press your thumb and middle finger together with that same gentle pressure, this feeling of confidence will return — automatically and reliably.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Release the anchor now. Notice how good you feel — capable, grounded, and ready. This confidence belongs to you. It is not a performance — it is who you truly are.",
+                    "durationSeconds": 35
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "In a moment I will count from one to five. With each number you will become more awake and alert, carrying this deep confidence back with you fully into the waking world.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "One — beginning to return, the confidence coming with you, as natural and solid as your own heartbeat.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Two — more aware now, feeling grounded and capable. You remember the anchor — press thumb to finger any time you need it.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Three — halfway back, feeling energised and clear-minded. Your confidence is fully real and completely yours.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Four — almost fully awake, alert and ready, carrying a quiet certainty in your ability to perform at your best.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Five — eyes open, fully awake, feeling excellent. Take a breath, have a gentle stretch. You have done something meaningful for yourself today.",
+                    "durationSeconds": 30
+                }
+            ]
+        }
+    }
+}

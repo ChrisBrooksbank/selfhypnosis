@@ -178,7 +178,7 @@
 ## Phase 3 — Additional Guided Sessions (See specs/guided-sessions.md)
 
 - [x] Create `src/content/sessions/pain-management.json` — full 5-phase script (~25 min); techniques: visualisation, breathing, autogenic; glove anaesthesia suggestion; pain dial metaphor. See specs/guided-sessions.md.
-- [ ] Create `src/content/sessions/confidence-building.json` — full 5-phase script (~20 min); techniques: eye-fixation, visualisation, countdown; mental rehearsal; anchoring. See specs/guided-sessions.md.
+- [x] Create `src/content/sessions/confidence-building.json` — full 5-phase script (~20 min); techniques: eye-fixation, visualisation, countdown; mental rehearsal; anchoring. See specs/guided-sessions.md.
 - [ ] Add contextual pain warning modal in `SessionLauncher.tsx` — one-time modal for pain-goal sessions: "Pain can be a symptom of underlying conditions. Ensure you have a medical diagnosis." See specs/safety-onboarding.md.
 
 ---
