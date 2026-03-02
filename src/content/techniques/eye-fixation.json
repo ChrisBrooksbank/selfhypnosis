@@ -1,0 +1,47 @@
+{
+    "id": "eye-fixation",
+    "name": "Eye Fixation",
+    "tagline": "The classic induction — let your gaze lead you into trance",
+    "difficultyLevel": "beginner",
+    "goalAreas": ["stress-anxiety", "general-relaxation", "sleep", "performance"],
+    "overview": "Eye fixation is the oldest and most traditional self-hypnosis induction method. By holding a steady gaze on a single point, the eyes naturally tire and grow heavy, and the suggestion to close them becomes the first step into trance.\n\nThe technique works with your body's natural physiology — sustained eye strain triggers a relaxation response, and the act of allowing your eyes to close carries the suggestion of letting go and drifting inward. It requires no equipment and can be practised anywhere.",
+    "steps": [
+        {
+            "number": 1,
+            "instruction": "Choose a fixed point slightly above your natural eye level — a spot on the ceiling, a candle flame, or a small mark on the wall. Sit or lie comfortably.",
+            "duration": "1 minute"
+        },
+        {
+            "number": 2,
+            "instruction": "Gaze steadily at your chosen point without straining. Keep your focus soft and relaxed. Allow yourself to breathe slowly and naturally.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 3,
+            "instruction": "Notice the sensations in your eyes — a gentle heaviness, warmth, or a tendency to blink more. Acknowledge them without resistance.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 4,
+            "instruction": "Repeat silently: \"As my eyes grow heavy, I drift into a comfortable, relaxed state.\" Let this suggestion accompany each exhale.",
+            "duration": "1–2 minutes"
+        },
+        {
+            "number": 5,
+            "instruction": "When your eyelids feel ready to close, allow them to do so naturally. Don't force them shut — simply permit the heaviness to carry them down.",
+            "duration": "30 seconds"
+        },
+        {
+            "number": 6,
+            "instruction": "With your eyes closed, continue breathing slowly. Notice how relaxed your eye muscles feel. Allow this relaxation to spread outward through your face, jaw, neck, and shoulders."
+        }
+    ],
+    "scienceBlurb": "Eye fixation works through a combination of physiological fatigue and conditioned expectation. Sustained upward gaze strains the extraocular muscles, triggering a genuine physical heaviness that validates the suggestion of \"growing heavy.\" This congruence between suggestion and physical sensation is thought to facilitate the ideomotor response — where focused thought translates directly into physical experience — which is a hallmark of hypnotic induction.\n\nNeuroimaging research shows that the transition into hypnosis involves decreased activity in the default mode network (the brain's \"mind-wandering\" system) and increased prefrontal engagement. The monotony of a fixed gaze reduces competing sensory input, helping shift attention inward. The technique is well suited to beginners because the physical cue of eye fatigue provides clear, tangible feedback that the induction is working.",
+    "citations": [
+        "Spiegel, D. et al. (2016). Neural correlates of hypnosis in highly hypnotisable subjects. Cerebral Cortex, 26(8), 3277–3285.",
+        "Jensen, M.P. et al. (2024). Neuroimaging of hypnosis: A systematic review of functional brain changes. Clinical Psychology Review.",
+        "Elkins, G., Barabasz, A., Council, J. & Spiegel, D. (2015). Advancing research and practice: The revised APA Division 30 definition of hypnosis. International Journal of Clinical and Experimental Hypnosis, 63(1), 1–9.",
+        "Lynn, S.J., Rhue, J.W. & Kirsch, I. (Eds.) (2010). Handbook of Clinical Hypnosis. American Psychological Association."
+    ],
+    "relatedTechniques": ["breathing", "countdown", "321-sensory"]
+}
