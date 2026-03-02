@@ -31,7 +31,7 @@
 - [x] Create `src/components/layout/PageHeader.tsx` — reusable header with `title` prop and optional back button. See specs/pwa-shell.md.
 - [x] Create `src/components/layout/BottomNav.tsx` — fixed bottom bar with 5 tabs (Home, Library, Session, Journal, Settings), active route highlighting, hidden when `data-fullscreen` is set. See specs/pwa-shell.md.
 - [x] Create `src/components/layout/SafetyGate.tsx` — reads `onboardingComplete` from IndexedDB; redirects to `/onboarding` if false; shows amber/red warning banner based on `riskLevel`; renders children otherwise. See specs/safety-onboarding.md.
-- [ ] Update `app/layout.tsx` — wrap children with `<SafetyGate>` and `<BottomNav>`; add safe-area padding (`env(safe-area-inset-*)`); constrain max content width to 640px centered. See specs/pwa-shell.md.
+- [x] Update `app/layout.tsx` — wrap children with `<SafetyGate>` and `<BottomNav>`; add safe-area padding (`env(safe-area-inset-*)`); constrain max content width to 640px centered. See specs/pwa-shell.md.
 
 ### Route Scaffolding
 
