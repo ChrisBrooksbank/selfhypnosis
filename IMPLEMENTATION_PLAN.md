@@ -132,7 +132,7 @@
 ## Phase 2 — Audio Playback (See specs/audio-playback.md)
 
 - [x] Create `src/content/audio/manifest.json` — maps `sessionId + phaseId + segmentIndex` to audio file paths (can be empty initially; structure must be correct). See specs/audio-playback.md.
-- [ ] Create `src/lib/session/audioManager.ts` — manages audio playback queue; preloads next phase; methods: `loadSession`, `playSegment`, `pause`, `resume`, `seek`, `stop`; emits `onSegmentEnd`, `onPhaseEnd`, `onError`; falls back to text-only on error. See specs/audio-playback.md.
+- [x] Create `src/lib/session/audioManager.ts` — manages audio playback queue; preloads next phase; methods: `loadSession`, `playSegment`, `pause`, `resume`, `seek`, `stop`; emits `onSegmentEnd`, `onPhaseEnd`, `onError`; falls back to text-only on error. See specs/audio-playback.md.
 - [ ] Create `src/components/session/AudioPlayer.tsx` — play/pause button; progress bar with seek; current/total time; integrated into session page. See specs/audio-playback.md.
 - [ ] Integrate `audioManager` with session engine: when audio available, segment advance triggered by `onSegmentEnd`; fallback to `durationSeconds` when unavailable. See specs/audio-playback.md.
 - [ ] Add `workbox-range-requests` plugin to Serwist service worker config for Safari audio seek compatibility. See specs/audio-playback.md.
