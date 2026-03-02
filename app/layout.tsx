@@ -3,6 +3,7 @@ import './globals.css';
 
 import { BottomNav } from '@components/layout/BottomNav';
 import { SafetyGate } from '@components/layout/SafetyGate';
+import { ThemeProvider } from '@components/layout/ThemeProvider';
 
 export const metadata: Metadata = {
     title: 'Self-Hypnosis',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+                <ThemeProvider />
                 <SafetyGate>
                     <div
                         className="mx-auto max-w-[640px] pb-20"
