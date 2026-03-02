@@ -67,3 +67,14 @@ export interface GuidedSession {
     techniquesUsed: TechniqueId[];
     phases: Record<PhaseId, SessionPhase>;
 }
+
+export interface CustomSuggestion {
+    id: string;
+    goalArea: GoalArea;
+    text: string;
+    score: number;
+    tags: string[];
+    isFavourite: boolean;
+    usageCount: number;
+    createdAt: Date;
+}
