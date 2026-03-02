@@ -13,7 +13,7 @@ import { PHASE_CONFIG, PHASE_ORDER } from './phaseConfig';
 
 // ─── Public Types ─────────────────────────────────────────────────────────────
 
-export type SessionState = 'idle' | PhaseId | 'complete';
+export type SessionState = 'idle' | PhaseId | 'timer' | 'complete';
 
 export interface ScriptSegment {
     /** Guidance text shown to the user. */
@@ -89,6 +89,8 @@ export class SessionEngine {
      * The audioManager drives segment advance via advanceSegmentFromAudio().
      */
     private _audioMode = false;
+    /** When true, the engine runs in timer-only mode (no phases, no scripts). */
+    private _timerMode = false;
 
     // ── Getters ───────────────────────────────────────────────────────────────
 
@@ -178,13 +180,17 @@ export class SessionEngine {
         this._isRunning = true;
         this._isPaused = false;
 
-        const firstPhase = PHASE_ORDER[0];
-        if (firstPhase === undefined) {
-            Logger.error('PHASE_ORDER is empty — cannot start session');
-            return;
+        if (config.type === 'timer') {
+            this._startTimerMode();
+        } else {
+            const firstPhase = PHASE_ORDER[0];
+            if (firstPhase === undefined) {
+                Logger.error('PHASE_ORDER is empty — cannot start session');
+                return;
+            }
+            this._enterPhase(firstPhase);
         }
 
-        this._enterPhase(firstPhase);
         this._startInterval();
         this._persistCreate();
     }
@@ -288,6 +294,23 @@ export class SessionEngine {
         this._totalElapsed = 0;
         this._phasesCompleted = [];
         this._audioMode = false;
+        this._timerMode = false;
+    }
+
+    private _startTimerMode(): void {
+        this._timerMode = true;
+        this._state = 'timer';
+        this._currentPhase = null;
+
+        const defaultMinutes = PHASE_ORDER.reduce(
+            (sum, p) => sum + PHASE_CONFIG[p].defaultMinutes,
+            0
+        );
+        const minutes = this._config?.plannedDurationMinutes ?? defaultMinutes;
+        this._timeRemaining = minutes * 60;
+
+        Logger.info(`Starting timer mode — ${minutes} min`);
+        this.emit('phaseChange');
     }
 
     private _enterPhase(phase: PhaseId): void {
@@ -326,6 +349,15 @@ export class SessionEngine {
 
         this._totalElapsed += 1;
         this._timeRemaining = Math.max(0, this._timeRemaining - 1);
+
+        if (this._timerMode) {
+            this.emit('tick');
+            if (this._timeRemaining <= 0) {
+                this._finishSession();
+            }
+            return;
+        }
+
         this._segmentElapsed += 1;
 
         // Advance to next segment when the current segment's duration has elapsed.
