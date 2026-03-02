@@ -160,7 +160,7 @@
 - [x] Create `src/components/suggestions/GuidelineChecklist.tsx` — 5 criteria with pass/fail indicators; user toggles for "believable" and "emotionally engaging"; star score display; save disabled below score 3. See specs/suggestion-builder.md.
 - [x] Create `src/components/suggestions/SuggestionPreview.tsx` — session-styled text preview; tags input; favourite toggle; save button → writes `CustomSuggestion` to IndexedDB. See specs/suggestion-builder.md.
 - [x] Implement `app/suggestions/builder/page.tsx` — 4-step wizard with step indicator and back/next navigation. See specs/suggestion-builder.md.
-- [ ] Implement `app/suggestions/page.tsx` — list all saved suggestions; filter by goal area; sort by usage count or date; favourite filter; tap to edit; delete button. See specs/suggestion-builder.md.
+- [x] Implement `app/suggestions/page.tsx` — list all saved suggestions; filter by goal area; sort by usage count or date; favourite filter; tap to edit; delete button. See specs/suggestion-builder.md.
 
 ---
 
