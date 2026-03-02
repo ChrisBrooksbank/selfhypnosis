@@ -1,0 +1,176 @@
+{
+    "id": "beginner-relaxation",
+    "name": "Beginner Relaxation",
+    "description": "A gentle introduction to self-hypnosis that guides you into deep relaxation using breathing, progressive muscle relaxation, and safe-place imagery.",
+    "goalArea": "general-relaxation",
+    "difficulty": "beginner",
+    "estimatedMinutes": 20,
+    "techniquesUsed": ["breathing", "pmr", "visualisation"],
+    "phases": {
+        "preparation": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Find a comfortable position — sitting or lying down — where you won't be disturbed. Let your hands rest gently in your lap or at your sides. Close your eyes when you feel ready.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Take a moment to set your intention for this session. You are choosing to give yourself the gift of deep relaxation. There is nothing you need to do, nowhere you need to be — just this moment, just this breath.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Begin to notice your natural breathing. Don't try to change it yet — simply observe the gentle rise and fall of your chest or belly. Notice the slight pause between each inhale and exhale.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "As you continue to breathe naturally, allow any thoughts about your day to drift to the background. You can return to them later. For now, your only task is to relax completely.",
+                    "durationSeconds": 30
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "Now let's begin a breathing pattern to help guide you into a relaxed state. Breathe in slowly through your nose for a count of four: one… two… three… four.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Hold that breath gently for four counts: one… two… three… four. There's no strain — just a comfortable pause.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Now exhale slowly through your mouth for a count of six: one… two… three… four… five… six. Feel the tension leaving your body with each outbreath.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Again — breathe in for four counts: one… two… three… four. Hold for four: one… two… three… four. And release for six: one… two… three… four… five… six.",
+                    "durationSeconds": 40
+                },
+                {
+                    "text": "Continue this pattern at your own pace. With every exhale, notice how your body becomes a little heavier, a little more at ease.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Now we'll add a simple progressive muscle relaxation. Starting at the top of your head — let your scalp and forehead completely soften. Release any tension in your brow, your eyes, your jaw.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Let the relaxation flow down into your neck and shoulders. You may feel your shoulders drop slightly as they release. That's perfectly natural — just let them go.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Allow the relaxation to spread through your arms — upper arms, elbows, forearms, wrists, and hands. Your fingers may tingle or feel warm. Simply notice and let go.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Feel the relaxation moving through your chest and back, your stomach and hips. With each breath, you sink a little deeper into comfort and ease.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Now down through your thighs, knees, calves, ankles, and feet. All the way to the tips of your toes. Your whole body is becoming pleasantly heavy and relaxed.",
+                    "durationSeconds": 25
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 4,
+            "segments": [
+                {
+                    "text": "In a moment I'm going to count down from ten to one. With each number, you will find yourself drifting twice as deep — twice as relaxed, twice as comfortable as before.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Imagine yourself standing at the top of a beautiful staircase. The steps lead down to a place of perfect peace and stillness. The banister is smooth beneath your hand. The lighting is soft and warm.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Ten — taking the first step down, feeling wonderfully relaxed. Nine — going deeper now, all tension dissolving. Eight — halfway down, drifting pleasantly.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Seven — deeper and deeper. Six — so comfortable, so at ease. Five — halfway to the bottom, completely safe and calm.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Four — sinking beautifully. Three — almost there, wonderfully deep. Two — nearly at the bottom now, profoundly relaxed.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "One — you step off the last stair into a place of complete stillness and peace. You are deeply, wonderfully relaxed.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "From this deep place of stillness, you are open, receptive, and perfectly safe. Your mind is calm. Your body is at ease. You are exactly where you need to be.",
+                    "durationSeconds": 30
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "Imagine yourself in your own safe and peaceful place. It might be a beach, a forest, a meadow, or anywhere that feels perfectly right for you. Take a moment to let this place form clearly in your mind.",
+                    "durationSeconds": 35
+                },
+                {
+                    "text": "Notice the details of this safe place. What do you see around you? Perhaps gentle colours, natural light filtering through, or a beautiful view stretching into the distance.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "What sounds can you hear in this peaceful place? Perhaps the soft sound of water, a gentle breeze, or simply a beautiful, healing silence.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Feel the temperature here — perfectly comfortable. Feel the ground or surface supporting you completely. In this place, you are entirely safe and at peace.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "As you rest in this peaceful place, allow these words to settle deeply into your mind and body: I am calm. I am at ease. With every breath I take, I become more relaxed.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "My body knows how to relax deeply and completely. Relaxation comes naturally and easily to me. Each time I practise, I reach this peaceful state more quickly.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "I carry this sense of calm with me into my daily life. When stress arises, I can return to this feeling with just three slow, deep breaths.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "I am worthy of rest and relaxation. Taking time for myself is a healthy and important choice. I emerge from each session refreshed, restored, and renewed.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Spend a few moments simply resting in this peaceful place, breathing gently, feeling completely at ease. There is nowhere to go, nothing to do — just this beautiful, healing stillness.",
+                    "durationSeconds": 60
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "In a moment I'm going to count from one to five. With each number you will become more aware, more alert, feeling wonderfully refreshed and at ease.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "One — beginning to return, carrying this sense of calm with you. Two — becoming more aware of your surroundings, feeling rested and at peace.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Three — halfway back now, feeling refreshed and renewed, as if you've had a wonderful, restful sleep.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Four — almost fully awake now, feeling alert and comfortable, with a pleasant sense of wellbeing throughout your whole body.",
+                    "durationSeconds": 20
+                },
+                {
+                    "text": "Five — eyes open, fully awake, feeling wonderful. Welcome back. Take a moment to stretch gently if you wish. You've done something truly good for yourself today.",
+                    "durationSeconds": 25
+                }
+            ]
+        }
+    }
+}
