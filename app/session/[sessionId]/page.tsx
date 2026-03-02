@@ -8,6 +8,7 @@ import { AudioPlayer } from '@components/session/AudioPlayer';
 import { PhaseDisplay } from '@components/session/PhaseDisplay';
 import { PhaseTimer } from '@components/session/PhaseTimer';
 import { ScriptDisplay } from '@components/session/ScriptDisplay';
+import { audioManager } from '@lib/session/audioManager';
 import { PHASE_CONFIG } from '@lib/session/phaseConfig';
 import type { PhaseId } from '@/types';
 
@@ -34,8 +35,19 @@ export default function SessionPlayerPage({ params }: Props) {
     const { sessionId } = use(params);
     const router = useRouter();
 
-    const { phase, timeRemaining, segment, isRunning, isPaused, start, skip, pause, resume } =
-        useSessionEngine();
+    const {
+        phase,
+        timeRemaining,
+        segment,
+        isRunning,
+        isPaused,
+        start,
+        skip,
+        pause,
+        resume,
+        setAudioMode,
+        advanceSegmentFromAudio,
+    } = useSessionEngine();
 
     const sessionStarted = useRef(false);
     const hasBeenRunning = useRef(false);
@@ -54,6 +66,41 @@ export default function SessionPlayerPage({ params }: Props) {
         sessionStarted.current = true;
         start({ sessionId, type: 'guided' });
     }, [sessionId, start]);
+
+    // Load audio for this session; enable audio mode if audio is available.
+    // Cleanup stops audio when the page unmounts.
+    useEffect(() => {
+        audioManager.loadSession(sessionId);
+        if (!audioManager.snapshot().textOnly) {
+            setAudioMode(true);
+        }
+        return () => {
+            audioManager.stop();
+        };
+    }, [sessionId, setAudioMode]);
+
+    // Wire audio segment-end callback to the engine's external advance method.
+    useEffect(() => {
+        audioManager.onSegmentEnd = advanceSegmentFromAudio;
+    }, [advanceSegmentFromAudio]);
+
+    // Play the current segment's audio whenever phase or segment changes.
+    useEffect(() => {
+        if (!phase || !isRunning) return;
+        if (!audioManager.snapshot().textOnly) {
+            audioManager.playSegment(phase, segment);
+        }
+    }, [phase, segment, isRunning]);
+
+    // Sync audio pause/resume with the engine's paused state.
+    useEffect(() => {
+        if (!isRunning) return;
+        if (isPaused) {
+            audioManager.pause();
+        } else {
+            audioManager.resume();
+        }
+    }, [isPaused, isRunning]);
 
     // Track when the session has started running so we can detect completion.
     useEffect(() => {

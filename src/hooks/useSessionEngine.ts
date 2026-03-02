@@ -29,6 +29,10 @@ export interface UseSessionEngineReturn extends SessionEngineState {
     resume: () => void;
     stop: () => void;
     discardInterrupted: () => Promise<void>;
+    /** Enable or disable audio-driven segment advance. */
+    setAudioMode: (enabled: boolean) => void;
+    /** Advance the current segment, called by the audio manager on segment end. */
+    advanceSegmentFromAudio: () => void;
 }
 
 function snapshotToState(
@@ -127,6 +131,14 @@ export function useSessionEngine(): UseSessionEngineReturn {
         engineRef.current?.stop();
     }, []);
 
+    const setAudioMode = useCallback((enabled: boolean) => {
+        engineRef.current?.setAudioMode(enabled);
+    }, []);
+
+    const advanceSegmentFromAudio = useCallback(() => {
+        engineRef.current?.advanceSegmentFromAudio();
+    }, []);
+
     const discardInterrupted = useCallback(async () => {
         const interrupted = interruptedSessionRef.current;
         if (!interrupted) return;
@@ -143,5 +155,15 @@ export function useSessionEngine(): UseSessionEngineReturn {
         }
     }, []);
 
-    return { ...state, start, skip, pause, resume, stop, discardInterrupted };
+    return {
+        ...state,
+        start,
+        skip,
+        pause,
+        resume,
+        stop,
+        discardInterrupted,
+        setAudioMode,
+        advanceSegmentFromAudio,
+    };
 }

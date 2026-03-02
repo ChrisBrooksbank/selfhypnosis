@@ -84,6 +84,11 @@ export class SessionEngine {
     private _config: SessionConfig | null = null;
     private _intervalId: ReturnType<typeof setInterval> | null = null;
     private _listeners = new Set<EngineListener>();
+    /**
+     * When true, timer-based segment advance is suppressed.
+     * The audioManager drives segment advance via advanceSegmentFromAudio().
+     */
+    private _audioMode = false;
 
     // ── Getters ───────────────────────────────────────────────────────────────
 
@@ -232,6 +237,33 @@ export class SessionEngine {
     }
 
     /**
+     * Enable or disable audio-driven segment advance.
+     * When enabled, timer-based segment advance is suppressed; the audio manager
+     * should call advanceSegmentFromAudio() when a segment ends.
+     */
+    setAudioMode(enabled: boolean): void {
+        this._audioMode = enabled;
+        Logger.info(`SessionEngine: audio mode ${enabled ? 'enabled' : 'disabled'}`);
+    }
+
+    /**
+     * Advance to the next segment, called by the audio manager on segment end.
+     * Only has effect when audio mode is active and the engine is running.
+     */
+    advanceSegmentFromAudio(): void {
+        if (!this._isRunning || this._currentPhase === null || !this._audioMode) return;
+        const segments = this._config?.phases?.[this._currentPhase]?.segments;
+        if (!segments || segments.length === 0) return;
+
+        const nextIndex = this._currentSegmentIndex + 1;
+        if (nextIndex < segments.length) {
+            this._currentSegmentIndex = nextIndex;
+            this._segmentElapsed = 0;
+            this.emit('segmentChange');
+        }
+    }
+
+    /**
      * Stop and abandon the current session.  Engine returns to `idle`.
      */
     stop(): void {
@@ -255,6 +287,7 @@ export class SessionEngine {
         this._segmentElapsed = 0;
         this._totalElapsed = 0;
         this._phasesCompleted = [];
+        this._audioMode = false;
     }
 
     private _enterPhase(phase: PhaseId): void {
@@ -295,8 +328,9 @@ export class SessionEngine {
         this._timeRemaining = Math.max(0, this._timeRemaining - 1);
         this._segmentElapsed += 1;
 
-        // Advance to next segment when the current segment's duration has elapsed
-        if (this._currentPhase !== null) {
+        // Advance to next segment when the current segment's duration has elapsed.
+        // Skipped in audio mode — the audioManager drives segment advance instead.
+        if (!this._audioMode && this._currentPhase !== null) {
             const segments = this._config?.phases?.[this._currentPhase]?.segments;
             if (segments && segments.length > 0) {
                 const current = segments[this._currentSegmentIndex];
