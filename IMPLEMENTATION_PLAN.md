@@ -147,7 +147,7 @@
 - [x] Add post-session journal prompt to `SessionSummary.tsx` — "Would you like to journal?" with pre-filled `sessionId`; optional, skippable. See specs/journal.md.
 - [x] Implement `app/journal/page.tsx` — chronological list of `JournalEntry` records (newest first); entry cards with date, mood, depth, first line, tags; tag filter; tap to view. See specs/journal.md.
 - [x] Implement `app/journal/[entryId]/page.tsx` — full entry display; edit mode toggle; delete with confirmation. See specs/journal.md.
-- [ ] Create `app/journal/new/page.tsx` — standalone journal entry creation (not session-linked). See specs/journal.md.
+- [x] Create `app/journal/new/page.tsx` — standalone journal entry creation (not session-linked). See specs/journal.md.
 
 ---
 
