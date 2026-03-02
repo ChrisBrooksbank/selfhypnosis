@@ -186,4 +186,4 @@
 ## Phase 3 — Timer Mode (See specs/settings-notifications.md)
 
 - [x] Add `timer` session type to `src/lib/session/engine.ts` — runs without script segments; shows countdown only; records `SessionRecord` with `type: 'timer'`. See specs/settings-notifications.md.
-- [ ] Create timer mode UI in `app/session/page.tsx` — user sets total duration; countdown display; randomly selected technique prompt cards from preferred techniques. See specs/settings-notifications.md.
+- [x] Create timer mode UI in `app/session/page.tsx` — user sets total duration; countdown display; randomly selected technique prompt cards from preferred techniques. See specs/settings-notifications.md.
