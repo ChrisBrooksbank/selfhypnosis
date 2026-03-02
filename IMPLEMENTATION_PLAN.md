@@ -38,7 +38,7 @@
 - [x] Create `app/onboarding/page.tsx` — placeholder layout (3-screen onboarding will be implemented under Safety). See specs/pwa-shell.md.
 - [x] Create `app/library/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [x] Create `app/library/[techniqueId]/page.tsx` — placeholder with `generateStaticParams` returning all 7 `TechniqueId` values. See specs/pwa-shell.md.
-- [ ] Create `app/session/page.tsx` — placeholder layout (session launcher). See specs/pwa-shell.md.
+- [x] Create `app/session/page.tsx` — placeholder layout (session launcher). See specs/pwa-shell.md.
 - [ ] Create `app/session/[sessionId]/page.tsx` — placeholder full-screen layout. See specs/pwa-shell.md.
 - [ ] Create `app/suggestions/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [ ] Create `app/suggestions/builder/page.tsx` — placeholder layout. See specs/pwa-shell.md.
