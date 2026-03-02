@@ -22,7 +22,7 @@
 ### PWA Manifest & Service Worker
 
 - [x] Replace `public/manifest.json` with `app/manifest.ts` — Next.js `MetadataRoute.Manifest` returning name, short_name, icons (192, 384, 512), theme_color `#6366f1`, background_color, display `standalone`. See specs/pwa-shell.md.
-- [ ] Add `@serwist/next` dependency and configure in `next.config.mjs`. See specs/pwa-shell.md.
+- [x] Add `@serwist/next` dependency and configure in `next.config.mjs`. See specs/pwa-shell.md.
 - [ ] Create `app/sw.ts` — Serwist service worker with `defaultCache` for static assets. See specs/pwa-shell.md.
 - [ ] Add PWA icon placeholders to `public/icons/` (192x192, 384x384, 512x512 PNG). See specs/pwa-shell.md.
 

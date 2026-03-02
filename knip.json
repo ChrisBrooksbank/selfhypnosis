@@ -21,7 +21,8 @@
         "@testing-library/react",
         "eslint-config-next",
         "tailwindcss",
-        "postcss"
+        "postcss",
+        "serwist"
     ],
     "ignoreBinaries": ["serve"]
 }
