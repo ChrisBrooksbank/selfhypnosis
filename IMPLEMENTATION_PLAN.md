@@ -89,7 +89,7 @@
 
 - [x] Create `src/lib/session/phaseConfig.ts` — per-phase defaults: `defaultMinutes`, `minMinutes`, `maxMinutes`, `allowSkip`; emergence: min 2 min, `allowSkip: false`. See specs/session-engine.md.
 - [x] Create `src/lib/session/engine.ts` — class-based state machine with states `idle → preparation → induction → deepening → suggestion → emergence → complete`; 1-second tick via `IntervalManager`; methods `start()`, `skip()`, `pause()`, `resume()`, `stop()`; emits phase/segment/tick events. See specs/session-engine.md.
-- [ ] Create `src/hooks/useSessionEngine.ts` — React wrapper returning `{ phase, timeRemaining, segment, totalElapsed, isRunning, isPaused, start, skip, pause, resume, stop }`. See specs/session-engine.md.
+- [x] Create `src/hooks/useSessionEngine.ts` — React wrapper returning `{ phase, timeRemaining, segment, totalElapsed, isRunning, isPaused, start, skip, pause, resume, stop }`. See specs/session-engine.md.
 - [ ] Add session persistence to engine: create `SessionRecord` in IndexedDB on `start()`; update on phase completion; set `completedAt` on `complete`. See specs/session-engine.md.
 - [ ] Add interrupted session detection: on app mount check IndexedDB for records with non-null `startedAt` and null `completedAt`; expose via `useSessionEngine`. See specs/session-engine.md.
 - [ ] Create `src/components/session/ScriptDisplay.tsx` — typewriter reveal (character-by-character); fades to low opacity after 8 seconds; auto-advances segments. See specs/session-engine.md.
