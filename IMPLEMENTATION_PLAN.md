@@ -43,7 +43,7 @@
 - [x] Create `app/suggestions/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [x] Create `app/suggestions/builder/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [x] Create `app/journal/page.tsx` — placeholder layout. See specs/pwa-shell.md.
-- [ ] Create `app/journal/[entryId]/page.tsx` — placeholder layout. See specs/pwa-shell.md.
+- [x] Create `app/journal/[entryId]/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 - [ ] Create `app/settings/page.tsx` — placeholder layout. See specs/pwa-shell.md.
 
 ---
