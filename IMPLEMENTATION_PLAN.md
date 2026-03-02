@@ -122,7 +122,7 @@
 ## Phase 2 — Dashboard & Home (See specs/dashboard-home.md)
 
 - [x] Create `src/components/dashboard/StreakCounter.tsx` — queries `sessions` table; calculates consecutive practice days (midnight-to-midnight local time); displays current streak and best streak. See specs/dashboard-home.md.
-- [ ] Create `src/components/dashboard/LastSessionCard.tsx` — shows most recent `SessionRecord` (name, date/time, duration, techniques, depth, mood change); "No sessions yet" empty state; taps to session record. See specs/dashboard-home.md.
+- [x] Create `src/components/dashboard/LastSessionCard.tsx` — shows most recent `SessionRecord` (name, date/time, duration, techniques, depth, mood change); "No sessions yet" empty state; taps to session record. See specs/dashboard-home.md.
 - [ ] Create `src/components/dashboard/Recommendations.tsx` — rule-based: 0-2 sessions → suggest Beginner Relaxation; post-beginner → suggest variety; never used builder → recommend builder; low depth → suggest different inductions; consistent practice → encourage advancing. Renders 1-3 suggestion cards. See specs/dashboard-home.md.
 - [ ] Create `src/components/dashboard/QuickLauncher.tsx` — prominent "Start Session" button; shows last-used session as quick-repeat; links to `/session` for full selection. See specs/dashboard-home.md.
 - [ ] Implement `app/page.tsx` — full dashboard layout: greeting, `StreakCounter`, `LastSessionCard`, `Recommendations`, `QuickLauncher`; data from IndexedDB via `useLiveQuery`. See specs/dashboard-home.md.
