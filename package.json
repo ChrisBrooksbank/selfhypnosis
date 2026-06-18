@@ -1,6 +1,7 @@
 {
     "name": "self-hypnosis",
     "version": "1.0.0",
+    "license": "MIT",
     "description": "Guided self-hypnosis PWA — technique library, session engine, and personal suggestion builder",
     "private": true,
     "type": "module",
