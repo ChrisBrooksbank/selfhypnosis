@@ -2,7 +2,7 @@
 
 import { useLiveQuery } from '@hooks/useDexieQuery';
 import { useRouter } from 'next/navigation';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { PageHeader } from '@components/layout/PageHeader';
 import type { JournalEntry } from '@lib/db';
@@ -67,13 +67,6 @@ export function JournalEntryView({ entryId }: JournalEntryViewProps) {
     const [isSaving, setIsSaving] = useState(false);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
-
-    // Initialise edit state when entry loads
-    useEffect(() => {
-        if (entry && editState === null) {
-            setEditState(entryToEditState(entry));
-        }
-    }, [entry, editState]);
 
     const handleStartEdit = useCallback(() => {
         if (entry) {

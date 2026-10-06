@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 
 import type { GoalArea } from '@/types';
 
@@ -47,21 +47,26 @@ const exampleChips: Record<GoalArea, string[]> = {
     'general-relaxation': ['I am deeply relaxed and at peace', 'Calm flows through my entire body'],
 };
 
+// Speech support never changes at runtime, so there is nothing to subscribe to.
+const noopSubscribe = () => () => {};
+
 export function SuggestionEditor({ goalArea, value, onChange }: SuggestionEditorProps) {
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const [isListening, setIsListening] = useState(false);
-    const [speechSupported, setSpeechSupported] = useState(false);
+    const speechSupported = useSyncExternalStore(
+        noopSubscribe,
+        () => 'SpeechRecognition' in window || 'webkitSpeechRecognition' in window,
+        () => false
+    );
     const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
     // Dictation results arrive asynchronously; read the latest text, not the text
     // captured when listening started (which would discard anything typed since).
     const valueRef = useRef(value);
-    valueRef.current = value;
+    useEffect(() => {
+        valueRef.current = value;
+    }, [value]);
 
     useEffect(() => {
-        const supported =
-            typeof window !== 'undefined' &&
-            ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
-        setSpeechSupported(supported);
         // Stop listening if the editor unmounts mid-dictation (e.g. the user goes back a step).
         return () => recognitionRef.current?.abort?.();
     }, []);

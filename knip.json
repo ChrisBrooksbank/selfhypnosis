@@ -19,9 +19,6 @@
         "dexie-react-hooks",
         "@testing-library/jest-dom",
         "@testing-library/react",
-        "eslint-config-next",
-        "tailwindcss",
-        "postcss"
-    ],
-    "ignoreBinaries": ["serve"]
+        "tailwindcss"
+    ]
 }
