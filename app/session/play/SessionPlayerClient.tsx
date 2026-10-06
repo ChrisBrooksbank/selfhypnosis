@@ -12,9 +12,9 @@ import { SessionSummary } from '@components/session/SessionSummary';
 import { audioManager } from '@lib/session/audioManager';
 import { PHASE_CONFIG } from '@lib/session/phaseConfig';
 import type { PhaseScript, SessionConfig } from '@lib/session/engine';
-import { db } from '@lib/db';
+import { db, type CustomSuggestion } from '@lib/db';
 import { getGuidedSession } from '@/content/sessions';
-import type { GuidedSession, PhaseId } from '@/types';
+import type { GoalArea, GuidedSession, PhaseId } from '@/types';
 import { Logger } from '@utils/logger';
 
 // Default guidance text shown when no guided session script is loaded.
@@ -26,7 +26,16 @@ const DEFAULT_SEGMENT_TEXT: Record<PhaseId, string> = {
     emergence: 'Slowly begin to return to full awareness. Wiggle your fingers and toes gently.',
 };
 
-function buildConfig(sessionId: string, template: GuidedSession | undefined): SessionConfig {
+/** Seconds each personal suggestion is shown for during the suggestion phase. */
+const PERSONAL_SUGGESTION_SECONDS = 30;
+/** Maximum number of personal suggestions woven into one session. */
+const MAX_PERSONAL_SUGGESTIONS = 3;
+
+function buildConfig(
+    sessionId: string,
+    template: GuidedSession | undefined,
+    personal: CustomSuggestion[]
+): SessionConfig {
     if (!template) return { sessionId, type: 'guided' };
 
     const phases: Partial<Record<PhaseId, PhaseScript>> = {};
@@ -37,6 +46,26 @@ function buildConfig(sessionId: string, template: GuidedSession | undefined): Se
         phases[phaseId] = { durationMinutes: phase.durationMinutes, segments: phase.segments };
     }
 
+    // Weave the user's own suggestions for this goal into the suggestion phase,
+    // just before its closing segment, and lengthen the phase to fit them.
+    const suggestionPhase = phases.suggestion;
+    if (suggestionPhase && personal.length > 0) {
+        const extra = personal.map(p => ({
+            text: p.text,
+            durationSeconds: PERSONAL_SUGGESTION_SECONDS,
+        }));
+        const segments = [...suggestionPhase.segments];
+        segments.splice(Math.max(0, segments.length - 1), 0, ...extra);
+        const totalSeconds = segments.reduce((sum, seg) => sum + seg.durationSeconds, 0);
+        phases.suggestion = {
+            segments,
+            durationMinutes: Math.max(
+                suggestionPhase.durationMinutes ?? 0,
+                Math.ceil(totalSeconds / 60)
+            ),
+        };
+    }
+
     return {
         sessionId,
         type: 'guided',
@@ -44,8 +73,36 @@ function buildConfig(sessionId: string, template: GuidedSession | undefined): Se
         goalArea: template.goalArea,
         techniquesUsed: template.techniquesUsed,
         plannedDurationMinutes: template.estimatedMinutes,
+        suggestionIds: personal.map(p => p.id),
         phases,
     };
+}
+
+/** The user's best suggestions for a goal: favourites first, then highest scoring. */
+async function loadPersonalSuggestions(
+    goalArea: GoalArea | undefined
+): Promise<CustomSuggestion[]> {
+    if (!goalArea) return [];
+    const all = await db.suggestions.where('goalArea').equals(goalArea).toArray();
+    return all
+        .sort(
+            (a, b) =>
+                Number(b.isFavourite) - Number(a.isFavourite) ||
+                b.validationScore - a.validationScore
+        )
+        .slice(0, MAX_PERSONAL_SUGGESTIONS);
+}
+
+/** Record which personal suggestions a session used, and bump their usage counts. */
+async function recordSuggestionUsage(sessionId: string, suggestions: CustomSuggestion[]) {
+    if (suggestions.length === 0) return;
+    const now = new Date().toISOString();
+    await db.transaction('rw', db.sessions, db.suggestions, async () => {
+        await db.sessions.update(sessionId, { suggestionIds: suggestions.map(s => s.id) });
+        for (const s of suggestions) {
+            await db.suggestions.update(s.id, { usageCount: s.usageCount + 1, lastUsedAt: now });
+        }
+    });
 }
 
 /** Phase length in seconds, matching the engine's clamping rules. */
@@ -92,16 +149,20 @@ export function SessionPlayerClient({ sessionId }: Props) {
     // Resolve the session record created by the launcher, and its guided script.
     useEffect(() => {
         let cancelled = false;
-        db.sessions
-            .get(sessionId)
-            .then(record => {
-                if (cancelled) return;
-                setConfig(buildConfig(sessionId, getGuidedSession(record?.templateId)));
-            })
-            .catch((err: unknown) => {
-                Logger.error('Failed to load session record:', String(err));
-                if (!cancelled) setConfig(buildConfig(sessionId, undefined));
+        async function load() {
+            const record = await db.sessions.get(sessionId);
+            const template = getGuidedSession(record?.templateId);
+            const personal = template ? await loadPersonalSuggestions(template.goalArea) : [];
+            if (cancelled) return;
+            setConfig(buildConfig(sessionId, template, personal));
+            recordSuggestionUsage(sessionId, personal).catch((err: unknown) => {
+                Logger.error('Failed to record suggestion usage:', String(err));
             });
+        }
+        load().catch((err: unknown) => {
+            Logger.error('Failed to load session record:', String(err));
+            if (!cancelled) setConfig(buildConfig(sessionId, undefined, []));
+        });
         return () => {
             cancelled = true;
         };

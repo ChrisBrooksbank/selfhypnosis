@@ -1,3 +1,48 @@
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Dark theme. Components are styled with light-theme utilities, so rather than
+ * doubling every class with a dark: variant we remap the palette tokens those
+ * utilities read. The session player (data-fullscreen) is already dark and keeps
+ * the original palette.
+ */
+:root.dark:not([data-fullscreen]) {
+    color-scheme: dark;
+
+    --color-gray-50: oklch(0.18 0.02 270);
+    --color-gray-100: oklch(0.24 0.025 270);
+    --color-gray-200: oklch(0.3 0.03 270);
+    --color-gray-300: oklch(0.38 0.03 270);
+    --color-gray-400: oklch(0.6 0.02 270);
+    --color-gray-500: oklch(0.68 0.02 270);
+    --color-gray-600: oklch(0.76 0.015 270);
+    --color-gray-700: oklch(0.84 0.01 270);
+    --color-gray-800: oklch(0.9 0.008 270);
+    --color-gray-900: oklch(0.95 0.005 270);
+
+    --color-indigo-50: oklch(0.27 0.06 277);
+    --color-indigo-100: oklch(0.33 0.08 277);
+    --color-indigo-700: oklch(0.8 0.1 277);
+    --color-indigo-800: oklch(0.86 0.08 277);
+    --color-indigo-900: oklch(0.92 0.05 277);
+
+    --color-amber-50: oklch(0.3 0.06 70);
+    --color-amber-800: oklch(0.88 0.1 85);
+    --color-red-50: oklch(0.28 0.07 25);
+    --color-red-100: oklch(0.33 0.09 25);
+    --color-red-200: oklch(0.4 0.1 25);
+    --color-red-700: oklch(0.82 0.1 25);
+    --color-red-800: oklch(0.86 0.09 25);
+    --color-green-50: oklch(0.28 0.05 150);
+    --color-green-100: oklch(0.32 0.06 150);
+    --color-green-700: oklch(0.85 0.12 150);
+    --color-yellow-100: oklch(0.32 0.06 95);
+    --color-yellow-700: oklch(0.88 0.12 95);
+    --color-emerald-100: oklch(0.32 0.06 165);
+}
+
+:root.dark:not([data-fullscreen]) .bg-white {
+    background-color: oklch(0.21 0.022 270);
+}

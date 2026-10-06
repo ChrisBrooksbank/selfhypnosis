@@ -25,6 +25,7 @@ interface SpeechRecognitionInstance extends EventTarget {
     onerror: (() => void) | null;
     start: () => void;
     stop: () => void;
+    abort?: () => void;
 }
 
 type SpeechRecognitionConstructor = new () => SpeechRecognitionInstance;
@@ -51,12 +52,18 @@ export function SuggestionEditor({ goalArea, value, onChange }: SuggestionEditor
     const [isListening, setIsListening] = useState(false);
     const [speechSupported, setSpeechSupported] = useState(false);
     const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
+    // Dictation results arrive asynchronously; read the latest text, not the text
+    // captured when listening started (which would discard anything typed since).
+    const valueRef = useRef(value);
+    valueRef.current = value;
 
     useEffect(() => {
         const supported =
             typeof window !== 'undefined' &&
             ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
         setSpeechSupported(supported);
+        // Stop listening if the editor unmounts mid-dictation (e.g. the user goes back a step).
+        return () => recognitionRef.current?.abort?.();
     }, []);
 
     const handleChipClick = (chip: string) => {
@@ -106,7 +113,7 @@ export function SuggestionEditor({ goalArea, value, onChange }: SuggestionEditor
         recognition.onresult = (event: SpeechRecognitionEvt) => {
             const transcript = event.results[0]?.[0]?.transcript ?? '';
             if (transcript) {
-                const trimmed = value.trimEnd();
+                const trimmed = valueRef.current.trimEnd();
                 const separator = trimmed.length > 0 ? ' ' : '';
                 onChange(trimmed + separator + transcript);
             }
