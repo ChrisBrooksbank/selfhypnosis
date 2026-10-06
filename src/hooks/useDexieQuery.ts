@@ -1,47 +1,33 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { liveQuery } from 'dexie';
+import { useEffect, useState } from 'react';
 
 /**
  * Drop-in replacement for dexie-react-hooks useLiveQuery that works with React 19.
  *
  * Returns `undefined` while loading, then the query result.
- * Re-runs whenever `deps` change. Does NOT live-subscribe to Dexie changes
- * (use a manual refresh if needed).
+ * Subscribes to Dexie's `liveQuery`, so the result re-renders whenever the
+ * underlying tables change (e.g. after an edit, delete or settings update).
+ * Re-subscribes whenever `deps` change.
  */
 export function useLiveQuery<T>(
     querier: () => Promise<T> | T,
-    deps: unknown[] = [],
-    defaultResult?: T
+    deps: unknown[] = []
 ): T | undefined {
-    const [result, setResult] = useState<T | undefined>(defaultResult);
-    const mountedRef = useRef(true);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const stableQuerier = useCallback(querier, deps);
+    const [result, setResult] = useState<T | undefined>(undefined);
 
     useEffect(() => {
-        mountedRef.current = true;
-        setResult(defaultResult);
+        setResult(undefined);
 
-        let cancelled = false;
+        const subscription = liveQuery(querier).subscribe({
+            next: value => setResult(() => value),
+            error: () => {
+                // Query failed — leave as undefined
+            },
+        });
 
-        async function run() {
-            try {
-                const value = await stableQuerier();
-                if (!cancelled && mountedRef.current) {
-                    setResult(value);
-                }
-            } catch {
-                // Query failed — leave as default
-            }
-        }
-
-        run();
-
-        return () => {
-            cancelled = true;
-            mountedRef.current = false;
-        };
-    }, [stableQuerier, defaultResult]);
+        return () => subscription.unsubscribe();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, deps);
 
     return result;
 }

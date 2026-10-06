@@ -57,7 +57,10 @@ interface JournalEntryViewProps {
 
 export function JournalEntryView({ entryId }: JournalEntryViewProps) {
     const router = useRouter();
-    const entry = useLiveQuery(() => db.journal.get(entryId), [entryId]);
+    const entry = useLiveQuery(
+        async () => (entryId ? ((await db.journal.get(entryId)) ?? null) : null),
+        [entryId]
+    );
 
     const [isEditing, setIsEditing] = useState(false);
     const [editState, setEditState] = useState<EditState | null>(null);
