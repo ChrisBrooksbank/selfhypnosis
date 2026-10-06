@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useSessionEngine } from '@hooks/useSessionEngine';
@@ -8,9 +8,14 @@ import { AudioPlayer } from '@components/session/AudioPlayer';
 import { PhaseDisplay } from '@components/session/PhaseDisplay';
 import { PhaseTimer } from '@components/session/PhaseTimer';
 import { ScriptDisplay } from '@components/session/ScriptDisplay';
+import { SessionSummary } from '@components/session/SessionSummary';
 import { audioManager } from '@lib/session/audioManager';
 import { PHASE_CONFIG } from '@lib/session/phaseConfig';
-import type { PhaseId } from '@/types';
+import type { PhaseScript, SessionConfig } from '@lib/session/engine';
+import { db } from '@lib/db';
+import { getGuidedSession } from '@/content/sessions';
+import type { GuidedSession, PhaseId } from '@/types';
+import { Logger } from '@utils/logger';
 
 // Default guidance text shown when no guided session script is loaded.
 const DEFAULT_SEGMENT_TEXT: Record<PhaseId, string> = {
@@ -20,6 +25,35 @@ const DEFAULT_SEGMENT_TEXT: Record<PhaseId, string> = {
     suggestion: 'You are open to positive change, feeling calm and at peace.',
     emergence: 'Slowly begin to return to full awareness. Wiggle your fingers and toes gently.',
 };
+
+function buildConfig(sessionId: string, template: GuidedSession | undefined): SessionConfig {
+    if (!template) return { sessionId, type: 'guided' };
+
+    const phases: Partial<Record<PhaseId, PhaseScript>> = {};
+    for (const [phaseId, phase] of Object.entries(template.phases) as [
+        PhaseId,
+        GuidedSession['phases'][PhaseId],
+    ][]) {
+        phases[phaseId] = { durationMinutes: phase.durationMinutes, segments: phase.segments };
+    }
+
+    return {
+        sessionId,
+        type: 'guided',
+        templateId: template.id,
+        goalArea: template.goalArea,
+        techniquesUsed: template.techniquesUsed,
+        plannedDurationMinutes: template.estimatedMinutes,
+        phases,
+    };
+}
+
+/** Phase length in seconds, matching the engine's clamping rules. */
+function phaseSeconds(phase: PhaseId, config: SessionConfig | null): number {
+    const conf = PHASE_CONFIG[phase];
+    const minutes = config?.phases?.[phase]?.durationMinutes ?? conf.defaultMinutes;
+    return Math.max(minutes, conf.minMinutes) * 60;
+}
 
 interface Props {
     sessionId: string;
@@ -42,6 +76,8 @@ export function SessionPlayerClient({ sessionId }: Props) {
         advanceSegmentFromAudio,
     } = useSessionEngine();
 
+    const [config, setConfig] = useState<SessionConfig | null>(null);
+    const [isComplete, setIsComplete] = useState(false);
     const sessionStarted = useRef(false);
     const hasBeenRunning = useRef(false);
 
@@ -53,24 +89,43 @@ export function SessionPlayerClient({ sessionId }: Props) {
         };
     }, []);
 
-    // Start the session engine once on mount.
+    // Resolve the session record created by the launcher, and its guided script.
     useEffect(() => {
-        if (sessionStarted.current) return;
+        let cancelled = false;
+        db.sessions
+            .get(sessionId)
+            .then(record => {
+                if (cancelled) return;
+                setConfig(buildConfig(sessionId, getGuidedSession(record?.templateId)));
+            })
+            .catch((err: unknown) => {
+                Logger.error('Failed to load session record:', String(err));
+                if (!cancelled) setConfig(buildConfig(sessionId, undefined));
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, [sessionId]);
+
+    // Start the session engine once the config is ready.
+    useEffect(() => {
+        if (!config || sessionStarted.current) return;
         sessionStarted.current = true;
-        start({ sessionId, type: 'guided' });
-    }, [sessionId, start]);
+        start(config);
+    }, [config, start]);
 
     // Load audio for this session; enable audio mode if audio is available.
     // Cleanup stops audio when the page unmounts.
     useEffect(() => {
-        audioManager.loadSession(sessionId);
+        if (!config) return;
+        audioManager.loadSession(config.templateId ?? sessionId);
         if (!audioManager.snapshot().textOnly) {
             setAudioMode(true);
         }
         return () => {
             audioManager.stop();
         };
-    }, [sessionId, setAudioMode]);
+    }, [config, sessionId, setAudioMode]);
 
     // Wire audio segment-end callback to the engine's external advance method.
     useEffect(() => {
@@ -102,12 +157,12 @@ export function SessionPlayerClient({ sessionId }: Props) {
         }
     }, [isRunning]);
 
-    // Navigate to session list when the session completes.
+    // Show the post-session summary when the session completes.
     useEffect(() => {
         if (hasBeenRunning.current && !isRunning && phase === null) {
-            router.push('/session');
+            setIsComplete(true);
         }
-    }, [isRunning, phase, router]);
+    }, [isRunning, phase]);
 
     // Jump to emergence: skip all preceding phases (engine ignores skips on emergence).
     const handleEmergencyExit = useCallback(() => {
@@ -116,15 +171,34 @@ export function SessionPlayerClient({ sessionId }: Props) {
         }
     }, [skip]);
 
-    const totalSeconds = phase ? PHASE_CONFIG[phase].defaultMinutes * 60 : 0;
-    const currentText = phase ? DEFAULT_SEGMENT_TEXT[phase] : '';
+    const totalSeconds = useMemo(() => (phase ? phaseSeconds(phase, config) : 0), [phase, config]);
+    const segments = phase ? config?.phases?.[phase]?.segments : undefined;
+    const currentText = phase
+        ? (segments?.[Math.min(segment, segments.length - 1)]?.text ?? DEFAULT_SEGMENT_TEXT[phase])
+        : '';
     const isEmergence = phase === 'emergence';
+
+    if (isComplete) {
+        return (
+            <div className="fixed inset-0 z-40 overflow-y-auto bg-white">
+                <div className="mx-auto max-w-lg">
+                    <SessionSummary sessionId={sessionId} />
+                </div>
+            </div>
+        );
+    }
 
     // Loading state before first phase fires.
     if (!phase) {
         return (
-            <div className="fixed inset-0 z-40 flex items-center justify-center bg-gray-950">
+            <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-4 bg-gray-950">
                 <p className="text-gray-400">Loading session…</p>
+                <button
+                    onClick={() => router.push('/session')}
+                    className="text-sm text-gray-500 underline hover:text-gray-300"
+                >
+                    Back to sessions
+                </button>
             </div>
         );
     }

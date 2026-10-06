@@ -108,7 +108,12 @@ export function useSessionEngine(): UseSessionEngineReturn {
             );
         });
 
-        return unsubscribe;
+        return () => {
+            unsubscribe();
+            // Leaving the page mid-session must not leave the engine ticking in the
+            // background — abandon it so the record is marked interrupted.
+            if (engine.isRunning) engine.stop();
+        };
     }, []);
 
     const start = useCallback((config: SessionConfig) => {

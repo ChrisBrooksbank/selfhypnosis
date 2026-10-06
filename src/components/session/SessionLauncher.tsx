@@ -72,7 +72,7 @@ export function SessionLauncher({ sessions }: SessionLauncherProps) {
                 });
 
                 Logger.info(`Session record created: ${id} (${session.id})`);
-                router.push(`/session/${id}`);
+                router.push(`/session/play/?id=${encodeURIComponent(id)}`);
             } catch (err) {
                 Logger.error('Failed to create session record');
                 Logger.error(String(err));

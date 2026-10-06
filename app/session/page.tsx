@@ -2,20 +2,11 @@
 
 import { useState } from 'react';
 
-import type { GuidedSession } from '@/types';
 import { PageHeader } from '@components/layout/PageHeader';
 import { SessionLauncher } from '@components/session/SessionLauncher';
 import { TimerMode } from '@components/session/TimerMode';
 
-import beginnerRelaxation from '@/content/sessions/beginner-relaxation.json';
-import stressRelief from '@/content/sessions/stress-relief.json';
-import sleepPreparation from '@/content/sessions/sleep-preparation.json';
-
-const sessions: GuidedSession[] = [
-    beginnerRelaxation,
-    stressRelief,
-    sleepPreparation,
-] as GuidedSession[];
+import { GUIDED_SESSIONS } from '@/content/sessions';
 
 type Tab = 'guided' | 'timer';
 
@@ -50,7 +41,11 @@ export default function SessionPage() {
                 </button>
             </div>
 
-            {activeTab === 'guided' ? <SessionLauncher sessions={sessions} /> : <TimerMode />}
+            {activeTab === 'guided' ? (
+                <SessionLauncher sessions={GUIDED_SESSIONS} />
+            ) : (
+                <TimerMode />
+            )}
         </main>
     );
 }

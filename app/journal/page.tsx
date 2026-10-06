@@ -97,7 +97,7 @@ export default function JournalPage() {
                     {filtered.map(entry => (
                         <li key={entry.id}>
                             <Link
-                                href={`/journal/${entry.id}`}
+                                href={`/journal/entry/?id=${encodeURIComponent(entry.id)}`}
                                 className="block rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:border-indigo-300 hover:shadow-md"
                             >
                                 {/* Date row */}
