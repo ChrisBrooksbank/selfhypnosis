@@ -3,3 +3,4 @@ out/
 coverage/
 node_modules/
 *.min.js
+public/sw.js

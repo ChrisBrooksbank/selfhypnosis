@@ -55,6 +55,25 @@ export function QuickLauncher() {
                     </svg>
                 </Link>
             )}
+            <Link
+                href="/suggestions"
+                className="flex items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 transition hover:border-indigo-300 hover:bg-indigo-50"
+            >
+                <div className="min-w-0">
+                    <p className="text-xs font-medium text-gray-500">Your words, your change</p>
+                    <p className="truncate text-sm font-semibold text-gray-800">My Suggestions</p>
+                </div>
+                <svg
+                    className="ml-2 h-4 w-4 shrink-0 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </Link>
         </div>
     );
 }

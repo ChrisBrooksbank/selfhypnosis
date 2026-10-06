@@ -423,8 +423,12 @@ export class SessionEngine {
             0
         );
 
-        db.sessions
-            .put({
+        db.transaction('rw', db.sessions, async () => {
+            // The launcher may already have created the record with richer metadata
+            // (template, goal area…) — never clobber it.
+            const existing = await db.sessions.get(cfg.sessionId);
+            if (existing) return;
+            await db.sessions.add({
                 id: cfg.sessionId,
                 startedAt: new Date().toISOString(),
                 type: cfg.type ?? 'custom',
@@ -434,7 +438,8 @@ export class SessionEngine {
                 plannedDurationMinutes: cfg.plannedDurationMinutes ?? defaultPlanned,
                 phasesCompleted: [],
                 suggestionIds: cfg.suggestionIds ?? [],
-            })
+            });
+        })
             .then(() => {
                 Logger.info(`SessionRecord created: ${cfg.sessionId}`);
             })

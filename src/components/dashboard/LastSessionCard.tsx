@@ -65,7 +65,7 @@ export function LastSessionCard() {
 
     return (
         <Link
-            href={`/session/${session.id}`}
+            href="/session"
             className="block rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-indigo-300 hover:shadow-md"
         >
             <div className="flex items-start justify-between gap-2">

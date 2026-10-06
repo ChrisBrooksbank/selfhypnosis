@@ -84,7 +84,9 @@ export function SessionSummary({ sessionId }: SessionSummaryProps) {
                 </div>
                 <div className="flex w-full flex-col gap-3">
                     <button
-                        onClick={() => router.push(`/journal/new?sessionId=${sessionId}`)}
+                        onClick={() =>
+                            router.push(`/journal/new/?sessionId=${encodeURIComponent(sessionId)}`)
+                        }
                         className="w-full rounded-xl bg-indigo-600 py-3 text-sm font-medium text-white hover:bg-indigo-700"
                     >
                         Open Journal

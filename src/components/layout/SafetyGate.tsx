@@ -15,7 +15,12 @@ export function SafetyGate({ children }: SafetyGateProps) {
     const pathname = usePathname();
 
     const [settings, setSettings] = useState<UserSettings | null | undefined>(undefined);
-    const isLoading = settings === undefined;
+    // Settings are re-read on every navigation (e.g. right after onboarding saves them).
+    // Until the read for the current path finishes, stale "not onboarded" state must not
+    // trigger a redirect back to onboarding.
+    const [loadedPath, setLoadedPath] = useState<string | null>(null);
+    const isLoading =
+        settings === undefined || (loadedPath !== pathname && !settings?.onboardingComplete);
     const isOnboarding = pathname.startsWith('/onboarding');
 
     useEffect(() => {
@@ -24,10 +29,16 @@ export function SafetyGate({ children }: SafetyGateProps) {
         async function load() {
             try {
                 const result = await db.settings.get('user');
-                if (!cancelled) setSettings(result ?? null);
+                if (!cancelled) {
+                    setSettings(result ?? null);
+                    setLoadedPath(pathname);
+                }
             } catch (err) {
                 Logger.error('SafetyGate: failed to load settings', err);
-                if (!cancelled) setSettings(null);
+                if (!cancelled) {
+                    setSettings(null);
+                    setLoadedPath(pathname);
+                }
             }
         }
 

@@ -11,8 +11,9 @@ export interface ValidationResult {
     score: number;
 }
 
-const NEGATION_REGEX = /\b(not|don't|dont|won't|wont|can't|cant|never|no\b|stop|avoid|without)\b/i;
-const FUTURE_TENSE_REGEX = /\b(will\b|going to|shall\b|will be)\b/i;
+// Accept both straight (') and typographic (’) apostrophes — mobile keyboards insert the latter.
+const NEGATION_REGEX = /\b(not|don['’]?t|won['’]?t|can['’]?t|never|no\b|stop|avoid|without)\b/i;
+const FUTURE_TENSE_REGEX = /\b(will\b|going to|shall\b|will be|['’]ll)\b/i;
 
 export function validateSuggestion(
     text: string,

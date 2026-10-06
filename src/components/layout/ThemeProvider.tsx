@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
+import { useLiveQuery } from '@hooks/useDexieQuery';
 import { db } from '@lib/db';
 
 type Theme = 'light' | 'dark' | 'system';
@@ -20,23 +21,10 @@ function applyTheme(theme: Theme): void {
 }
 
 export function ThemeProvider() {
-    const [theme, setTheme] = useState<Theme>('system');
-
-    useEffect(() => {
-        let cancelled = false;
-        async function load() {
-            try {
-                const settings = await db.settings.get('user');
-                if (!cancelled) setTheme(settings?.theme ?? 'system');
-            } catch {
-                // ignore
-            }
-        }
-        load();
-        return () => {
-            cancelled = true;
-        };
-    }, []);
+    // Live query so a theme picked in Settings takes effect (and the system
+    // listener is added/removed) without a reload.
+    const theme: Theme =
+        useLiveQuery(async () => (await db.settings.get('user'))?.theme) ?? 'system';
 
     useEffect(() => {
         applyTheme(theme);
