@@ -101,7 +101,8 @@ export default function SettingsPage() {
         ]);
         setClearState('idle');
         Logger.info('All data cleared');
-        window.location.href = '/onboarding';
+        // Full reload so no in-memory state survives the wipe.
+        window.location.replace(new URL('/onboarding/', window.location.origin).href);
     }, []);
 
     if (settings === undefined) {

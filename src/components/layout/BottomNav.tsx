@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 
 interface NavTab {
     href: string;
@@ -120,23 +120,22 @@ function isTabActive(href: string, pathname: string, matchPaths?: string[]): boo
     return pathname === href || pathname.startsWith(href + '/');
 }
 
+function subscribeToFullscreen(onChange: () => void): () => void {
+    const observer = new MutationObserver(onChange);
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-fullscreen'],
+    });
+    return () => observer.disconnect();
+}
+
 export function BottomNav() {
     const pathname = usePathname();
-    const [isFullscreen, setIsFullscreen] = useState(false);
-
-    useEffect(() => {
-        const observer = new MutationObserver(() => {
-            setIsFullscreen(document.documentElement.hasAttribute('data-fullscreen'));
-        });
-
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['data-fullscreen'],
-        });
-        setIsFullscreen(document.documentElement.hasAttribute('data-fullscreen'));
-
-        return () => observer.disconnect();
-    }, []);
+    const isFullscreen = useSyncExternalStore(
+        subscribeToFullscreen,
+        () => document.documentElement.hasAttribute('data-fullscreen'),
+        () => false
+    );
 
     if (isFullscreen) {
         return null;

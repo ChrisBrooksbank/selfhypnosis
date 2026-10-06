@@ -34,6 +34,16 @@ export function ScriptDisplay({
     const fadeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const typewriterRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+    // Reset the reveal during render when the segment changes, so the new text
+    // never flashes fully visible for a frame.
+    const resetKey = `${segmentIndex}\u0000${text}`;
+    const [prevResetKey, setPrevResetKey] = useState(resetKey);
+    if (prevResetKey !== resetKey) {
+        setPrevResetKey(resetKey);
+        setRevealedCount(0);
+        setFaded(false);
+    }
+
     // Reset when segment changes
     useEffect(() => {
         // Clear existing timers
@@ -45,9 +55,6 @@ export function ScriptDisplay({
             clearTimeout(fadeTimerRef.current);
             fadeTimerRef.current = null;
         }
-
-        setRevealedCount(0);
-        setFaded(false);
 
         if (!text) return;
 
