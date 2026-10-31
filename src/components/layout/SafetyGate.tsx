@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { db, type UserSettings } from '@lib/db';
+import prose from '@/content/prose.json';
 import { Logger } from '@utils/logger';
 
 interface SafetyGateProps {
@@ -76,17 +77,18 @@ export function SafetyGate({ children }: SafetyGateProps) {
                 <div
                     role="alert"
                     className="sticky top-0 z-40 bg-amber-50 px-4 py-2 text-center text-sm font-medium text-amber-800"
+                    data-speech-clip="prose/banner-amber"
                 >
-                    Some of your answers suggest extra care is recommended. Continue with awareness.
+                    {prose.banners.amber}
                 </div>
             )}
             {riskLevel === 'red' && (
                 <div
                     role="alert"
                     className="sticky top-0 z-40 bg-red-50 px-4 py-2 text-center text-sm font-medium text-red-800"
+                    data-speech-clip="prose/banner-red"
                 >
-                    Based on your screening, session launch is disabled. The technique library is
-                    still available.
+                    {prose.banners.red}
                 </div>
             )}
             {children}

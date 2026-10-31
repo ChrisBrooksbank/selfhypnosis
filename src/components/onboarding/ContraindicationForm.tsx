@@ -2,46 +2,16 @@
 
 import { useState } from 'react';
 
-const QUESTIONS = [
-    {
-        id: 'psychosis',
-        text: 'Do you have active psychosis or schizophrenia?',
-        explanation:
-            'Hypnotic induction can intensify altered perceptions and is not recommended during active psychotic episodes.',
-    },
-    {
-        id: 'dissociation',
-        text: 'Do you have a severe dissociative disorder?',
-        explanation:
-            'Deep relaxation techniques may heighten dissociative experiences in those with severe dissociative conditions.',
-    },
-    {
-        id: 'epilepsy',
-        text: 'Do you have uncontrolled epilepsy?',
-        explanation:
-            'Certain relaxation or visualisation states may lower seizure threshold in some individuals with uncontrolled epilepsy.',
-    },
-    {
-        id: 'ptsd',
-        text: 'Do you have severe PTSD without current professional guidance?',
-        explanation:
-            'Self-hypnosis can surface traumatic memories. Professional support is strongly recommended before proceeding.',
-    },
-    {
-        id: 'trauma',
-        text: 'Have you experienced a significant traumatic event in the last 3 months?',
-        explanation:
-            'Recent trauma needs time to stabilise before working with inward-focused relaxation techniques.',
-    },
-    {
-        id: 'personality',
-        text: 'Do you have a personality disorder that affects your sense of reality?',
-        explanation:
-            'Conditions that impair reality testing may make it harder to maintain grounded awareness during sessions.',
-    },
-] as const;
+import prose from '@/content/prose.json';
 
-type QuestionId = (typeof QUESTIONS)[number]['id'];
+type QuestionId = 'psychosis' | 'dissociation' | 'epilepsy' | 'ptsd' | 'trauma' | 'personality';
+
+// The JSON widens `id` to string; the screening test checks the ids match QuestionId.
+const QUESTIONS = prose.screening.questions as readonly {
+    id: QuestionId;
+    text: string;
+    explanation: string;
+}[];
 type Answer = 'yes' | 'no';
 type Answers = Partial<Record<QuestionId, Answer>>;
 
@@ -65,17 +35,18 @@ export function ContraindicationForm({ onNext }: ContraindicationFormProps) {
 
     return (
         <div className="flex flex-col gap-6 px-6 py-8">
-            <div>
-                <h1 className="text-2xl font-bold text-gray-900">Safety Screening</h1>
-                <p className="mt-2 text-base text-gray-600">
-                    Please answer all 6 questions honestly. Your answers help us provide appropriate
-                    guidance.
-                </p>
+            <div data-speech-clip="prose/screening-intro">
+                <h1 className="text-2xl font-bold text-gray-900">{prose.screening.heading}</h1>
+                <p className="mt-2 text-base text-gray-600">{prose.screening.intro}</p>
             </div>
 
             <ol className="flex flex-col gap-4">
                 {QUESTIONS.map((q, index) => (
-                    <li key={q.id} className="rounded-xl border border-gray-200 bg-white p-4">
+                    <li
+                        key={q.id}
+                        className="rounded-xl border border-gray-200 bg-white p-4"
+                        data-speech-clip={`prose/screening-question-${index}`}
+                    >
                         <p className="text-sm font-medium text-gray-800">
                             <span className="mr-2 text-indigo-500">{index + 1}.</span>
                             {q.text}

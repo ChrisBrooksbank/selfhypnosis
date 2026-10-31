@@ -2,34 +2,32 @@
 
 import { useState } from 'react';
 
+import prose from '@/content/prose.json';
+
 interface SafetyAcknowledgementProps {
     onComplete: () => void;
 }
+
+const { safety } = prose;
 
 export function SafetyAcknowledgement({ onComplete }: SafetyAcknowledgementProps) {
     const [acknowledged, setAcknowledged] = useState(false);
 
     return (
         <div className="flex flex-col gap-6 px-6 py-8">
-            <div>
-                <h1 className="text-2xl font-bold text-gray-900">One Last Step</h1>
-                <p className="mt-2 text-base text-gray-600">
-                    Please read and acknowledge the following before using the app.
-                </p>
+            <div data-speech-clip="prose/safety-intro">
+                <h1 className="text-2xl font-bold text-gray-900">{safety.heading}</h1>
+                <p className="mt-2 text-base text-gray-600">{safety.intro}</p>
             </div>
 
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-                <p className="text-sm font-semibold text-amber-900">Important Notice</p>
+                <p className="text-sm font-semibold text-amber-900">{safety.noticeHeading}</p>
                 <ul className="mt-3 flex flex-col gap-2 text-sm text-amber-800">
-                    <li>
-                        • Self-hypnosis is a <strong>complementary practice</strong> and does not
-                        replace professional medical or psychological treatment.
-                    </li>
-                    <li>
-                        • If you have a mental health condition, consult your healthcare provider
-                        before starting.
-                    </li>
-                    <li>• You are always in control during a session and can stop at any time.</li>
+                    {safety.notice.map((line, i) => (
+                        <li key={line} data-speech-clip={`prose/safety-notice-${i}`}>
+                            • {line}
+                        </li>
+                    ))}
                 </ul>
             </div>
 
@@ -40,9 +38,11 @@ export function SafetyAcknowledgement({ onComplete }: SafetyAcknowledgementProps
                     onChange={e => setAcknowledged(e.target.checked)}
                     className="mt-0.5 size-5 shrink-0 cursor-pointer accent-indigo-600"
                 />
-                <span className="text-sm text-gray-800">
-                    I understand that self-hypnosis is complementary and does not replace
-                    professional treatment.
+                <span
+                    className="text-sm text-gray-800"
+                    data-speech-clip="prose/safety-acknowledgement"
+                >
+                    {safety.acknowledgement}
                 </span>
             </label>
 

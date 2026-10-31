@@ -6,9 +6,11 @@ interface PageHeaderProps {
     title: string;
     showBack?: boolean;
     onBack?: () => void;
+    /** Leave the title out of read-aloud (when the page speaks it as part of its own clip). */
+    silent?: boolean;
 }
 
-export function PageHeader({ title, showBack = false, onBack }: PageHeaderProps) {
+export function PageHeader({ title, showBack = false, onBack, silent = false }: PageHeaderProps) {
     const router = useRouter();
 
     const handleBack = () => {
@@ -20,7 +22,10 @@ export function PageHeader({ title, showBack = false, onBack }: PageHeaderProps)
     };
 
     return (
-        <header className="flex items-center gap-3 border-b border-gray-200 bg-white px-4 py-3">
+        <header
+            className="flex items-center gap-3 border-b border-gray-200 bg-white px-4 py-3"
+            data-no-speech={silent ? '' : undefined}
+        >
             {showBack && (
                 <button
                     onClick={handleBack}
