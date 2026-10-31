@@ -7,9 +7,14 @@ interface SciencePanelProps {
 export function SciencePanel({ technique }: SciencePanelProps) {
     return (
         <div className="flex flex-col gap-6">
-            <p className="text-sm leading-relaxed text-gray-700">{technique.scienceBlurb}</p>
+            <p
+                className="text-sm leading-relaxed text-gray-700"
+                data-speech-clip={`technique/${technique.id}/science`}
+            >
+                {technique.scienceBlurb}
+            </p>
             {technique.citations.length > 0 && (
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2" data-no-speech>
                     <h3 className="text-sm font-semibold text-gray-900">References</h3>
                     <ol className="flex flex-col gap-2">
                         {technique.citations.map((citation, index) => (

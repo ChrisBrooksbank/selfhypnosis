@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 import { BottomNav } from '@components/layout/BottomNav';
+import { ReadAloud } from '@components/layout/ReadAloud';
 import { SafetyGate } from '@components/layout/SafetyGate';
 import { ThemeProvider } from '@components/layout/ThemeProvider';
 
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         {children}
                     </div>
                     <BottomNav />
+                    <ReadAloud />
                 </SafetyGate>
             </body>
         </html>

@@ -48,6 +48,7 @@ The player is built to be used blind:
 - **The screen fades to near-black** after ten seconds. Any tap wakes it, and that first tap never hits a control by accident.
 - **The screen stays awake** (Wake Lock) for the whole session.
 - **Big Pause and Emergency Exit buttons**, easy to find if something startles you.
+- **Listen to anything.** A speaker button on every page reads it aloud: recorded narration for the technique pages, session descriptions and safety text, and your device's voice for everything else (stats, your own suggestions, your journal). Technique **Try It** is hands-free guided practice: each step is spoken, then followed by silence for that step's duration.
 - **A soft chime** tells you when it's over. It's synthesised in the browser, so it works offline.
 
 ## ✨ A look around
@@ -143,6 +144,7 @@ echo "OPENAI_API_KEY=sk-..." > .env.local        # gitignored
 npm run generate:audio -- --dry-run              # count clips and characters, no API calls
 npm run generate:audio -- --session stress-relief
 npm run generate:audio -- --force                # regenerate everything
+npm run generate:audio -- --content              # technique pages, session blurbs, onboarding and safety text
 ```
 
 Tune it with `OPENAI_TTS_VOICE` (default `sage`; try `shimmer` or `marin`), `OPENAI_TTS_MODEL` (default `gpt-4o-mini-tts`) `OPENAI_TTS_TEMPO` (default `0.9`; lower is slower) and `OPENAI_TTS_LUFS` (default `-20`; the raw voice is very quiet at about -33, so each clip is levelled up to a clear but gentle volume with the peaks capped). Each clip is slowed slightly, faded, and padded with silence to its scripted duration so the audio stays in step with the phase timers. Existing clips are skipped, so an interrupted run can simply be restarted.

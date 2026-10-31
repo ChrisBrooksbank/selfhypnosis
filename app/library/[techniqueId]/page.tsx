@@ -50,9 +50,15 @@ export default async function TechniqueDetailPage({ params }: Props) {
 
     return (
         <main className="flex flex-col">
-            <PageHeader title={technique.name} showBack />
+            <PageHeader title={technique.name} showBack silent />
             <div className="p-4">
-                <p className="mb-4 text-sm text-gray-500">{technique.tagline}</p>
+                <p
+                    className="mb-4 text-sm text-gray-500"
+                    data-speech-clip={`technique/${technique.id}/intro`}
+                >
+                    <span className="sr-only">{technique.name}. </span>
+                    {technique.tagline}
+                </p>
                 <TechniqueDetail technique={technique} />
             </div>
         </main>

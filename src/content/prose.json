@@ -1,0 +1,76 @@
+{
+    "welcome": {
+        "heading": "Welcome to Self-Hypnosis",
+        "intro": "Self-hypnosis is a natural state of focused attention combined with deep relaxation. You guide yourself using self-directed suggestions to support positive change.",
+        "mythsHeading": "Common myths — busted",
+        "myths": [
+            {
+                "myth": "Mind control",
+                "truth": "You are always in full control and can end the session at any time."
+            },
+            {
+                "myth": "Sleep or unconsciousness",
+                "truth": "You remain aware and alert throughout — it is a focused, wakeful state."
+            },
+            {
+                "myth": "Loss of memory",
+                "truth": "You will remember everything that happens during your session."
+            },
+            {
+                "myth": "Only works on some people",
+                "truth": "Most people can benefit with practice — responsiveness improves over time."
+            }
+        ]
+    },
+    "screening": {
+        "heading": "Safety Screening",
+        "intro": "Please answer all 6 questions honestly. Your answers help us provide appropriate guidance.",
+        "questions": [
+            {
+                "id": "psychosis",
+                "text": "Do you have active psychosis or schizophrenia?",
+                "explanation": "Hypnotic induction can intensify altered perceptions and is not recommended during active psychotic episodes."
+            },
+            {
+                "id": "dissociation",
+                "text": "Do you have a severe dissociative disorder?",
+                "explanation": "Deep relaxation techniques may heighten dissociative experiences in those with severe dissociative conditions."
+            },
+            {
+                "id": "epilepsy",
+                "text": "Do you have uncontrolled epilepsy?",
+                "explanation": "Certain relaxation or visualisation states may lower seizure threshold in some individuals with uncontrolled epilepsy."
+            },
+            {
+                "id": "ptsd",
+                "text": "Do you have severe PTSD without current professional guidance?",
+                "explanation": "Self-hypnosis can surface traumatic memories. Professional support is strongly recommended before proceeding."
+            },
+            {
+                "id": "trauma",
+                "text": "Have you experienced a significant traumatic event in the last 3 months?",
+                "explanation": "Recent trauma needs time to stabilise before working with inward-focused relaxation techniques."
+            },
+            {
+                "id": "personality",
+                "text": "Do you have a personality disorder that affects your sense of reality?",
+                "explanation": "Conditions that impair reality testing may make it harder to maintain grounded awareness during sessions."
+            }
+        ]
+    },
+    "safety": {
+        "heading": "One Last Step",
+        "intro": "Please read and acknowledge the following before using the app.",
+        "noticeHeading": "Important Notice",
+        "notice": [
+            "Self-hypnosis is a complementary practice and does not replace professional medical or psychological treatment.",
+            "If you have a mental health condition, consult your healthcare provider before starting.",
+            "You are always in control during a session and can stop at any time."
+        ],
+        "acknowledgement": "I understand that self-hypnosis is complementary and does not replace professional treatment."
+    },
+    "banners": {
+        "amber": "Some of your answers suggest extra care is recommended. Continue with awareness.",
+        "red": "Based on your screening, session launch is disabled. The technique library is still available."
+    }
+}

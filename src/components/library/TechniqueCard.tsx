@@ -29,6 +29,7 @@ export function TechniqueCard({ technique }: TechniqueCardProps) {
     return (
         <Link
             href={`/library/${technique.id}`}
+            data-speech-clip={`technique/${technique.id}/intro`}
             className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
         >
             <div className="flex items-start justify-between gap-2">
