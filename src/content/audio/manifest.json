@@ -1,23 +1,232 @@
 {
     "beginner-relaxation": {
-        "preparation": {},
-        "induction": {},
-        "deepening": {},
-        "suggestion": {},
-        "emergence": {}
+        "preparation": {
+            "0": "/audio/beginner-relaxation/preparation-0.mp3",
+            "1": "/audio/beginner-relaxation/preparation-1.mp3",
+            "2": "/audio/beginner-relaxation/preparation-2.mp3",
+            "3": "/audio/beginner-relaxation/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/beginner-relaxation/induction-0.mp3",
+            "1": "/audio/beginner-relaxation/induction-1.mp3",
+            "2": "/audio/beginner-relaxation/induction-2.mp3",
+            "3": "/audio/beginner-relaxation/induction-3.mp3",
+            "4": "/audio/beginner-relaxation/induction-4.mp3",
+            "5": "/audio/beginner-relaxation/induction-5.mp3",
+            "6": "/audio/beginner-relaxation/induction-6.mp3",
+            "7": "/audio/beginner-relaxation/induction-7.mp3",
+            "8": "/audio/beginner-relaxation/induction-8.mp3",
+            "9": "/audio/beginner-relaxation/induction-9.mp3"
+        },
+        "deepening": {
+            "0": "/audio/beginner-relaxation/deepening-0.mp3",
+            "1": "/audio/beginner-relaxation/deepening-1.mp3",
+            "2": "/audio/beginner-relaxation/deepening-2.mp3",
+            "3": "/audio/beginner-relaxation/deepening-3.mp3",
+            "4": "/audio/beginner-relaxation/deepening-4.mp3",
+            "5": "/audio/beginner-relaxation/deepening-5.mp3",
+            "6": "/audio/beginner-relaxation/deepening-6.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/beginner-relaxation/suggestion-0.mp3",
+            "1": "/audio/beginner-relaxation/suggestion-1.mp3",
+            "2": "/audio/beginner-relaxation/suggestion-2.mp3",
+            "3": "/audio/beginner-relaxation/suggestion-3.mp3",
+            "4": "/audio/beginner-relaxation/suggestion-4.mp3",
+            "5": "/audio/beginner-relaxation/suggestion-5.mp3",
+            "6": "/audio/beginner-relaxation/suggestion-6.mp3",
+            "7": "/audio/beginner-relaxation/suggestion-7.mp3",
+            "8": "/audio/beginner-relaxation/suggestion-8.mp3"
+        },
+        "emergence": {
+            "0": "/audio/beginner-relaxation/emergence-0.mp3",
+            "1": "/audio/beginner-relaxation/emergence-1.mp3",
+            "2": "/audio/beginner-relaxation/emergence-2.mp3",
+            "3": "/audio/beginner-relaxation/emergence-3.mp3",
+            "4": "/audio/beginner-relaxation/emergence-4.mp3"
+        }
     },
     "stress-relief": {
-        "preparation": {},
-        "induction": {},
-        "deepening": {},
-        "suggestion": {},
-        "emergence": {}
+        "preparation": {
+            "0": "/audio/stress-relief/preparation-0.mp3",
+            "1": "/audio/stress-relief/preparation-1.mp3",
+            "2": "/audio/stress-relief/preparation-2.mp3",
+            "3": "/audio/stress-relief/preparation-3.mp3",
+            "4": "/audio/stress-relief/preparation-4.mp3"
+        },
+        "induction": {
+            "0": "/audio/stress-relief/induction-0.mp3",
+            "1": "/audio/stress-relief/induction-1.mp3",
+            "2": "/audio/stress-relief/induction-2.mp3",
+            "3": "/audio/stress-relief/induction-3.mp3",
+            "4": "/audio/stress-relief/induction-4.mp3",
+            "5": "/audio/stress-relief/induction-5.mp3",
+            "6": "/audio/stress-relief/induction-6.mp3",
+            "7": "/audio/stress-relief/induction-7.mp3",
+            "8": "/audio/stress-relief/induction-8.mp3",
+            "9": "/audio/stress-relief/induction-9.mp3"
+        },
+        "deepening": {
+            "0": "/audio/stress-relief/deepening-0.mp3",
+            "1": "/audio/stress-relief/deepening-1.mp3",
+            "2": "/audio/stress-relief/deepening-2.mp3",
+            "3": "/audio/stress-relief/deepening-3.mp3",
+            "4": "/audio/stress-relief/deepening-4.mp3",
+            "5": "/audio/stress-relief/deepening-5.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/stress-relief/suggestion-0.mp3",
+            "1": "/audio/stress-relief/suggestion-1.mp3",
+            "2": "/audio/stress-relief/suggestion-2.mp3",
+            "3": "/audio/stress-relief/suggestion-3.mp3",
+            "4": "/audio/stress-relief/suggestion-4.mp3",
+            "5": "/audio/stress-relief/suggestion-5.mp3",
+            "6": "/audio/stress-relief/suggestion-6.mp3",
+            "7": "/audio/stress-relief/suggestion-7.mp3"
+        },
+        "emergence": {
+            "0": "/audio/stress-relief/emergence-0.mp3",
+            "1": "/audio/stress-relief/emergence-1.mp3",
+            "2": "/audio/stress-relief/emergence-2.mp3",
+            "3": "/audio/stress-relief/emergence-3.mp3",
+            "4": "/audio/stress-relief/emergence-4.mp3"
+        }
     },
     "sleep-preparation": {
-        "preparation": {},
-        "induction": {},
-        "deepening": {},
-        "suggestion": {},
-        "emergence": {}
+        "preparation": {
+            "0": "/audio/sleep-preparation/preparation-0.mp3",
+            "1": "/audio/sleep-preparation/preparation-1.mp3",
+            "2": "/audio/sleep-preparation/preparation-2.mp3",
+            "3": "/audio/sleep-preparation/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/sleep-preparation/induction-0.mp3",
+            "1": "/audio/sleep-preparation/induction-1.mp3",
+            "2": "/audio/sleep-preparation/induction-2.mp3",
+            "3": "/audio/sleep-preparation/induction-3.mp3",
+            "4": "/audio/sleep-preparation/induction-4.mp3",
+            "5": "/audio/sleep-preparation/induction-5.mp3",
+            "6": "/audio/sleep-preparation/induction-6.mp3",
+            "7": "/audio/sleep-preparation/induction-7.mp3",
+            "8": "/audio/sleep-preparation/induction-8.mp3"
+        },
+        "deepening": {
+            "0": "/audio/sleep-preparation/deepening-0.mp3",
+            "1": "/audio/sleep-preparation/deepening-1.mp3",
+            "2": "/audio/sleep-preparation/deepening-2.mp3",
+            "3": "/audio/sleep-preparation/deepening-3.mp3",
+            "4": "/audio/sleep-preparation/deepening-4.mp3",
+            "5": "/audio/sleep-preparation/deepening-5.mp3",
+            "6": "/audio/sleep-preparation/deepening-6.mp3",
+            "7": "/audio/sleep-preparation/deepening-7.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/sleep-preparation/suggestion-0.mp3",
+            "1": "/audio/sleep-preparation/suggestion-1.mp3",
+            "2": "/audio/sleep-preparation/suggestion-2.mp3",
+            "3": "/audio/sleep-preparation/suggestion-3.mp3",
+            "4": "/audio/sleep-preparation/suggestion-4.mp3",
+            "5": "/audio/sleep-preparation/suggestion-5.mp3",
+            "6": "/audio/sleep-preparation/suggestion-6.mp3"
+        },
+        "emergence": {
+            "0": "/audio/sleep-preparation/emergence-0.mp3",
+            "1": "/audio/sleep-preparation/emergence-1.mp3",
+            "2": "/audio/sleep-preparation/emergence-2.mp3"
+        }
+    },
+    "confidence-building": {
+        "preparation": {
+            "0": "/audio/confidence-building/preparation-0.mp3",
+            "1": "/audio/confidence-building/preparation-1.mp3",
+            "2": "/audio/confidence-building/preparation-2.mp3",
+            "3": "/audio/confidence-building/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/confidence-building/induction-0.mp3",
+            "1": "/audio/confidence-building/induction-1.mp3",
+            "2": "/audio/confidence-building/induction-2.mp3",
+            "3": "/audio/confidence-building/induction-3.mp3",
+            "4": "/audio/confidence-building/induction-4.mp3",
+            "5": "/audio/confidence-building/induction-5.mp3"
+        },
+        "deepening": {
+            "0": "/audio/confidence-building/deepening-0.mp3",
+            "1": "/audio/confidence-building/deepening-1.mp3",
+            "2": "/audio/confidence-building/deepening-2.mp3",
+            "3": "/audio/confidence-building/deepening-3.mp3",
+            "4": "/audio/confidence-building/deepening-4.mp3",
+            "5": "/audio/confidence-building/deepening-5.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/confidence-building/suggestion-0.mp3",
+            "1": "/audio/confidence-building/suggestion-1.mp3",
+            "2": "/audio/confidence-building/suggestion-2.mp3",
+            "3": "/audio/confidence-building/suggestion-3.mp3",
+            "4": "/audio/confidence-building/suggestion-4.mp3",
+            "5": "/audio/confidence-building/suggestion-5.mp3",
+            "6": "/audio/confidence-building/suggestion-6.mp3",
+            "7": "/audio/confidence-building/suggestion-7.mp3",
+            "8": "/audio/confidence-building/suggestion-8.mp3",
+            "9": "/audio/confidence-building/suggestion-9.mp3"
+        },
+        "emergence": {
+            "0": "/audio/confidence-building/emergence-0.mp3",
+            "1": "/audio/confidence-building/emergence-1.mp3",
+            "2": "/audio/confidence-building/emergence-2.mp3",
+            "3": "/audio/confidence-building/emergence-3.mp3",
+            "4": "/audio/confidence-building/emergence-4.mp3",
+            "5": "/audio/confidence-building/emergence-5.mp3"
+        }
+    },
+    "pain-management": {
+        "preparation": {
+            "0": "/audio/pain-management/preparation-0.mp3",
+            "1": "/audio/pain-management/preparation-1.mp3",
+            "2": "/audio/pain-management/preparation-2.mp3",
+            "3": "/audio/pain-management/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/pain-management/induction-0.mp3",
+            "1": "/audio/pain-management/induction-1.mp3",
+            "2": "/audio/pain-management/induction-2.mp3",
+            "3": "/audio/pain-management/induction-3.mp3",
+            "4": "/audio/pain-management/induction-4.mp3",
+            "5": "/audio/pain-management/induction-5.mp3",
+            "6": "/audio/pain-management/induction-6.mp3",
+            "7": "/audio/pain-management/induction-7.mp3"
+        },
+        "deepening": {
+            "0": "/audio/pain-management/deepening-0.mp3",
+            "1": "/audio/pain-management/deepening-1.mp3",
+            "2": "/audio/pain-management/deepening-2.mp3",
+            "3": "/audio/pain-management/deepening-3.mp3",
+            "4": "/audio/pain-management/deepening-4.mp3",
+            "5": "/audio/pain-management/deepening-5.mp3",
+            "6": "/audio/pain-management/deepening-6.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/pain-management/suggestion-0.mp3",
+            "1": "/audio/pain-management/suggestion-1.mp3",
+            "2": "/audio/pain-management/suggestion-2.mp3",
+            "3": "/audio/pain-management/suggestion-3.mp3",
+            "4": "/audio/pain-management/suggestion-4.mp3",
+            "5": "/audio/pain-management/suggestion-5.mp3",
+            "6": "/audio/pain-management/suggestion-6.mp3",
+            "7": "/audio/pain-management/suggestion-7.mp3",
+            "8": "/audio/pain-management/suggestion-8.mp3",
+            "9": "/audio/pain-management/suggestion-9.mp3",
+            "10": "/audio/pain-management/suggestion-10.mp3",
+            "11": "/audio/pain-management/suggestion-11.mp3",
+            "12": "/audio/pain-management/suggestion-12.mp3"
+        },
+        "emergence": {
+            "0": "/audio/pain-management/emergence-0.mp3",
+            "1": "/audio/pain-management/emergence-1.mp3",
+            "2": "/audio/pain-management/emergence-2.mp3",
+            "3": "/audio/pain-management/emergence-3.mp3",
+            "4": "/audio/pain-management/emergence-4.mp3",
+            "5": "/audio/pain-management/emergence-5.mp3"
+        }
     }
 }
