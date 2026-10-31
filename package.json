@@ -19,6 +19,7 @@
         "typecheck": "tsc --noEmit",
         "knip": "knip",
         "check": "npm run typecheck && npm run lint && npm run format:check && npm run knip",
+        "generate:audio": "node scripts/generate-audio.mjs",
         "prepare": "husky"
     },
     "dependencies": {

@@ -4,12 +4,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useSessionEngine } from '@hooks/useSessionEngine';
+import { useWakeLock } from '@hooks/useWakeLock';
 import { AudioPlayer } from '@components/session/AudioPlayer';
 import { PhaseDisplay } from '@components/session/PhaseDisplay';
 import { PhaseTimer } from '@components/session/PhaseTimer';
 import { ScriptDisplay } from '@components/session/ScriptDisplay';
 import { SessionSummary } from '@components/session/SessionSummary';
 import { audioManager } from '@lib/session/audioManager';
+import { playChime } from '@lib/session/chime';
 import { PHASE_CONFIG } from '@lib/session/phaseConfig';
 import type { PhaseScript, SessionConfig } from '@lib/session/engine';
 import { db, type CustomSuggestion } from '@lib/db';
@@ -30,6 +32,8 @@ const DEFAULT_SEGMENT_TEXT: Record<PhaseId, string> = {
 const PERSONAL_SUGGESTION_SECONDS = 30;
 /** Maximum number of personal suggestions woven into one session. */
 const MAX_PERSONAL_SUGGESTIONS = 3;
+/** Seconds of inactivity before the screen fades to near-black for eyes-closed use. */
+const DIM_AFTER_SECONDS = 10;
 
 function buildConfig(
     sessionId: string,
@@ -135,6 +139,9 @@ export function SessionPlayerClient({ sessionId }: Props) {
 
     const [config, setConfig] = useState<SessionConfig | null>(null);
     const [isComplete, setIsComplete] = useState(false);
+    // Nothing starts until the user taps Begin: browsers only allow audio after a gesture.
+    const [began, setBegan] = useState(false);
+    const [dimmed, setDimmed] = useState(false);
     const sessionStarted = useRef(false);
     const hasBeenRunning = useRef(false);
 
@@ -170,10 +177,20 @@ export function SessionPlayerClient({ sessionId }: Props) {
 
     // Start the session engine once the config is ready.
     useEffect(() => {
-        if (!config || sessionStarted.current) return;
+        if (!config || !began || sessionStarted.current) return;
         sessionStarted.current = true;
         start(config);
-    }, [config, start]);
+    }, [config, began, start]);
+
+    // Keep the screen awake for the duration of the session.
+    useWakeLock(began && !isComplete);
+
+    // Fade the screen to near-black after a period of inactivity; any tap wakes it.
+    useEffect(() => {
+        if (!began || isComplete) return;
+        const id = window.setTimeout(() => setDimmed(true), DIM_AFTER_SECONDS * 1000);
+        return () => window.clearTimeout(id);
+    }, [began, isComplete, dimmed]);
 
     // Load audio for this session; enable audio mode if audio is available.
     // Cleanup stops audio when the page unmounts.
@@ -222,6 +239,7 @@ export function SessionPlayerClient({ sessionId }: Props) {
     useEffect(() => {
         if (hasBeenRunning.current && !isRunning && phase === null) {
             setIsComplete(true);
+            playChime();
         }
     }, [isRunning, phase]);
 
@@ -249,6 +267,32 @@ export function SessionPlayerClient({ sessionId }: Props) {
         );
     }
 
+    // Start screen: one huge target, easy to hit before closing your eyes.
+    if (!began) {
+        return (
+            <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-gray-950 px-6 text-center text-white">
+                <p className="max-w-xs text-lg text-gray-300">
+                    Get comfortable. Turn your volume up a little, then tap to begin. The screen
+                    will fade and a calm voice will guide you.
+                </p>
+                <button
+                    onClick={() => setBegan(true)}
+                    disabled={!config}
+                    aria-label="Begin session"
+                    className="flex h-48 w-48 items-center justify-center rounded-full bg-indigo-600 text-2xl font-medium shadow-lg hover:bg-indigo-500 active:scale-95 disabled:opacity-40"
+                >
+                    {config ? 'Begin' : 'Loading…'}
+                </button>
+                <button
+                    onClick={() => router.push('/session')}
+                    className="text-sm text-gray-500 underline hover:text-gray-300"
+                >
+                    Back to sessions
+                </button>
+            </div>
+        );
+    }
+
     // Loading state before first phase fires.
     if (!phase) {
         return (
@@ -266,6 +310,15 @@ export function SessionPlayerClient({ sessionId }: Props) {
 
     return (
         <div className="fixed inset-0 z-40 flex flex-col bg-gray-950 text-white">
+            {/* Dim overlay: swallows the first tap so a wake-up tap never hits a control. */}
+            <div
+                onPointerDown={() => setDimmed(false)}
+                aria-hidden={!dimmed}
+                className={`absolute inset-0 z-50 bg-black transition-opacity duration-[2000ms] ${
+                    dimmed ? 'opacity-95' : 'pointer-events-none opacity-0'
+                }`}
+            />
+
             {/* Phase stepper */}
             <div className="px-4 pt-10">
                 <PhaseDisplay currentPhase={phase} />
@@ -290,7 +343,7 @@ export function SessionPlayerClient({ sessionId }: Props) {
             </div>
 
             {/* Controls */}
-            <div className="flex flex-col gap-3 px-6 pb-10">
+            <div className="flex flex-col gap-3 px-6 pb-10" onPointerDown={() => setDimmed(false)}>
                 <div className="flex gap-3">
                     {!isEmergence && (
                         <button
@@ -304,7 +357,7 @@ export function SessionPlayerClient({ sessionId }: Props) {
                     <button
                         onClick={isPaused ? resume : pause}
                         disabled={!isRunning}
-                        className="flex-1 rounded-xl bg-indigo-600 py-3 text-sm font-medium text-white hover:bg-indigo-500 disabled:opacity-40"
+                        className="flex-1 rounded-xl bg-indigo-600 py-6 text-xl font-medium text-white hover:bg-indigo-500 disabled:opacity-40"
                     >
                         {isPaused ? 'Resume' : 'Pause'}
                     </button>
@@ -314,7 +367,7 @@ export function SessionPlayerClient({ sessionId }: Props) {
                     <button
                         onClick={handleEmergencyExit}
                         disabled={!isRunning}
-                        className="w-full rounded-xl bg-red-900/40 py-3 text-sm font-medium text-red-300 hover:bg-red-900/60 disabled:opacity-40"
+                        className="w-full rounded-xl bg-red-900/60 py-8 text-xl font-medium text-red-200 hover:bg-red-900/80 disabled:opacity-40"
                     >
                         Emergency Exit → Emergence
                     </button>
