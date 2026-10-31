@@ -30,10 +30,6 @@ jobs:
             - name: Format check
               run: npm run format:check
 
-            - name: DEBUG prettier diff
-              if: failure()
-              run: npx prettier README.md | diff README.md - || true
-
             - name: Find unused code
               run: npm run knip
 

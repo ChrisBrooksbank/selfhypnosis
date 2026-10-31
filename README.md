@@ -1,5 +1,5 @@
-
 **Live demo:** [selfhypnosis.netlify.app](https://selfhypnosis.netlify.app)
+
 <p align="center">
   <img src="docs/media/hero.png" alt="Self-Hypnosis — a quiet room you carry in your pocket" width="100%">
 </p>
