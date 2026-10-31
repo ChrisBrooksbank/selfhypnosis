@@ -171,7 +171,7 @@ function postProcess(rawPath, outPath, durationSeconds) {
         `atempo=${TEMPO}`,
         'afade=t=in:d=0.4',
         `afade=t=out:st=${fadeOutStart.toFixed(2)}:d=0.6`,
-        `loudnorm=I=${LUFS}:TP=-1.5:LRA=11`,
+        `loudnorm=I=${LUFS}:TP=-2:LRA=11`,
         `apad=whole_dur=${total}`,
     ].join(',');
     execFileSync(
