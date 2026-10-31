@@ -9,6 +9,7 @@
 
 import { Logger } from '@utils/logger';
 import type { PhaseId } from '@/types';
+import manifestJson from '@/content/audio/manifest.json';
 
 // ─── Manifest Types ────────────────────────────────────────────────────────────
 
@@ -18,10 +19,8 @@ import type { PhaseId } from '@/types';
  */
 type AudioManifest = Record<string, Record<string, Record<string, string>>>;
 
-// Loaded at module level — static JSON, available before any instances are created.
-// The cast is safe: JSON files have no prototype chain concerns.
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const MANIFEST: AudioManifest = require('@/content/audio/manifest.json') as AudioManifest;
+// Static JSON, bundled at build time and available before any instances are created.
+const MANIFEST: AudioManifest = manifestJson as AudioManifest;
 
 // ─── Public Types ──────────────────────────────────────────────────────────────
 
@@ -204,6 +203,8 @@ export class AudioManager {
         this._audio = audio;
 
         audio.addEventListener('ended', () => {
+            // Ignore events from an element that has already been replaced.
+            if (this._audio !== audio) return;
             this._isPlaying = false;
             Logger.debug(`AudioManager: segment ended ${phaseId}[${segmentIndex}]`);
             this._onSegmentEnd?.();
@@ -220,6 +221,9 @@ export class AudioManager {
         });
 
         audio.addEventListener('error', () => {
+            // Clearing a finished element (src = '') makes browsers fire `error` on it.
+            // That is not a real failure and must not switch the session to text-only.
+            if (this._audio !== audio) return;
             const msg = `Failed to load audio: ${path}`;
             Logger.error(`AudioManager: ${msg}`);
             this._isPlaying = false;

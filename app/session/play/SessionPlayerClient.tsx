@@ -206,9 +206,12 @@ export function SessionPlayerClient({ sessionId }: Props) {
     }, [config, sessionId, setAudioMode]);
 
     // Wire audio segment-end callback to the engine's external advance method.
+    // If audio genuinely fails, hand segment timing back to the engine's timer so the
+    // script keeps moving (text-only) instead of freezing on one line.
     useEffect(() => {
         audioManager.onSegmentEnd = advanceSegmentFromAudio;
-    }, [advanceSegmentFromAudio]);
+        audioManager.onError = () => setAudioMode(false);
+    }, [advanceSegmentFromAudio, setAudioMode]);
 
     // Play the current segment's audio whenever phase or segment changes.
     useEffect(() => {
