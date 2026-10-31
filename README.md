@@ -1,5 +1,5 @@
-
 **Live demo:** [selfhypnosis.netlify.app](https://selfhypnosis.netlify.app)
+
 <p align="center">
   <img src="docs/media/hero.png" alt="Self-Hypnosis — a quiet room you carry in your pocket" width="100%">
 </p>
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000?logo=nextdotjs">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-000?logo=nextdotjs">
   <img alt="React" src="https://img.shields.io/badge/React-19-149eca?logo=react">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white">
   <img alt="Offline" src="https://img.shields.io/badge/works-offline-6366f1">
@@ -32,6 +32,23 @@ It runs fully in your browser. Install it to your home screen, switch on airplan
 <p align="center">
   <img src="docs/media/session.gif" alt="A guided session: phases advance, the ring counts down, script lines type themselves out and fade" width="300">
 </p>
+
+## 🎙️ A voice for your eyes-closed moments
+
+You shouldn't need to read anything once you've begun. Every guided session is **narrated by a slow, warm, hypnotherapist-style voice**, paced so the pauses between lines are real silence.
+
+<p align="center">
+  <a href="docs/media/voice-demo.mp4"><img src="docs/media/voice-demo-poster.png" alt="Click to listen: a 38-second sample of the narration" width="480"></a><br>
+  <sub>▶ <a href="docs/media/voice-demo.mp4"><b>Listen to the voice</b></a> (38 seconds) · <a href="docs/media/voice-demo.mp3">mp3</a></sub>
+</p>
+
+The player is built to be used blind:
+
+- **One huge Begin button.** Tap it, then close your eyes.
+- **The screen fades to near-black** after ten seconds. Any tap wakes it, and that first tap never hits a control by accident.
+- **The screen stays awake** (Wake Lock) for the whole session.
+- **Big Pause and Emergency Exit buttons**, easy to find if something startles you.
+- **A soft chime** tells you when it's over. It's synthesised in the browser, so it works offline.
 
 ## ✨ A look around
 
@@ -64,7 +81,7 @@ Need out _now_? The **Emergency Exit** jumps straight to emergence. You still co
 
 ## 🧰 What's inside
 
-- **🎧 Guided sessions**: five scripted journeys (Beginner Relaxation, Stress Relief, Sleep Preparation, Pain Management, Confidence Building), with a typewriter script reveal, a phase ring, pause/skip, and a post-session check-in for depth and mood.
+- **🎧 Guided sessions**: five narrated journeys (Beginner Relaxation, Stress Relief, Sleep Preparation, Pain Management, Confidence Building), with a typewriter script reveal, a phase ring, pause/skip, and a post-session check-in for depth and mood. Audio is cached by the service worker, so it plays offline.
 - **⏳ Free timer**: no script, just you, a countdown, and shuffled technique cards for inspiration.
 - **📚 Technique library**: eye fixation, progressive muscle relaxation, visualisation, countdown deepening, controlled breathing, Betty Erickson's 3-2-1 sensory method, and autogenic training. Each has steps, the science, and citations.
 - **✍️ Suggestion builder**: pick a goal, write (or dictate) your suggestion, and get a live check for positive framing, present tense, specificity, believability and emotional pull. Your best suggestions for a goal are woven into that goal's sessions automatically.
@@ -117,26 +134,40 @@ npm run start      # serve out/ locally
 
 Deploy `out/` to any static host (GitHub Pages, Netlify, Cloudflare Pages, S3). There's no server to run.
 
+### Narration audio
+
+The narration ships in the repo (`public/audio/`), so you don't need to do anything to hear it. The app never calls a speech service at runtime. To change the voice or regenerate it, you need an [OpenAI API key](https://platform.openai.com/api-keys) with a few dollars of credit and `ffmpeg` on your PATH:
+
+```bash
+echo "OPENAI_API_KEY=sk-..." > .env.local        # gitignored
+npm run generate:audio -- --dry-run              # count clips and characters, no API calls
+npm run generate:audio -- --session stress-relief
+npm run generate:audio -- --force                # regenerate everything
+```
+
+Tune it with `OPENAI_TTS_VOICE` (default `sage`; try `shimmer` or `marin`), `OPENAI_TTS_MODEL` (default `gpt-4o-mini-tts`) and `OPENAI_TTS_TEMPO` (default `0.9`; lower is slower). Each clip is slowed slightly, faded, and padded with silence to its scripted duration so the audio stays in step with the phase timers. Existing clips are skipped, so an interrupted run can simply be restarted.
+
 ### Scripts
 
-| Command                 | Description                                       |
-| ----------------------- | ------------------------------------------------- |
-| `npm run dev`           | Start Next.js dev server (Turbopack)              |
-| `npm run build`         | Production build (static export to `out/`)        |
-| `npm run start`         | Serve production build locally                    |
-| `npm test`              | Run tests in watch mode                           |
-| `npm run test:run`      | Run tests once                                    |
-| `npm run test:coverage` | Generate coverage report                          |
-| `npm run lint`          | Check for lint errors                             |
-| `npm run lint:fix`      | Fix lint errors                                   |
-| `npm run format`        | Format code with Prettier                         |
-| `npm run typecheck`     | TypeScript type checking                          |
-| `npm run knip`          | Find unused code                                  |
-| `npm run check`         | Run all checks (typecheck + lint + format + knip) |
+| Command                  | Description                                       |
+| ------------------------ | ------------------------------------------------- |
+| `npm run dev`            | Start Next.js dev server (Turbopack)              |
+| `npm run build`          | Production build (static export to `out/`)        |
+| `npm run start`          | Serve production build locally                    |
+| `npm test`               | Run tests in watch mode                           |
+| `npm run test:run`       | Run tests once                                    |
+| `npm run test:coverage`  | Generate coverage report                          |
+| `npm run lint`           | Check for lint errors                             |
+| `npm run lint:fix`       | Fix lint errors                                   |
+| `npm run format`         | Format code with Prettier                         |
+| `npm run typecheck`      | TypeScript type checking                          |
+| `npm run knip`           | Find unused code                                  |
+| `npm run check`          | Run all checks (typecheck + lint + format + knip) |
+| `npm run generate:audio` | Generate narration audio with OpenAI TTS          |
 
 ## 🏗️ Under the hood
 
-**Next.js 15 (App Router, static export)** · **React 19** · **TypeScript** · **Tailwind CSS 4** · **Dexie.js / IndexedDB** · **Serwist service worker** · **Zod** · **Vitest**
+**Next.js 16 (App Router, static export)** · **React 19** · **TypeScript** · **Tailwind CSS 4** · **Dexie.js / IndexedDB** · **Serwist service worker** · **Zod** · **Vitest**
 
 ```
 app/                      # Routes: home, library, session, suggestions, journal, settings, onboarding
@@ -144,13 +175,15 @@ app/                      # Routes: home, library, session, suggestions, journal
   journal/entry/          # Journal entry view (/journal/entry/?id=…)
   sw.ts                   # Service worker (offline cache)
 src/
-  lib/session/            # Session engine state machine, phase config, audio manager
+  lib/session/            # Session engine state machine, phase config, audio manager, chime
   lib/suggestions/        # Suggestion guideline validator
   lib/stats/              # Streak calculation
   lib/db.ts               # Dexie schema: settings, sessions, suggestions, journal
   hooks/                  # useSessionEngine, live Dexie queries, notifications…
   components/             # UI by feature (dashboard, session, library, journal…)
   content/                # Technique and guided-session scripts (JSON)
+public/audio/             # Pre-generated narration (mp3), one folder per session
+scripts/                  # Icon and narration generators
 specs/                    # Feature specs
 research.md               # The research everything is built on
 ```

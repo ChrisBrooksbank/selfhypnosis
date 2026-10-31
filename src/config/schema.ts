@@ -12,7 +12,7 @@ export const ConfigSchema = z.object({
             defaultSessionDuration: z.number().positive().default(20),
             maxSessionDuration: z.number().positive().default(60),
         })
-        .default({}),
+        .prefault({}),
 });
 
 export type AppConfig = z.infer<typeof ConfigSchema>;
