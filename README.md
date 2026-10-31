@@ -145,7 +145,7 @@ npm run generate:audio -- --session stress-relief
 npm run generate:audio -- --force                # regenerate everything
 ```
 
-Tune it with `OPENAI_TTS_VOICE` (default `sage`; try `shimmer` or `marin`), `OPENAI_TTS_MODEL` (default `gpt-4o-mini-tts`) and `OPENAI_TTS_TEMPO` (default `0.9`; lower is slower). Each clip is slowed slightly, faded, and padded with silence to its scripted duration so the audio stays in step with the phase timers. Existing clips are skipped, so an interrupted run can simply be restarted.
+Tune it with `OPENAI_TTS_VOICE` (default `sage`; try `shimmer` or `marin`), `OPENAI_TTS_MODEL` (default `gpt-4o-mini-tts`) `OPENAI_TTS_TEMPO` (default `0.9`; lower is slower) and `OPENAI_TTS_LUFS` (default `-20`; the raw voice is very quiet at about -33, so each clip is levelled up to a clear but gentle volume with the peaks capped). Each clip is slowed slightly, faded, and padded with silence to its scripted duration so the audio stays in step with the phase timers. Existing clips are skipped, so an interrupted run can simply be restarted.
 
 ### Scripts
 
