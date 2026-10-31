@@ -13,10 +13,11 @@ import { SessionSummary } from '@components/session/SessionSummary';
 import { audioManager } from '@lib/session/audioManager';
 import { playChime } from '@lib/session/chime';
 import { PHASE_CONFIG } from '@lib/session/phaseConfig';
-import type { PhaseScript, SessionConfig } from '@lib/session/engine';
+import type { SessionConfig } from '@lib/session/engine';
+import { buildConfig } from '@lib/session/sessionConfig';
 import { db, type CustomSuggestion } from '@lib/db';
 import { getGuidedSession } from '@/content/sessions';
-import type { GoalArea, GuidedSession, PhaseId } from '@/types';
+import type { GoalArea, PhaseId } from '@/types';
 import { Logger } from '@utils/logger';
 
 // Default guidance text shown when no guided session script is loaded.
@@ -28,59 +29,10 @@ const DEFAULT_SEGMENT_TEXT: Record<PhaseId, string> = {
     emergence: 'Slowly begin to return to full awareness. Wiggle your fingers and toes gently.',
 };
 
-/** Seconds each personal suggestion is shown for during the suggestion phase. */
-const PERSONAL_SUGGESTION_SECONDS = 30;
 /** Maximum number of personal suggestions woven into one session. */
 const MAX_PERSONAL_SUGGESTIONS = 3;
 /** Seconds of inactivity before the screen fades to near-black for eyes-closed use. */
 const DIM_AFTER_SECONDS = 10;
-
-function buildConfig(
-    sessionId: string,
-    template: GuidedSession | undefined,
-    personal: CustomSuggestion[]
-): SessionConfig {
-    if (!template) return { sessionId, type: 'guided' };
-
-    const phases: Partial<Record<PhaseId, PhaseScript>> = {};
-    for (const [phaseId, phase] of Object.entries(template.phases) as [
-        PhaseId,
-        GuidedSession['phases'][PhaseId],
-    ][]) {
-        phases[phaseId] = { durationMinutes: phase.durationMinutes, segments: phase.segments };
-    }
-
-    // Weave the user's own suggestions for this goal into the suggestion phase,
-    // just before its closing segment, and lengthen the phase to fit them.
-    const suggestionPhase = phases.suggestion;
-    if (suggestionPhase && personal.length > 0) {
-        const extra = personal.map(p => ({
-            text: p.text,
-            durationSeconds: PERSONAL_SUGGESTION_SECONDS,
-        }));
-        const segments = [...suggestionPhase.segments];
-        segments.splice(Math.max(0, segments.length - 1), 0, ...extra);
-        const totalSeconds = segments.reduce((sum, seg) => sum + seg.durationSeconds, 0);
-        phases.suggestion = {
-            segments,
-            durationMinutes: Math.max(
-                suggestionPhase.durationMinutes ?? 0,
-                Math.ceil(totalSeconds / 60)
-            ),
-        };
-    }
-
-    return {
-        sessionId,
-        type: 'guided',
-        templateId: template.id,
-        goalArea: template.goalArea,
-        techniquesUsed: template.techniquesUsed,
-        plannedDurationMinutes: template.estimatedMinutes,
-        suggestionIds: personal.map(p => p.id),
-        phases,
-    };
-}
 
 /** The user's best suggestions for a goal: favourites first, then highest scoring. */
 async function loadPersonalSuggestions(
@@ -206,17 +158,28 @@ export function SessionPlayerClient({ sessionId }: Props) {
     }, [config, sessionId, setAudioMode]);
 
     // Wire audio segment-end callback to the engine's external advance method.
+    // If audio genuinely fails, hand segment timing back to the engine's timer so the
+    // script keeps moving (text-only) instead of freezing on one line.
     useEffect(() => {
         audioManager.onSegmentEnd = advanceSegmentFromAudio;
-    }, [advanceSegmentFromAudio]);
+        audioManager.onError = () => setAudioMode(false);
+    }, [advanceSegmentFromAudio, setAudioMode]);
 
     // Play the current segment's audio whenever phase or segment changes.
+    // Recorded segments play their own clip (by audioIndex, which survives personal
+    // suggestions shifting positions); text with no recording is spoken by the device voice.
     useEffect(() => {
         if (!phase || !isRunning) return;
-        if (!audioManager.snapshot().textOnly) {
-            audioManager.playSegment(phase, segment);
+        if (audioManager.snapshot().textOnly) return;
+        const segs = config?.phases?.[phase]?.segments;
+        const seg = segs?.[Math.min(segment, (segs?.length ?? 1) - 1)];
+        if (!seg) return;
+        if (seg.audioIndex !== undefined) {
+            audioManager.playSegment(phase, seg.audioIndex);
+        } else {
+            audioManager.speak(seg.text);
         }
-    }, [phase, segment, isRunning]);
+    }, [phase, segment, isRunning, config]);
 
     // Sync audio pause/resume with the engine's paused state.
     useEffect(() => {

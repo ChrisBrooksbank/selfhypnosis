@@ -31,6 +31,8 @@ const MODEL = process.env.OPENAI_TTS_MODEL ?? 'gpt-4o-mini-tts';
 const VOICE = process.env.OPENAI_TTS_VOICE ?? 'sage';
 /** 1.0 = unchanged. Below 1 slows the voice further for a more hypnotic pace. */
 const TEMPO = Number(process.env.OPENAI_TTS_TEMPO ?? '0.9');
+/** Target loudness in LUFS. Raw TTS is very quiet (about -33); -20 is a clear but gentle level. */
+const LUFS = Number(process.env.OPENAI_TTS_LUFS ?? '-20');
 
 const INSTRUCTIONS = [
     'Voice: warm, gentle and deeply soothing, like an experienced hypnotherapist guiding a client into relaxation.',
@@ -111,6 +113,7 @@ function postProcess(rawPath, outPath, durationSeconds) {
         `atempo=${TEMPO}`,
         'afade=t=in:d=0.4',
         `afade=t=out:st=${fadeOutStart.toFixed(2)}:d=0.6`,
+        `loudnorm=I=${LUFS}:TP=-1.5:LRA=11`,
         `apad=whole_dur=${total}`,
     ].join(',');
     execFileSync(
@@ -123,6 +126,8 @@ function postProcess(rawPath, outPath, durationSeconds) {
             rawPath,
             '-af',
             filter,
+            '-ar',
+            '24000',
             '-ac',
             '1',
             '-b:a',
