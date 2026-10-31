@@ -20,6 +20,11 @@ export interface ScriptSegment {
     text: string;
     /** How many seconds this segment occupies before advancing to the next. */
     durationSeconds: number;
+    /**
+     * Position of this segment's recorded narration clip. Absent for text that has no
+     * recording (e.g. the user's own suggestions), which is spoken by the device voice.
+     */
+    audioIndex?: number;
 }
 
 export interface PhaseScript {

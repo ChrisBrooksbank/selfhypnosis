@@ -38,6 +38,27 @@ export interface AudioManagerSnapshot {
     textOnly: boolean;
 }
 
+// ─── Device voice (for text with no recording, e.g. the user's own suggestions) ─
+
+/** Silence after a spoken line, before the next one, so suggestions have room to land. */
+const SPEECH_GAP_SECONDS = 8;
+/** Rough speaking time per character at the slowed device-voice rate. */
+const MS_PER_CHAR = 85;
+
+const PREFERRED_VOICE = /natural|neural|online|premium|enhanced/i;
+const KNOWN_GOOD_VOICE =
+    /google uk english female|samantha|serena|moira|karen|libby|sonia|jenny|aria/i;
+
+/** The most pleasant-sounding English voice available on this device, if any. */
+export function pickVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | undefined {
+    const english = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
+    const score = (v: SpeechSynthesisVoice) =>
+        (PREFERRED_VOICE.test(v.name) ? 4 : 0) +
+        (KNOWN_GOOD_VOICE.test(v.name) ? 2 : 0) +
+        (v.lang.toLowerCase() === 'en-gb' ? 1 : 0);
+    return [...english].sort((a, b) => score(b) - score(a))[0];
+}
+
 // ─── AudioManager ─────────────────────────────────────────────────────────────
 
 export class AudioManager {
@@ -51,6 +72,15 @@ export class AudioManager {
     private _audio: HTMLAudioElement | null = null;
     /** Pre-loaded audio for the next phase to reduce loading latency. */
     private _preload: HTMLAudioElement | null = null;
+
+    // Device-voice state: a spoken line followed by a silent gap, both cancellable.
+    private _speaking = false;
+    private _speechToken = 0;
+    private _gapTimer: ReturnType<typeof setTimeout> | null = null;
+    private _gapPending = false;
+    private _gapRemainingMs = 0;
+    private _gapStartedAt = 0;
+    private _watchdog: ReturnType<typeof setTimeout> | null = null;
 
     private _onSegmentEnd: SegmentEndCallback | null = null;
     private _onPhaseEnd: PhaseEndCallback | null = null;
@@ -103,19 +133,75 @@ export class AudioManager {
 
         const path = this._resolveAudioPath(this._sessionId, phaseId, segmentIndex);
         if (!path) {
-            Logger.debug(
-                `AudioManager: no audio for ${phaseId}[${segmentIndex}] — text-only fallback`
-            );
-            this._textOnly = true;
+            // The caller decides what plays; a missing clip must never freeze the script.
+            const msg = `No audio clip for ${phaseId}[${segmentIndex}]`;
+            Logger.warn(`AudioManager: ${msg}`);
+            this._emitError(msg);
             return;
         }
 
+        this._cancelSpeech();
         this._stopCurrentAudio();
         this._playPath(path, phaseId, segmentIndex);
     }
 
+    /**
+     * Speak text that has no recording using the device voice, then wait a short silent
+     * gap and fire onSegmentEnd, exactly as a finished clip would. If speech is
+     * unavailable or stalls, the script still advances at a reading pace.
+     */
+    speak(text: string, gapSeconds = SPEECH_GAP_SECONDS): void {
+        this._cancelSpeech();
+        this._stopCurrentAudio();
+        const token = this._speechToken;
+        this._isPaused = false;
+        this._isPlaying = true;
+        const gapMs = gapSeconds * 1000;
+        const readingMs = text.length * MS_PER_CHAR;
+
+        const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
+        if (!synth || typeof SpeechSynthesisUtterance === 'undefined') {
+            Logger.warn('AudioManager: no device voice — advancing at reading pace');
+            this._startGap(readingMs + gapMs);
+            return;
+        }
+
+        this._speaking = true;
+        const done = () => {
+            if (token !== this._speechToken) return; // cancelled or replaced
+            if (this._isPaused) {
+                // Never advance while paused; check again shortly.
+                this._armWatchdog(done, 1000);
+                return;
+            }
+            this._clearWatchdog();
+            this._speaking = false;
+            this._startGap(gapMs);
+        };
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.8;
+        utterance.pitch = 0.9;
+        utterance.volume = 1;
+        const voice = pickVoice(synth.getVoices());
+        if (voice) {
+            utterance.voice = voice;
+            utterance.lang = voice.lang;
+        }
+        utterance.onend = done;
+        utterance.onerror = done;
+        // Some engines never fire `end`; don't let that freeze the session.
+        this._armWatchdog(done, readingMs * 2 + 5000);
+        synth.speak(utterance);
+        Logger.debug('AudioManager: speaking with device voice');
+    }
+
     /** Pause current playback. */
     pause(): void {
+        if ((this._speaking || this._gapTimer !== null) && !this._isPaused) {
+            this._pauseSpeech();
+            return;
+        }
         if (!this._audio || !this._isPlaying || this._isPaused) return;
         this._audio.pause();
         this._isPaused = true;
@@ -125,6 +211,10 @@ export class AudioManager {
 
     /** Resume paused playback. */
     resume(): void {
+        if (this._isPaused && (this._speaking || this._gapPending)) {
+            this._resumeSpeech();
+            return;
+        }
         if (!this._audio || this._isPlaying || !this._isPaused) return;
         this._audio
             .play()
@@ -148,6 +238,7 @@ export class AudioManager {
 
     /** Stop all playback and release resources. */
     stop(): void {
+        this._cancelSpeech();
         this._stopCurrentAudio();
         this._cancelPreload();
         this._phase = null;
@@ -264,6 +355,70 @@ export class AudioManager {
         preload.src = path;
         this._preload = preload;
         Logger.debug(`AudioManager: preloading ${phaseId}[${nextSegmentIndex}]`);
+    }
+
+    private _startGap(ms: number): void {
+        this._gapRemainingMs = ms;
+        this._gapStartedAt = Date.now();
+        this._gapTimer = setTimeout(() => {
+            this._gapTimer = null;
+            this._isPlaying = false;
+            this._onSegmentEnd?.();
+        }, ms);
+    }
+
+    private _armWatchdog(fn: () => void, ms: number): void {
+        this._clearWatchdog();
+        this._watchdog = setTimeout(fn, ms);
+    }
+
+    private _clearWatchdog(): void {
+        if (this._watchdog !== null) {
+            clearTimeout(this._watchdog);
+            this._watchdog = null;
+        }
+    }
+
+    private _pauseSpeech(): void {
+        if (this._gapTimer !== null) {
+            clearTimeout(this._gapTimer);
+            this._gapTimer = null;
+            this._gapRemainingMs = Math.max(
+                0,
+                this._gapRemainingMs - (Date.now() - this._gapStartedAt)
+            );
+            this._gapPending = true;
+        } else if (this._speaking) {
+            window.speechSynthesis?.pause();
+        }
+        this._isPaused = true;
+        this._isPlaying = false;
+        Logger.debug('AudioManager: paused (device voice)');
+    }
+
+    private _resumeSpeech(): void {
+        this._isPaused = false;
+        this._isPlaying = true;
+        if (this._gapPending) {
+            this._gapPending = false;
+            this._startGap(this._gapRemainingMs);
+        } else {
+            window.speechSynthesis?.resume();
+        }
+        Logger.debug('AudioManager: resumed (device voice)');
+    }
+
+    /** Cancel any spoken line or silent gap. Stale callbacks are ignored via the token. */
+    private _cancelSpeech(): void {
+        this._speechToken += 1;
+        this._speaking = false;
+        this._gapPending = false;
+        this._clearWatchdog();
+        if (this._gapTimer !== null) {
+            clearTimeout(this._gapTimer);
+            this._gapTimer = null;
+        }
+        if (typeof window !== 'undefined') window.speechSynthesis?.cancel();
     }
 
     private _stopCurrentAudio(): void {
