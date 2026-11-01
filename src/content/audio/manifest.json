@@ -228,5 +228,216 @@
             "4": "/audio/pain-management/emergence-4.mp3",
             "5": "/audio/pain-management/emergence-5.mp3"
         }
+    },
+    "embers-for-two": {
+        "preparation": {
+            "0": "/audio/embers-for-two/preparation-0.mp3",
+            "1": "/audio/embers-for-two/preparation-1.mp3",
+            "2": "/audio/embers-for-two/preparation-2.mp3",
+            "3": "/audio/embers-for-two/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/embers-for-two/induction-0.mp3",
+            "1": "/audio/embers-for-two/induction-1.mp3",
+            "2": "/audio/embers-for-two/induction-2.mp3",
+            "3": "/audio/embers-for-two/induction-3.mp3",
+            "4": "/audio/embers-for-two/induction-4.mp3",
+            "5": "/audio/embers-for-two/induction-5.mp3"
+        },
+        "deepening": {
+            "0": "/audio/embers-for-two/deepening-0.mp3",
+            "1": "/audio/embers-for-two/deepening-1.mp3",
+            "2": "/audio/embers-for-two/deepening-2.mp3",
+            "3": "/audio/embers-for-two/deepening-3.mp3",
+            "4": "/audio/embers-for-two/deepening-4.mp3",
+            "5": "/audio/embers-for-two/deepening-5.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/embers-for-two/suggestion-0.mp3",
+            "1": "/audio/embers-for-two/suggestion-1.mp3",
+            "2": "/audio/embers-for-two/suggestion-2.mp3",
+            "3": "/audio/embers-for-two/suggestion-3.mp3",
+            "4": "/audio/embers-for-two/suggestion-4.mp3",
+            "5": "/audio/embers-for-two/suggestion-5.mp3",
+            "6": "/audio/embers-for-two/suggestion-6.mp3",
+            "7": "/audio/embers-for-two/suggestion-7.mp3",
+            "8": "/audio/embers-for-two/suggestion-8.mp3",
+            "9": "/audio/embers-for-two/suggestion-9.mp3",
+            "10": "/audio/embers-for-two/suggestion-10.mp3",
+            "11": "/audio/embers-for-two/suggestion-11.mp3",
+            "12": "/audio/embers-for-two/suggestion-12.mp3"
+        },
+        "emergence": {
+            "0": "/audio/embers-for-two/emergence-0.mp3",
+            "1": "/audio/embers-for-two/emergence-1.mp3",
+            "2": "/audio/embers-for-two/emergence-2.mp3",
+            "3": "/audio/embers-for-two/emergence-3.mp3"
+        }
+    },
+    "hands-at-peace": {
+        "preparation": {
+            "0": "/audio/hands-at-peace/preparation-0.mp3",
+            "1": "/audio/hands-at-peace/preparation-1.mp3",
+            "2": "/audio/hands-at-peace/preparation-2.mp3"
+        },
+        "induction": {
+            "0": "/audio/hands-at-peace/induction-0.mp3",
+            "1": "/audio/hands-at-peace/induction-1.mp3",
+            "2": "/audio/hands-at-peace/induction-2.mp3",
+            "3": "/audio/hands-at-peace/induction-3.mp3",
+            "4": "/audio/hands-at-peace/induction-4.mp3"
+        },
+        "deepening": {
+            "0": "/audio/hands-at-peace/deepening-0.mp3",
+            "1": "/audio/hands-at-peace/deepening-1.mp3",
+            "2": "/audio/hands-at-peace/deepening-2.mp3",
+            "3": "/audio/hands-at-peace/deepening-3.mp3",
+            "4": "/audio/hands-at-peace/deepening-4.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/hands-at-peace/suggestion-0.mp3",
+            "1": "/audio/hands-at-peace/suggestion-1.mp3",
+            "2": "/audio/hands-at-peace/suggestion-2.mp3",
+            "3": "/audio/hands-at-peace/suggestion-3.mp3",
+            "4": "/audio/hands-at-peace/suggestion-4.mp3",
+            "5": "/audio/hands-at-peace/suggestion-5.mp3",
+            "6": "/audio/hands-at-peace/suggestion-6.mp3",
+            "7": "/audio/hands-at-peace/suggestion-7.mp3",
+            "8": "/audio/hands-at-peace/suggestion-8.mp3",
+            "9": "/audio/hands-at-peace/suggestion-9.mp3"
+        },
+        "emergence": {
+            "0": "/audio/hands-at-peace/emergence-0.mp3",
+            "1": "/audio/hands-at-peace/emergence-1.mp3",
+            "2": "/audio/hands-at-peace/emergence-2.mp3"
+        }
+    },
+    "ibs-gut-calm": {
+        "preparation": {
+            "0": "/audio/ibs-gut-calm/preparation-0.mp3",
+            "1": "/audio/ibs-gut-calm/preparation-1.mp3",
+            "2": "/audio/ibs-gut-calm/preparation-2.mp3",
+            "3": "/audio/ibs-gut-calm/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/ibs-gut-calm/induction-0.mp3",
+            "1": "/audio/ibs-gut-calm/induction-1.mp3",
+            "2": "/audio/ibs-gut-calm/induction-2.mp3",
+            "3": "/audio/ibs-gut-calm/induction-3.mp3",
+            "4": "/audio/ibs-gut-calm/induction-4.mp3",
+            "5": "/audio/ibs-gut-calm/induction-5.mp3"
+        },
+        "deepening": {
+            "0": "/audio/ibs-gut-calm/deepening-0.mp3",
+            "1": "/audio/ibs-gut-calm/deepening-1.mp3",
+            "2": "/audio/ibs-gut-calm/deepening-2.mp3",
+            "3": "/audio/ibs-gut-calm/deepening-3.mp3",
+            "4": "/audio/ibs-gut-calm/deepening-4.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/ibs-gut-calm/suggestion-0.mp3",
+            "1": "/audio/ibs-gut-calm/suggestion-1.mp3",
+            "2": "/audio/ibs-gut-calm/suggestion-2.mp3",
+            "3": "/audio/ibs-gut-calm/suggestion-3.mp3",
+            "4": "/audio/ibs-gut-calm/suggestion-4.mp3",
+            "5": "/audio/ibs-gut-calm/suggestion-5.mp3",
+            "6": "/audio/ibs-gut-calm/suggestion-6.mp3",
+            "7": "/audio/ibs-gut-calm/suggestion-7.mp3",
+            "8": "/audio/ibs-gut-calm/suggestion-8.mp3",
+            "9": "/audio/ibs-gut-calm/suggestion-9.mp3",
+            "10": "/audio/ibs-gut-calm/suggestion-10.mp3",
+            "11": "/audio/ibs-gut-calm/suggestion-11.mp3"
+        },
+        "emergence": {
+            "0": "/audio/ibs-gut-calm/emergence-0.mp3",
+            "1": "/audio/ibs-gut-calm/emergence-1.mp3",
+            "2": "/audio/ibs-gut-calm/emergence-2.mp3",
+            "3": "/audio/ibs-gut-calm/emergence-3.mp3"
+        }
+    },
+    "mindful-eating": {
+        "preparation": {
+            "0": "/audio/mindful-eating/preparation-0.mp3",
+            "1": "/audio/mindful-eating/preparation-1.mp3",
+            "2": "/audio/mindful-eating/preparation-2.mp3",
+            "3": "/audio/mindful-eating/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/mindful-eating/induction-0.mp3",
+            "1": "/audio/mindful-eating/induction-1.mp3",
+            "2": "/audio/mindful-eating/induction-2.mp3",
+            "3": "/audio/mindful-eating/induction-3.mp3",
+            "4": "/audio/mindful-eating/induction-4.mp3",
+            "5": "/audio/mindful-eating/induction-5.mp3"
+        },
+        "deepening": {
+            "0": "/audio/mindful-eating/deepening-0.mp3",
+            "1": "/audio/mindful-eating/deepening-1.mp3",
+            "2": "/audio/mindful-eating/deepening-2.mp3",
+            "3": "/audio/mindful-eating/deepening-3.mp3",
+            "4": "/audio/mindful-eating/deepening-4.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/mindful-eating/suggestion-0.mp3",
+            "1": "/audio/mindful-eating/suggestion-1.mp3",
+            "2": "/audio/mindful-eating/suggestion-2.mp3",
+            "3": "/audio/mindful-eating/suggestion-3.mp3",
+            "4": "/audio/mindful-eating/suggestion-4.mp3",
+            "5": "/audio/mindful-eating/suggestion-5.mp3",
+            "6": "/audio/mindful-eating/suggestion-6.mp3",
+            "7": "/audio/mindful-eating/suggestion-7.mp3",
+            "8": "/audio/mindful-eating/suggestion-8.mp3",
+            "9": "/audio/mindful-eating/suggestion-9.mp3",
+            "10": "/audio/mindful-eating/suggestion-10.mp3",
+            "11": "/audio/mindful-eating/suggestion-11.mp3"
+        },
+        "emergence": {
+            "0": "/audio/mindful-eating/emergence-0.mp3",
+            "1": "/audio/mindful-eating/emergence-1.mp3",
+            "2": "/audio/mindful-eating/emergence-2.mp3",
+            "3": "/audio/mindful-eating/emergence-3.mp3"
+        }
+    },
+    "smoke-free": {
+        "preparation": {
+            "0": "/audio/smoke-free/preparation-0.mp3",
+            "1": "/audio/smoke-free/preparation-1.mp3",
+            "2": "/audio/smoke-free/preparation-2.mp3",
+            "3": "/audio/smoke-free/preparation-3.mp3"
+        },
+        "induction": {
+            "0": "/audio/smoke-free/induction-0.mp3",
+            "1": "/audio/smoke-free/induction-1.mp3",
+            "2": "/audio/smoke-free/induction-2.mp3",
+            "3": "/audio/smoke-free/induction-3.mp3",
+            "4": "/audio/smoke-free/induction-4.mp3"
+        },
+        "deepening": {
+            "0": "/audio/smoke-free/deepening-0.mp3",
+            "1": "/audio/smoke-free/deepening-1.mp3",
+            "2": "/audio/smoke-free/deepening-2.mp3",
+            "3": "/audio/smoke-free/deepening-3.mp3",
+            "4": "/audio/smoke-free/deepening-4.mp3"
+        },
+        "suggestion": {
+            "0": "/audio/smoke-free/suggestion-0.mp3",
+            "1": "/audio/smoke-free/suggestion-1.mp3",
+            "2": "/audio/smoke-free/suggestion-2.mp3",
+            "3": "/audio/smoke-free/suggestion-3.mp3",
+            "4": "/audio/smoke-free/suggestion-4.mp3",
+            "5": "/audio/smoke-free/suggestion-5.mp3",
+            "6": "/audio/smoke-free/suggestion-6.mp3",
+            "7": "/audio/smoke-free/suggestion-7.mp3",
+            "8": "/audio/smoke-free/suggestion-8.mp3",
+            "9": "/audio/smoke-free/suggestion-9.mp3",
+            "10": "/audio/smoke-free/suggestion-10.mp3",
+            "11": "/audio/smoke-free/suggestion-11.mp3"
+        },
+        "emergence": {
+            "0": "/audio/smoke-free/emergence-0.mp3",
+            "1": "/audio/smoke-free/emergence-1.mp3",
+            "2": "/audio/smoke-free/emergence-2.mp3",
+            "3": "/audio/smoke-free/emergence-3.mp3"
+        }
     }
 }
