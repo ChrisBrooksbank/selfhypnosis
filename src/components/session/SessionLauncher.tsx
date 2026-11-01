@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 
+import { SessionArt } from '@components/art/SessionArt';
 import { db } from '@lib/db';
 import { useOnboardingStatus } from '@hooks/useOnboardingStatus';
 import { Logger } from '@utils/logger';
@@ -23,6 +24,7 @@ const goalAreaLabels: Record<GoalArea, string> = {
     ibs: 'IBS',
     childbirth: 'Childbirth',
     'general-relaxation': 'Relaxation',
+    intimacy: 'Intimacy',
 };
 
 const techniqueLabels: Record<TechniqueId, string> = {
@@ -154,46 +156,52 @@ export function SessionLauncher({ sessions }: SessionLauncherProps) {
                             <div
                                 key={session.id}
                                 data-speech-clip={`session/${session.id}/description`}
-                                className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
+                                className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
                             >
-                                <div className="flex items-start justify-between gap-2">
-                                    <h2 className="text-base font-semibold text-gray-900">
-                                        {session.name}
-                                    </h2>
-                                    <span
-                                        className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${difficulty.className}`}
-                                    >
-                                        {difficulty.label}
-                                    </span>
-                                </div>
-
-                                <p className="text-sm text-gray-600">{session.description}</p>
-
-                                <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                                    <span className="rounded-full bg-indigo-50 px-2 py-0.5 font-medium text-indigo-700">
-                                        {goalAreaLabels[session.goalArea]}
-                                    </span>
-                                    <span>{session.estimatedMinutes} min</span>
-                                </div>
-
-                                <div className="flex flex-wrap gap-1">
-                                    {session.techniquesUsed.map(tid => (
+                                <SessionArt
+                                    sessionId={session.id}
+                                    className="h-28 w-full shrink-0"
+                                />
+                                <div className="flex flex-1 flex-col gap-3 p-4">
+                                    <div className="flex items-start justify-between gap-2">
+                                        <h2 className="font-display text-lg font-semibold text-gray-900">
+                                            {session.name}
+                                        </h2>
                                         <span
-                                            key={tid}
-                                            className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
+                                            className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${difficulty.className}`}
                                         >
-                                            {techniqueLabels[tid]}
+                                            {difficulty.label}
                                         </span>
-                                    ))}
-                                </div>
+                                    </div>
 
-                                <button
-                                    onClick={() => handleLaunch(session)}
-                                    disabled={isDisabled}
-                                    className="mt-auto rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-40"
-                                >
-                                    Start Session
-                                </button>
+                                    <p className="text-sm text-gray-600">{session.description}</p>
+
+                                    <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                                        <span className="rounded-full bg-indigo-50 px-2 py-0.5 font-medium text-indigo-700">
+                                            {goalAreaLabels[session.goalArea]}
+                                        </span>
+                                        <span>{session.estimatedMinutes} min</span>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-1">
+                                        {session.techniquesUsed.map(tid => (
+                                            <span
+                                                key={tid}
+                                                className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
+                                            >
+                                                {techniqueLabels[tid]}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <button
+                                        onClick={() => handleLaunch(session)}
+                                        disabled={isDisabled}
+                                        className="mt-auto rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-40"
+                                    >
+                                        Start Session
+                                    </button>
+                                </div>
                             </div>
                         );
                     })}

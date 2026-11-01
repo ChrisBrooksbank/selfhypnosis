@@ -34,6 +34,7 @@ const goalAreas: { id: GoalArea; label: string; icon: string; description: strin
         icon: '☁️',
         description: 'Deep peace and wellbeing',
     },
+    { id: 'intimacy', label: 'Intimacy', icon: '🕯️', description: 'Closeness and desire' },
 ];
 
 export function GoalAreaPicker({ value, onChange }: GoalAreaPickerProps) {

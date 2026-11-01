@@ -1,0 +1,140 @@
+{
+    "id": "hands-at-peace",
+    "name": "Hands at Peace",
+    "description": "Break the habit of nail biting and picking. Raise your awareness of the urge, calm the nervous energy behind it and give your hands somewhere better to be.",
+    "goalArea": "habits",
+    "difficulty": "beginner",
+    "techniquesUsed": ["pmr", "autogenic", "visualisation"],
+    "estimatedMinutes": 11,
+    "phases": {
+        "preparation": {
+            "durationMinutes": 1,
+            "segments": [
+                {
+                    "text": "Sit or lie comfortably, and place your hands where you can see them, resting on your lap or beside you. Look at them for a moment, without judgement. They have done a lot for you.",
+                    "durationSeconds": 31
+                },
+                {
+                    "text": "Nail biting is usually an automatic habit, often tied to nervous energy, boredom or concentration. Change starts with noticing, and in this session we will teach your mind to notice sooner and respond differently.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Take a slow breath in, and let it out. Let your eyes close, and let your hands rest.",
+                    "durationSeconds": 23
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "We will start with your hands. Make two gentle fists, squeezing for five seconds. Notice the tension in your fingers, your palms and your wrists.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "And now release. Let your fingers uncurl and spread softly. Notice the warm, tingling relief as the tension drains away.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Again, make fists, tight. Hold. And let go. Your hands feel loose, heavy and calm, like they could sink through the surface beneath them.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Now tense your forearms, hold, and release. Then your upper arms and shoulders, hold, and release. Let the whole of your arms go heavy.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Feel the calm run through your shoulders, your neck and your jaw. Your face softens. Your breathing slows.",
+                    "durationSeconds": 23
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Now, in the quiet, say silently to yourself: my hands are heavy. My hands are heavy and warm.",
+                    "durationSeconds": 23
+                },
+                {
+                    "text": "Feel a pleasant warmth moving into your fingers, as if you were holding a mug of something warm. My hands are warm. My hands are still. My hands are calm.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "Picture your hands resting on soft grass on a warm afternoon. There is nothing for them to do. They are completely at peace.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "With each breath, the calm in your hands spreads up through your arms and into your whole body. You are drifting deeper, heavy and comfortable.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "And with it, any restless energy that used to seek an outlet through your fingers dissolves, like mist in warm sunshine.",
+                    "durationSeconds": 24
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 5,
+            "segments": [
+                {
+                    "text": "In this calm state, your mind is open, and these words settle in deeply, so that they will be there when you need them.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "My hands are calm and still. They rest quietly when I am relaxed, and they find other things to do when I am busy or restless.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "I notice quickly when my hand starts to move toward my mouth. That moment of noticing is easy, and it is automatic. It feels like a gentle pause.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "In that pause, I take a slow breath, and I let my hand relax and lower. The urge fades like a wave, and I feel proud of myself.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "I like the look and feel of my nails. They are healthy and strong, and they grow longer and smoother every day. I want to protect them.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "Picture your hands now, in a few weeks. The nails are whole and smooth, the skin around them healthy. You glance at them and smile.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "When I feel nervous, bored or stressed, I find a better outlet. I press my fingertips together, I stretch my hands wide, or I hold something smooth. My hands are calm, and so am I.",
+                    "durationSeconds": 31
+                },
+                {
+                    "text": "The urge to bite is losing its hold on me. Each time I let it pass, it becomes weaker, and I become stronger and more free.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "My hands are an expression of my confidence. I keep them still, I keep them gentle, and I keep them well.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Every day, in every way, I am more relaxed, more aware, and more in control. This habit is behind me, and I am moving on.",
+                    "durationSeconds": 26
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 1,
+            "segments": [
+                {
+                    "text": "It is time to return. Take with you the calm in your hands and the pause you have practised.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "I will count from one to five. One, gently stirring. Two, feeling energy return. Three, more awake. Four, fingers moving lightly.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Five, eyes open, wide awake and refreshed. Welcome back. Look at your hands, and notice how calm they feel.",
+                    "durationSeconds": 24
+                }
+            ]
+        }
+    }
+}

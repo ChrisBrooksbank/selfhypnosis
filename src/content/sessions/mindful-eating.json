@@ -1,0 +1,160 @@
+{
+    "id": "mindful-eating",
+    "name": "Mindful Eating & Weight",
+    "description": "Build a calmer, kinder relationship with food. Tune into true hunger and fullness, ease cravings and picture yourself comfortable in a body you care for.",
+    "goalArea": "habits",
+    "difficulty": "intermediate",
+    "techniquesUsed": ["eye-fixation", "breathing", "visualisation"],
+    "estimatedMinutes": 14,
+    "phases": {
+        "preparation": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Settle somewhere comfortable and quiet, ideally when you are neither very hungry nor very full. Let your body be supported, and let your hands rest.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "This session helps you listen to your body and make choices that suit the life you want. It is not about punishment or willpower. It is about a gentler, more connected way of eating. It works best alongside balanced eating and regular movement.",
+                    "durationSeconds": 34
+                },
+                {
+                    "text": "Choose a spot a little above eye level, a corner of the ceiling, or a point on the wall. Rest your eyes there softly. We will let them close in a moment.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "Take one slow breath in, and breathe it out like a long sigh. You are here, and you are ready.",
+                    "durationSeconds": 24
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Keep your eyes resting on that spot. Notice the colours and edges, and how your eyes begin to feel heavy. There is no need to blink away the heaviness. Let it come.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "With each breath, your eyelids grow heavier. Heavier and more tired, as though they were weighted with warm sand.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "When the heaviness is too much to resist, let your eyes close, and enjoy the relief as your face softens.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Breathe in slowly, and as you breathe out, let your jaw loosen, your tongue rest, your forehead smooth.",
+                    "durationSeconds": 23
+                },
+                {
+                    "text": "Feel the release travel down through your neck and shoulders, down your arms to your fingertips. Heavy, loose and calm.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Let it flow down through your chest and your stomach, soft and unclenched, down through your hips and legs to your toes.",
+                    "durationSeconds": 25
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Now I will count down from ten. With each number you will sink twice as deeply into relaxation, safe and comfortable.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Ten, going down. Nine, deeper. Eight, letting go of everything unnecessary. Seven, drifting down and down.",
+                    "durationSeconds": 22
+                },
+                {
+                    "text": "Six, heavy and calm. Five, halfway to a deep, quiet place. Four, deeper still. Three, warm and heavy. Two, almost there. One, completely at ease.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "From here, picture a staircase of ten gentle steps leading down into a garden. With each step the garden grows brighter and quieter.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "You reach the bottom, and there is a soft bench, shaded by trees. You sit, and the quiet fills you. This is the place where your deepest wishes for yourself become clear.",
+                    "durationSeconds": 29
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "In this calm place, your mind is wonderfully open. The words you hear sink in and become part of you, as naturally as breathing.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "I listen to my body. I eat when I am genuinely hungry, and I stop when I am comfortably full. I know the difference, and I trust it.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "I eat slowly. I sit down to eat, I put down my fork between bites, and I truly taste my food. Each mouthful is enough to satisfy me.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "I enjoy foods that nourish me and make me feel strong, and I do so without guilt. No food is forbidden, and no food rules over me.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "When a craving comes, I pause. I take one slow breath, and I notice it like a wave rising and falling. It passes, and I am still in charge.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "I notice the difference between hunger in my body and hunger in my feelings. When I am stressed, tired or bored, I find something kinder than food to comfort me.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "Now see yourself clearly, a few months from now. You are comfortable in your body, you move with ease and energy, and you feel proud of how you care for yourself.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "See the clothes you wear, and how they fit. See yourself at the table, relaxed and enjoying a meal, and then pushing the plate gently away when you are satisfied. It feels natural. It feels like you.",
+                    "durationSeconds": 32
+                },
+                {
+                    "text": "I enjoy moving my body. I find activities I love, and I look forward to them, because they make me feel alive and capable.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "I drink water through the day. I sleep well. I treat myself with the same patience and kindness I would offer a friend.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Each day, my choices become easier and more automatic. I am steadily moving toward a healthy weight, at a pace my body can sustain. I am becoming the person I picture.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "Rest for a moment in that picture, feeling the pride and ease of it, and know that every step you take brings it closer.",
+                    "durationSeconds": 26
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "It is time to return, carrying this clarity and calm with you. These ideas stay with you long after the session ends.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "I will count up from one to five. One, beginning to stir. Two, feeling energy returning to your body.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Three, more aware of the room, clear and positive. Four, fingers and toes moving, ready to return.",
+                    "durationSeconds": 23
+                },
+                {
+                    "text": "Five, eyes open, fully awake and refreshed. Welcome back. Take a breath, and notice how you feel.",
+                    "durationSeconds": 23
+                }
+            ]
+        }
+    }
+}

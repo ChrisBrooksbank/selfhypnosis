@@ -1,0 +1,160 @@
+{
+    "id": "ibs-gut-calm",
+    "name": "Gut Calm",
+    "description": "Gut-directed hypnotherapy for irritable bowel syndrome. Soothing warmth, slow breathing and the image of a calm, steady river help settle an over-sensitive gut.",
+    "goalArea": "ibs",
+    "difficulty": "beginner",
+    "techniquesUsed": ["breathing", "autogenic", "visualisation"],
+    "estimatedMinutes": 14,
+    "phases": {
+        "preparation": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Find somewhere you can be undisturbed for a while, and lie back or sit with your belly unrestricted. Loosen anything tight around your waist. This time is for your gut, and your gut deserves some kindness.",
+                    "durationSeconds": 31
+                },
+                {
+                    "text": "This session is based on gut-directed hypnotherapy, one of the best-studied approaches for irritable bowel syndrome. It works alongside your medical care, not instead of it. If you notice new or worrying symptoms, please speak to your doctor.",
+                    "durationSeconds": 32
+                },
+                {
+                    "text": "Let your eyes close. Take a slow breath in through your nose, and let it go with a long, soft sigh. Do that once more, and let your shoulders drop away from your ears.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "For the next little while there is nothing to fix and nothing to get right. All you need to do is listen, and let your body remember how to be calm.",
+                    "durationSeconds": 29
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 3,
+            "segments": [
+                {
+                    "text": "Bring your attention to your breathing, down low, in your belly. Rest a hand there if you like, just below your ribs. Feel it rise gently as you breathe in, and soften as you breathe out.",
+                    "durationSeconds": 31
+                },
+                {
+                    "text": "Breathe in slowly for a count of four. Hold for a moment. And breathe out for a count of six, longer than the breath in. The long out-breath is the signal your gut has been waiting for.",
+                    "durationSeconds": 32
+                },
+                {
+                    "text": "In for four. Out for six. Each time you breathe out, your belly softens a little more, as though a clenched fist were slowly opening.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Now notice that your gut and your brain are in constant conversation. For a long time the messages may have been loud and worried. Tonight you can begin to turn the volume down, kindly and without force.",
+                    "durationSeconds": 32
+                },
+                {
+                    "text": "Imagine a gentle dial in your mind, marked from loud to quiet. Notice where it is set now, and with each out-breath, turn it a little more toward quiet.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "Loud becoming softer. Alarm becoming calm. Your gut does not need to be on guard. It is safe here, and so are you.",
+                    "durationSeconds": 25
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Now let us use the simple language of warmth and heaviness. Say silently to yourself: my belly is warm. My belly is warm and soft.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Feel warmth gathering beneath your hand, like sun on a stone, or a warm bath held in cupped hands. The warmth spreads slowly inward, soothing every layer of muscle.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "My belly is warm and heavy. My breathing is slow and easy. My gut is calm and quiet.",
+                    "durationSeconds": 23
+                },
+                {
+                    "text": "As the warmth spreads, notice how the muscles around your digestive system let go. No gripping, no tightening. Just a deep, comfortable, spacious softness.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "With every breath you drift deeper, safe and heavy and warm, deeper into a quiet that is entirely your own.",
+                    "durationSeconds": 24
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 5,
+            "segments": [
+                {
+                    "text": "In this peaceful state, your mind is open and receptive, and the words you hear settle easily into place. Let them in the way you would let in warm light.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "Now picture a river, wide and clear, flowing smoothly through a green valley. This river is your digestive system. It knows exactly how to flow, steadily and at just the right pace.",
+                    "durationSeconds": 29
+                },
+                {
+                    "text": "See the water moving easily around every stone and bend. Nothing blocks it. Nothing rushes it. It flows with calm, gentle rhythm, and the surface is smooth and bright.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "My digestive system works smoothly and comfortably. My gut knows how to flow in a steady, easy rhythm, and each day it settles more.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "The muscles of my gut are relaxed and soft. I breathe, and my belly breathes with me. Tension melts away with every out-breath.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "I am becoming less sensitive to sensations in my gut. What once felt loud now feels quiet. What once felt sharp now feels soft and far away.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "My gut and my mind are friends. They speak to each other in a calm, gentle voice, and I trust my body to know what to do.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "When worries rise, I notice them, and I breathe, and I let them drift downstream with the river. Stress no longer has a hold on my gut.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "I can eat calmly and comfortably. I give my body the time it needs, and my body thanks me with ease.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Whenever I feel any discomfort, I place a hand on my belly, I breathe slowly, and I feel the warmth return. This is my signal, and it always works a little better each time.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "Every day, in every way, my gut is becoming calmer, stronger and more comfortable. I am at ease inside my own body.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Take a moment now to rest in that feeling of ease. Your gut flowing like the river, quiet and unhurried, and you at peace beside it.",
+                    "durationSeconds": 27
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "It is time to come back. Carry the warmth, the river and the quiet with you. They will be here whenever you return to them.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "I will count up from one to five. One, beginning to stir, feeling your breath. Two, noticing the room around you, your body soft and comfortable.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "Three, becoming more awake, your belly warm and calm. Four, wriggling your fingers and toes, ready to return.",
+                    "durationSeconds": 23
+                },
+                {
+                    "text": "Five, eyes open, fully awake and refreshed. Take a gentle breath. Welcome back. Move slowly, and drink a glass of water when you are ready.",
+                    "durationSeconds": 26
+                }
+            ]
+        }
+    }
+}

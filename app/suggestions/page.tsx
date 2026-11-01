@@ -20,6 +20,7 @@ const GOAL_AREA_LABELS: Record<GoalArea, string> = {
     ibs: 'IBS Relief',
     childbirth: 'Childbirth',
     'general-relaxation': 'General Relaxation',
+    intimacy: 'Intimacy',
 };
 
 const ALL_GOAL_AREAS: GoalArea[] = [
@@ -31,6 +32,7 @@ const ALL_GOAL_AREAS: GoalArea[] = [
     'ibs',
     'childbirth',
     'general-relaxation',
+    'intimacy',
 ];
 
 function formatDate(isoDate: string): string {
