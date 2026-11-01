@@ -20,6 +20,7 @@ const GOAL_AREAS: GoalArea[] = [
     'ibs',
     'childbirth',
     'general-relaxation',
+    'intimacy',
 ];
 const TECHNIQUE_IDS: TechniqueId[] = [
     'eye-fixation',

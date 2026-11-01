@@ -3,6 +3,38 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
+ * Dusk palette. Every screen is styled with the stock Tailwind indigo scale, so
+ * re-tinting it here gives the whole app a violet-at-twilight character without
+ * touching each component. Headings use a warm serif (system fonts only: the app
+ * is offline-first, so nothing is fetched).
+ */
+@theme {
+    --font-display:
+        'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+
+    --color-indigo-50: oklch(0.972 0.014 292);
+    --color-indigo-100: oklch(0.94 0.03 291);
+    --color-indigo-200: oklch(0.885 0.06 289);
+    --color-indigo-300: oklch(0.8 0.1 287);
+    --color-indigo-400: oklch(0.7 0.16 285);
+    --color-indigo-500: oklch(0.6 0.21 284);
+    --color-indigo-600: oklch(0.52 0.23 283);
+    --color-indigo-700: oklch(0.45 0.21 282);
+    --color-indigo-800: oklch(0.38 0.17 282);
+    --color-indigo-900: oklch(0.31 0.12 282);
+    --color-indigo-950: oklch(0.22 0.08 282);
+}
+
+body {
+    background-image: linear-gradient(180deg, oklch(0.955 0.03 292) 0, var(--color-gray-50) 380px);
+    background-repeat: no-repeat;
+}
+
+:root.dark:not([data-fullscreen]) body {
+    background-image: linear-gradient(180deg, oklch(0.22 0.06 285) 0, var(--color-gray-50) 380px);
+}
+
+/*
  * Dark theme. Components are styled with light-theme utilities, so rather than
  * doubling every class with a dark: variant we remap the palette tokens those
  * utilities read. The session player (data-fullscreen) is already dark and keeps

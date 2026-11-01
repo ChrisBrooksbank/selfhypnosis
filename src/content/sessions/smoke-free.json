@@ -1,0 +1,156 @@
+{
+    "id": "smoke-free",
+    "name": "Smoke-Free",
+    "description": "Support for quitting or cutting down smoking. Strengthen your reasons, take the power out of cravings and practise riding out urges until they pass.",
+    "goalArea": "habits",
+    "difficulty": "intermediate",
+    "techniquesUsed": ["eye-fixation", "countdown", "breathing", "visualisation"],
+    "estimatedMinutes": 13,
+    "phases": {
+        "preparation": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Settle somewhere comfortable, and put your cigarettes and lighter out of reach. This is time for you, and for the person you are choosing to become.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "Hypnosis works best for stopping smoking when you truly want to stop. If you do, you are already halfway there. It also works well alongside nicotine replacement or advice from your pharmacist or doctor, and the research supports using both.",
+                    "durationSeconds": 33
+                },
+                {
+                    "text": "Pick a point just above eye level and rest your gaze there. Breathe in through your nose, slowly, and out through your mouth, as if breathing out a long, thin stream of cool air.",
+                    "durationSeconds": 30
+                },
+                {
+                    "text": "You are here because you value yourself. Hold that thought. It is the strongest thing in the room.",
+                    "durationSeconds": 23
+                }
+            ]
+        },
+        "induction": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Keep your eyes on that point, and let your breathing slow. Notice how restful it is to simply rest and breathe, with nothing to chase and nothing to resist.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "Your eyelids are growing heavier now. Heavier and heavier, and you do not have to fight it. Let them close when they are ready.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "As they close, take a deep breath of clean, fresh air. Notice how good clean air feels. Then breathe out slowly, releasing tension with the breath.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "Feel your whole body begin to loosen. Your shoulders drop, your arms grow heavy, your hands warm and still.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "With each out-breath, you drift a little deeper. There is nothing to do except let go.",
+                    "durationSeconds": 22
+                }
+            ]
+        },
+        "deepening": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "I will count slowly from ten down to one. With each number, you go twice as deep, calm and comfortable.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Ten. Nine, deeper. Eight. Seven, the body very heavy. Six. Five, drifting down. Four. Three, deeper still. Two. One, completely relaxed.",
+                    "durationSeconds": 24
+                },
+                {
+                    "text": "Imagine a mountain path in the early morning. The air is cool, clean and sweet. You breathe deeply, and your lungs feel wide open and strong.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "With every step, you feel lighter. The weight you have been carrying falls away with each stride, and the path leads toward a bright, clear view.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "You reach a high place and look out across a valley full of morning light. You stand there, free and calm, and you know the way forward.",
+                    "durationSeconds": 27
+                }
+            ]
+        },
+        "suggestion": {
+            "durationMinutes": 6,
+            "segments": [
+                {
+                    "text": "From this clear, calm place, your mind is open, and these words become your own, as natural as the air you breathe.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "Think of your reasons for being smoke-free. Perhaps your health, your family, your money, your freedom. See them clearly. They are strong, and they are yours.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "I am a non-smoker. I choose clean air, and I choose to breathe freely. My body is already healing, and every day it grows stronger.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Cigarettes no longer have any power over me. The smell and taste of smoke are unpleasant to me. I do not want it, and I do not need it.",
+                    "durationSeconds": 28
+                },
+                {
+                    "text": "When a craving rises, I recognise it as only a wave. It peaks and passes in a few minutes, and I let it go by without acting on it. I breathe slowly, I drink some cool water, and the wave subsides.",
+                    "durationSeconds": 33
+                },
+                {
+                    "text": "Each craving I ride out makes me stronger and the next one weaker. Each moment smoke-free is a victory, and I am proud of it.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Now imagine yourself in a moment that you once associated with smoking. After a meal, with a coffee, during a break, or when stressed. See yourself calm, with your hands relaxed and your breath easy, without a cigarette.",
+                    "durationSeconds": 32
+                },
+                {
+                    "text": "You find something else that suits you better. A deep breath, a stretch, a glass of water, a short walk. It feels easy, and it feels natural.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "When I feel stress, I breathe in slowly, and I breathe out slowly, and I feel calm return. I do not need smoke to cope. I have my breath, and my breath is always with me.",
+                    "durationSeconds": 31
+                },
+                {
+                    "text": "I breathe deeply, I taste food more fully, I smell the world more richly. I have more energy and more money. I feel free.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Picture yourself a year from now, healthy and strong, climbing stairs without effort, laughing without a cough. You are free of cigarettes, and you are proud.",
+                    "durationSeconds": 27
+                },
+                {
+                    "text": "Hold on to that feeling. Know that you have made your choice, and you will keep making it, one moment at a time.",
+                    "durationSeconds": 25
+                }
+            ]
+        },
+        "emergence": {
+            "durationMinutes": 2,
+            "segments": [
+                {
+                    "text": "Now it is time to return, bringing with you your strength and your freedom. These suggestions stay with you throughout the day.",
+                    "durationSeconds": 25
+                },
+                {
+                    "text": "I will count from one to five. One, starting to stir. Two, feeling energy flow back into your body. Three, more awake and aware.",
+                    "durationSeconds": 26
+                },
+                {
+                    "text": "Four, breathing deeply the clean fresh air. Five, eyes open, wide awake, feeling clear and strong.",
+                    "durationSeconds": 22
+                },
+                {
+                    "text": "Welcome back. If a craving comes today, remember it is a wave, and you know how to let it pass. You are a non-smoker.",
+                    "durationSeconds": 26
+                }
+            ]
+        }
+    }
+}

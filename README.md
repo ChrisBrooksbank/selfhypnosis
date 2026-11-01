@@ -21,6 +21,13 @@
 
 ## 🌙 What is this?
 
+<table>
+  <tr>
+    <td width="120" align="center"><img src="public/icons/icon-192.png" width="96" alt="Lull, the app's sleepy moon mascot"></td>
+    <td>Meet <b>Lull</b>, a small moon in a nightcap who lives in the middle of the ripples. Lull greets you on the home screen, waves you through onboarding, and is the app's icon. The look is dusk all the way down: violet twilight, warm lamp-gold, serif headlines, and a scene for every session.</td>
+  </tr>
+</table>
+
 Ten minutes from now you could be somewhere quieter.
 
 **Self-Hypnosis** is a pocket-sized trance studio. It guides you through the same five-phase arc that clinical hypnotherapists use: _preparation → induction → deepening → suggestion → emergence_. The script appears one soft line at a time, a breathing ring counts down each phase, and the text fades away when it's time to close your eyes.
@@ -61,7 +68,7 @@ The player is built to be used blind:
   </tr>
   <tr>
     <td align="center"><img src="docs/media/library.png" width="230"><br><sub><b>Library</b>: 7 evidence-based techniques</sub></td>
-    <td align="center"><img src="docs/media/sessions.png" width="230"><br><sub><b>Guided sessions</b>: relax, de-stress, sleep, pain, confidence</sub></td>
+    <td align="center"><img src="docs/media/sessions.png" width="230"><br><sub><b>Guided sessions</b>: ten illustrated journeys</sub></td>
     <td align="center"><img src="docs/media/home-dark.png" width="230"><br><sub><b>Dark mode</b>: for 2am sessions</sub></td>
   </tr>
 </table>
@@ -82,7 +89,7 @@ Need out _now_? The **Emergency Exit** jumps straight to emergence. You still co
 
 ## 🧰 What's inside
 
-- **🎧 Guided sessions**: five narrated journeys (Beginner Relaxation, Stress Relief, Sleep Preparation, Pain Management, Confidence Building), with a typewriter script reveal, a phase ring, pause/skip, and a post-session check-in for depth and mood. Audio is cached by the service worker, so it plays offline.
+- **🎧 Guided sessions**: ten journeys, each with its own little illustrated scene: Beginner Relaxation, Stress Relief, Sleep Preparation, Pain Management, Confidence Building, Gut Calm (IBS), Mindful Eating & Weight, Smoke-Free, Hands at Peace (nail biting) and Embers, an adults-only session for two. Each has a typewriter script reveal, a phase ring, pause/skip, and a post-session check-in for depth and mood. Audio is cached by the service worker, so it plays offline.
 - **⏳ Free timer**: no script, just you, a countdown, and shuffled technique cards for inspiration.
 - **📚 Technique library**: eye fixation, progressive muscle relaxation, visualisation, countdown deepening, controlled breathing, Betty Erickson's 3-2-1 sensory method, and autogenic training. Each has steps, the science, and citations.
 - **✍️ Suggestion builder**: pick a goal, write (or dictate) your suggestion, and get a live check for positive framing, present tense, specificity, believability and emotional pull. Your best suggestions for a goal are woven into that goal's sessions automatically.
@@ -151,21 +158,23 @@ Tune it with `OPENAI_TTS_VOICE` (default `sage`; try `shimmer` or `marin`), `OPE
 
 ### Scripts
 
-| Command                  | Description                                       |
-| ------------------------ | ------------------------------------------------- |
-| `npm run dev`            | Start Next.js dev server (Turbopack)              |
-| `npm run build`          | Production build (static export to `out/`)        |
-| `npm run start`          | Serve production build locally                    |
-| `npm test`               | Run tests in watch mode                           |
-| `npm run test:run`       | Run tests once                                    |
-| `npm run test:coverage`  | Generate coverage report                          |
-| `npm run lint`           | Check for lint errors                             |
-| `npm run lint:fix`       | Fix lint errors                                   |
-| `npm run format`         | Format code with Prettier                         |
-| `npm run typecheck`      | TypeScript type checking                          |
-| `npm run knip`           | Find unused code                                  |
-| `npm run check`          | Run all checks (typecheck + lint + format + knip) |
-| `npm run generate:audio` | Generate narration audio with OpenAI TTS          |
+| Command                            | Description                                                          |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| `npm run dev`                      | Start Next.js dev server (Turbopack)                                 |
+| `npm run build`                    | Production build (static export to `out/`)                           |
+| `npm run start`                    | Serve production build locally                                       |
+| `npm test`                         | Run tests in watch mode                                              |
+| `npm run test:run`                 | Run tests once                                                       |
+| `npm run test:coverage`            | Generate coverage report                                             |
+| `npm run lint`                     | Check for lint errors                                                |
+| `npm run lint:fix`                 | Fix lint errors                                                      |
+| `npm run format`                   | Format code with Prettier                                            |
+| `npm run typecheck`                | TypeScript type checking                                             |
+| `npm run knip`                     | Find unused code                                                     |
+| `npm run check`                    | Run all checks (typecheck + lint + format + knip)                    |
+| `npm run generate:audio`           | Generate narration audio with OpenAI TTS                             |
+| `node scripts/generate-icons.mjs`  | Re-render the app icons from the Lull artwork                        |
+| `node scripts/capture-screens.mjs` | Retake README screenshots and hero (needs Chrome and a served build) |
 
 ## 🏗️ Under the hood
 

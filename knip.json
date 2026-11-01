@@ -17,6 +17,7 @@
     },
     "ignoreBinaries": ["ffmpeg", "ffprobe"],
     "ignoreDependencies": [
+        "sharp",
         "dexie-react-hooks",
         "@testing-library/jest-dom",
         "@testing-library/react",

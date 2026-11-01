@@ -21,6 +21,7 @@ const goalAreaLabels: Record<GoalArea, string> = {
     ibs: 'IBS',
     childbirth: 'Childbirth',
     'general-relaxation': 'Relaxation',
+    intimacy: 'Intimacy',
 };
 
 export function TechniqueCard({ technique }: TechniqueCardProps) {

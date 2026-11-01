@@ -23,7 +23,8 @@ export type GoalArea =
     | 'performance'
     | 'ibs'
     | 'childbirth'
-    | 'general-relaxation';
+    | 'general-relaxation'
+    | 'intimacy';
 
 export type PhaseId = 'preparation' | 'induction' | 'deepening' | 'suggestion' | 'emergence';
 

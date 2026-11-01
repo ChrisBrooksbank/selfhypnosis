@@ -5,6 +5,11 @@ import stressRelief from './stress-relief.json';
 import sleepPreparation from './sleep-preparation.json';
 import painManagement from './pain-management.json';
 import confidenceBuilding from './confidence-building.json';
+import ibsGutCalm from './ibs-gut-calm.json';
+import mindfulEating from './mindful-eating.json';
+import smokeFree from './smoke-free.json';
+import handsAtPeace from './hands-at-peace.json';
+import embersForTwo from './embers-for-two.json';
 
 /** All guided session templates, in display order. */
 export const GUIDED_SESSIONS: GuidedSession[] = [
@@ -13,6 +18,11 @@ export const GUIDED_SESSIONS: GuidedSession[] = [
     sleepPreparation,
     painManagement,
     confidenceBuilding,
+    ibsGutCalm,
+    mindfulEating,
+    smokeFree,
+    handsAtPeace,
+    embersForTwo,
 ] as GuidedSession[];
 
 export function getGuidedSession(id: string | undefined): GuidedSession | undefined {

@@ -45,6 +45,7 @@ const exampleChips: Record<GoalArea, string[]> = {
     ibs: ['My digestive system functions calmly', 'I feel comfortable and at ease'],
     childbirth: ['My body knows how to birth naturally', 'Each surge brings my baby closer'],
     'general-relaxation': ['I am deeply relaxed and at peace', 'Calm flows through my entire body'],
+    intimacy: ['I am present and open in my body', 'Desire rises slowly and naturally'],
 };
 
 // Speech support never changes at runtime, so there is nothing to subscribe to.

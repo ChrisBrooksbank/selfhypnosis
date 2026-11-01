@@ -1,5 +1,6 @@
 'use client';
 
+import { Lull } from '@components/art/Lull';
 import prose from '@/content/prose.json';
 
 interface WelcomeSlideProps {
@@ -12,10 +13,12 @@ export function WelcomeSlide({ onNext }: WelcomeSlideProps) {
     return (
         <div className="flex flex-col gap-8 px-6 py-8">
             <div className="text-center" data-speech-clip="prose/welcome-intro">
-                <div className="mb-4 text-5xl" aria-hidden="true">
-                    🧘
+                <div className="mb-2 flex justify-center">
+                    <Lull size={150} mood="calm" />
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900">{welcome.heading}</h1>
+                <h1 className="font-display text-3xl font-semibold text-gray-900">
+                    {welcome.heading}
+                </h1>
                 <p className="mt-3 text-base text-gray-600">{welcome.intro}</p>
             </div>
 

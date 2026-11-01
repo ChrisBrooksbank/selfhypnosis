@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
             'Guided self-hypnosis sessions, technique library, and personal suggestion builder',
         start_url: '/',
         display: 'standalone',
-        background_color: '#f9fafb',
-        theme_color: '#6366f1',
+        background_color: '#120f33',
+        theme_color: '#2a2070',
         orientation: 'portrait',
         categories: ['health', 'lifestyle'],
         icons: [
